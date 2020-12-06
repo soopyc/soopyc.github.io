@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html style="font-family: ABeeZee, sans-serif;">
+<html lang="en" style="font-family: 'Quicksand', sans-serif;">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Kenny's Corner</title>
-    <meta name="theme-color" content="rgb(82,191,191)">
+    <meta name="theme-color" content="rgb(106, 201, 255)">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav32.png">
     <link rel="icon" type="image/png" sizes="180x180" href="assets/img/fav180.png">
@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/fav512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/Pre-loader.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -21,20 +21,44 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md sticky-top bg-light">
-        <div class="container-fluid"><a class="navbar-brand" href="/">Kenny's Corner</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Kenny's Corner</a>
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" href="index.html" title="Home page">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" href="about.html" title="Stuffs about me">About Me</a></li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" href="index.html" title="Home page">Home</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" href="about.html" title="Stuff about me">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" href="links.html" title="Links">
+                            Links
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container">
-        <h1 style="font-family: ABeeZee, sans-serif;">About</h1>
-        <p style="font-family: ABeeZee, sans-serif;">Hello, I am Kenny from Hong Kong. You may know me as&nbsp;<a href="https://github.com/kcomain">@kcomain</a> on github, or&nbsp;<a href="https://twitter.com/kennycheung_">@kennycheung_</a> on Twitter.<br></p>
-        <h1>Projects</h1>
+        <h1>about</h1>
+        <p>Hello, I am Kenny from &lt;insert location here&gt;.
+            You may know me as&nbsp;<a href="https://github.com/kcomain">@kcomain</a>
+            on github, or&nbsp;<a href="https://twitter.com/kennycheung_">@kennycheung_</a>
+            on Twitter.
+            <br>
+            Most of my usernames are "kcomain" if not specified so you can find me basically
+            everywhere (that i've registered) with that.
+            <br>
+        </p>
+        <h1>projects</h1>
         <p>Below you can find all/most projects that I'm a part of.</p>
         <div class="table-responsive">
             <table class="table">
@@ -43,7 +67,7 @@
                         <th>Stats</th>
                         <th>Project</th>
                         <th>Description</th>
-                        <th>URL</th>
+                        <th>Links</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,23 +78,61 @@
                         <td class="text-nowrap">Closed source (<a href="https://discord.gg/tF7WVSs">Support server</a>|<a href="https://www.cypherbot.org/">Website</a>)</td>
                     </tr>
                     <tr>
-                        <td class="table-warning">Hiatus</td>
+                        <td class="table-danger">Paused indefinitely until further notice</td>
                         <td class="text-nowrap">Waterbot</td>
-                        <td>Yet another random as fuck bot that does literally nothing - for now</td>
+                        <td>Yet another random bot that does literally nothing - for now (and probably the next decade)</td>
                         <td class="text-nowrap"><a href="https://github.com/waterbotdev/waterbot">Source</a>&nbsp;(<a href="https://discord.gg/ATCjdFA">Support server</a>)</td>
                     </tr>
                     <tr>
-                        <td class="table-success">Early Dev</td>
-                        <td class="text-nowrap">Project Objectia</td>
-                        <td>Electron app for enthusiasts to create their own object show</td>
-                        <td>None for now</td>
+                        <td class="table-warning">Paused temporarily</td>
+                        <td class="text-nowrap">DBot/Blossom</td>
+                        <td>yet another yet another annoying random discord bot that does literlly nothing special</td>
+                        <td class="text-nowrap"><a href="https://github.com/kcomain/dbot">Source</a></td>
                     </tr>
-                    <tr>
-                        <td class="table-success">Early Dev</td>
-                        <td class="text-nowrap">Project Elimina</td>
-                        <td><em>(Subproject of Project Objectia)</em>&nbsp;A simple platform for people to do elimination vote count for their object show created through Objectia and more.</td>
-                        <td>None for now</td>
-                    </tr>
+<!--                    <tr>-->
+<!--                        <td class="table-success">Early Dev</td>-->
+<!--                        <td class="text-nowrap">Project Objectia</td>-->
+<!--                        <td>Electron app for enthusiasts to create their own object show</td>-->
+<!--                        <td>None for now</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td class="table-success">Early Dev</td>-->
+<!--                        <td class="text-nowrap">Project Elimina</td>-->
+<!--                        <td><em>(Subproject of Project Objectia)</em>&nbsp;A simple platform for people to do elimination vote count for their object show created through Objectia and more.</td>-->
+<!--                        <td>None for now</td>-->
+<!--                    </tr>-->
+                </tbody>
+            </table>
+        </div>
+
+        <h1>challenges, puzzles etc</h1>
+        <p>
+            You can find a list of challenges, puzzles, games and etc that I'm currently participating
+            or have participated in the past.
+        </p>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Link(s)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="table-success text-nowrap">Advent of Code <span class="text-primary">2020</span></td>
+                    <td>
+                        Every December, a puzzle-ish game called the Advent of Code.
+                        There are 50 challenges, where 2 will be released every day.
+                    </td>
+                    <td class="text-nowrap">
+                        <ul>
+                            <li><a href="//adventofcode.com">Official Website</a></li>
+                            <li><a href="//github.com/kcomain/aoc2020">me and my friends' solutions</a></li>
+                        </ul>
+                    </td>
+                </tr>
                 </tbody>
             </table>
         </div>
