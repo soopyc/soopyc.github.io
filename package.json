@@ -1,0 +1,26 @@
+{
+  "name": "kcomain.github.io",
+  "version": "0.1.0",
+  "description": "kcomain's site",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prefix": "npx postcss assets/pre_style.css --use autoprefixer > assets/style.css",
+    "build": "postcss assets/pre_style.css > assets/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcomain/kcomain.github.io.git"
+  },
+  "author": "kcomain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kcomain/kcomain.github.io/issues"
+  },
+  "homepage": "https://github.com/kcomain/kcomain.github.io#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^8.3.1"
+  }
+}
