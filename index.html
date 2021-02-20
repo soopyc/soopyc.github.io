@@ -1,30 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/fontawesome.min.css">
     <link rel="stylesheet" href="assets/solid.min.css">
     <link rel="stylesheet" href="assets/brands.min.css">
 
     <link rel="stylesheet" href="assets/style.css">
-    <title>Kenny's site</title>
+    <title>kebny</title>
 </head>
 <body>
-
-<div class="center">
-    <img src="avatar.png" alt="kcomain's avatar consisting of a catboy" class="avatar">
-<!--    <h2 class="mono">home</h2>-->
+<div>
+    <a href="https://picrew.me/image_maker/622853/"><img src="avatar.png" alt="kcomain's avatar consisting of a catboy" class="avatar"></a>
+<!--        <h2 class="mono">home</h2>-->
+    <p class="center">just your basic <span id="job" style="color: #007ddd">student</span></p>
+    <p class="center"><a href="/about/javascript.html" data-jslicense="1"><i class="fab fa-js-square"></i> License</a></p>
     <div class="flex-container">
-        <p class="flex-item test-border">te</p>
-        <p class="flex-item test-border">te</p>
-        <p class="flex-item test-border">tet</p>
-        <p class="flex-item test-border">tettfmsdklfndl</p>
-        <p class="flex-item test-border">tettfmsdklfndl</p>
-        <p class="flex-item test-border">tettfmsdklfndl</p>
-        <p class="flex-item test-border">tettfmsdklfndl</p>
-        <p class="flex-item test-border">tettfmsdklfndl</p>
-        <p class="flex-item test-border">tettfmsdklfndl</p>
+        <table style="width: 50%" class="mono">
+            <!-- this is a really really really really bad way of doing it but i can't be bothered -->
+            <tr>
+                <td class="head">personal stuff</td>
+                <td class="head">social media/sns</td>
+                <td class="head">projects and stuff</td>
+            </tr>
+
+            <tr>
+                <td><i class="fas fa-address-card" aria-label="Name" title="Name"></i> Kenny Cheung</td>
+                <td><i class="fab fa-twitter" aria-label="Twitter handle" title="Twitter"></i> <a href="//twitter.com/kennycheung_">@kennycheung_</a></td>
+                <td><i class="fab fa-python"></i> <a href="//www.cypherbot.org">Cypher</a></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-calendar-day" aria-label="Age" title="Age"></i> <span id="age" title="Birth year: 15th December, 2005"><small>js disabled</small></span></td>
+                <td><i class="fab fa-discord" aria-label="Discord username" title="Discord"></i> <a href="//discord.com/users/397029587965575170">kcomain#2020</a></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-user-alt" aria-label="Pronouns" title="Pronouns"></i> he/him, they/them</td>
+                <td><i class="fab fa-github-alt" aria-label="GitHub Profile" title="GitHub"></i> <a href="//github.com/kcomain">kcomain</a></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-book-reader" aria-label="Education level" title="Education level"></i> Secondary 4</td>
+                <td><i class="fab fa-gitlab" aria-label="GitLab Profile" title="GitLab"></i> <a href="//gitlab.com/kcomain">kcomain</a></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-globe-asia" aria-label="Location" title="Location"></i> Hong Kong</td>
+                <td><i class="fab fa-dev" aria-label="dev.to" title="dev.to"></i> <a href="//dev.to/kcomain">kcomain</a></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-heart" aria-label="Love icon"></i> open source</td>
+                <td><i class="fab fa-lastfm" aria-label="Last.fm Profile" title="Last.fm"></i> <a href="//www.last.fm/user/kcomain">kcomain</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><i class="fas fa-inbox"></i> <a href="/contact.html">Other contact methods</a> </td>
+            </tr>
+        </table>
     </div>
+    <p class="hidden">site design <span title="more like stolen from">"inspired"</span> by rauf's site (https://rauf.wtf)</p>
+    <p class="hidden">the icons are a bit off and i can't do jack shit about it</p>
 </div>
 
+<script src="/scripts/job_updater.js"></script>
+<script>
+    'use strict';
+    const age = document.getElementById('age')
+    const birth = new Date('2005-12-26')
+    age.innerText = `about ${Math.floor((new Date() - birth) / 31557600000)}`
+</script>
 </body>
 </html>
