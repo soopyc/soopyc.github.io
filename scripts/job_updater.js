@@ -6,7 +6,9 @@ const jobs = [
     'osu! addict',
     'minecraft player',
     'vtuber fan',
-    'gura shrimp'
+    'gura shrimp',
+    'weeb',
+    'otaku'
 ]
 job.innerText = jobs[Math.floor(Math.random() * jobs.length)]
 
