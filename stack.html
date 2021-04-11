@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/assets/style.css" />
+  <title>Beehive stack</title>
+</head>
+<body>
+<div>
+  <h3>The hive stack</h3>
+  <ul>
+    <li>
+      kcomain.dev: this static site
+      <ul>
+        <li><a href="//gitlab.kcomain.dev">gitlab.kcomain.dev</a>: private gitlab instance</li>
+        <li><a href="//cockpit.kcomain.dev">cockpit.kcomain.dev</a>: beehive manager</li>
+        <li><a href="//files.kcomain.dev">files.kcomain.dev</a>: file host (<a href="//github.com/weebdev/chibisafe">chibisafe</a> clone)</li>
+        <li>fwd.kcomain.dev: firebase dynamic link forwarder</li>
+        <li><del><a href="//phab.kcomain.dev">phab.kcomain.dev</a>: (deprecated) private phabricator instance</del></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a href="//cypherbot.org">cypherbot.org</a>: bot site
+      <ul>
+        <li>preview.cypherbot.org: preview/canary build of the site</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h3>The hive stack... the actual one</h3>
+  <ul>
+    <li>
+      beehive: the heart of the stack (Arch Linux kernelv5.11.11-hardened1-1-hardened #1 SMP PREEMPT Sat, 03 Apr 2021 20:20:28 +0000 x86_64 GNU/Linux)
+      <b>Services:</b>
+      <ul>
+        <li>cockpit</li>
+        <li>gitlab</li>
+        <li>cypherbot (discord.py bot)</li>
+        <li>tbkbot (discord.py bot)</li>
+      </ul>
+    </li>
+    <li>hiveconsole: touch console (LineageOS kernelv3.18.140-g4ab8dd99ab92 #1 SMP PREEMPT Wed Dec 11 19:40:24 EET 2019 aarch64 Android)</li>
+    <li>raspberryjam: raspberry pi 3b live camera stream (Raspbian 5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020 armv7l GNU/Linux)</li>
+    <li>shipport: router (OpenWrt 4.14.221 #0 Mon Feb 15 15:22:37 2021 mips GNU/Linux)</li>
+    <li title="this is really the only thing that's running non free software">
+      laptop: macbook (MacOS 20.3.0 Darwin Kernel Version 20.3.0: Thu Jan 21 00:07:06 PST 2021; root:xnu-7195.81.3~1/RELEASE_X86_64 x86_64)
+    </li>
+  </ul>
+</div>
+</body>
+</html>
