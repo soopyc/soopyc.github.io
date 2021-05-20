@@ -79,19 +79,8 @@
     //tippy('#info-pronouns', {content: "(experimental) she/her",})
     
     tippy('#info-fsf', {content: "Become a FSF Associate Member"})
-    /*
-    tippy('#projects-dpextras', {
-        content: document.getElementById('projects-dpextras').getAttribute('data-project-desc') + '<br>'+
-                 '<img src="https://wakatime.com/badge/github/kcomain/dpextras.svg" alt="wakatime stats for the dpextras project">',
-        allowHTML: true
-    })
-    tippy('#projects-cypher', {
-          content: document.getElementById('projects-cypher').getAttribute("data-project-desc") + '<br>'+
-                   '<img src="https://wakatime.com/badge/github/kcomain/cypher.svg" alt="wakatime stats for the cypher project">',
-          allowHTML: true
-    })
-    */
-    for (let i of document.getElementsByClassName("projects")){
+
+    for (let i of document.getElementsByClassName("projects")) {
         tippy(i, {
             content: i.getAttribute('data-project-desc') + "<br>" +
                      `<img src="https://wakatime.com/badge/github/${i.getAttribute("data-wakatime-slug")}.svg" ` +
