@@ -66,6 +66,7 @@
 </div>
 
 <script src="/scripts/job_updater.js"></script>
+<script src="/scripts/load_poppers.js"></script>
 <script>
     'use strict';
     const age = document.getElementById('age')
@@ -78,6 +79,8 @@
     //tippy('#info-pronouns', {content: "(experimental) she/her",})
     
     tippy('#info-fsf', {content: "Become a FSF Associate Member"})
+
+    loadPoppers()
 
     for (let i of document.getElementsByClassName("projects")) {
         tippy(i, {
