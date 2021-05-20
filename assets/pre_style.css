@@ -62,3 +62,9 @@ small {
 .hidden {
     color: lightsteelblue;
 }
+
+@media (hover: hover){
+    .mobile {
+        display: none
+    }
+}
