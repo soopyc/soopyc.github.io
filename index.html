@@ -33,12 +33,12 @@
             <tr>
                 <td><i class="fas fa-address-card" aria-label="Name" title="Name"></i> Kenny Cheung</td>
                 <td><i class="fab fa-twitter" aria-label="Twitter handle" title="Twitter"></i> <a href="//twitter.com/kennycheung_">@kennycheung_</a></td>
-                <td id="projects-cypher" data-project-desc="Versatile Discord server management bot"><i class="fab fa-python"></i> <a href="//www.cypherbot.org">Cypher</a></td>
+                <td id="projects-cypher" data-project-desc="Versatile Discord server management bot" data-wakatime-slug="kcomain/cypher" data-project-name="cypher"><i class="fab fa-python"></i> <a href="//www.cypherbot.org">Cypher</a></td>
             </tr>
             <tr>
                 <td><i class="fas fa-calendar-day" aria-label="Age" title="Age"></i> <span id="age" title="Birth year: 26th December, 2005"><small>js disabled, hover to see date</small></span></td>
                 <td id="info-discord" style="color: #5865F2"><i class="fab fa-discord" aria-label="Discord username" title="Discord"></i> <a href="//discord.com/users/397029587965575170">kcomain#2020</a></td>
-                <td id="projects-dpextras" data-project-desc="Extra utility modules for discord.py"><i class="fab fa-python"></i> <a href="https://github.com/kcomain/dpextras">dpextras</a></td>
+                <td id="projects-dpextras" data-project-desc="Extra utility modules for discord.py" data-wakatime-slug="kcomain/dpextras" data-project-name="dpextras"><i class="fab fa-python"></i> <a href="https://github.com/kcomain/dpextras">dpextras</a></td>
             </tr>
             <tr>
                 <td id="info-pronouns"><i class="fas fa-user-alt" aria-label="Pronouns" title="Pronouns"></i> she/her, they/them</td>
@@ -46,7 +46,7 @@
             </tr>
             <tr>
                 <td><i class="fas fa-book-reader" aria-label="Education level" title="Education level"></i> Secondary 4</td>
-                <td><i class="fab fa-gitlab" aria-label="GitLab Profile" title="GitLab"></i> <a href="//gitlab.com/kcomain">kcomain</a></td>
+                <td style="color: #fc6d26"><i class="fab fa-gitlab" aria-label="GitLab Profile" title="GitLab"></i> <a href="//gitlab.com/kcomain">kcomain</a></td>
             </tr>
             <tr>
                 <td><i class="fas fa-globe-asia" aria-label="Location" title="Location"></i> Hong Kong</td>
@@ -79,14 +79,26 @@
     //tippy('#info-pronouns', {content: "(experimental) she/her",})
     
     tippy('#info-fsf', {content: "Become a FSF Associate Member"})
-    tippy('#projects-dpextras', {content: 'Extra modules and stuff for discord.py <br>'+
-                                          '<img src="https://wakatime.com/badge/github/kcomain/dpextras.svg" alt="wakatime stats for the dpextras project">',
-                                 allowHTML: true})
+    /*
+    tippy('#projects-dpextras', {
+        content: document.getElementById('projects-dpextras').getAttribute('data-project-desc') + '<br>'+
+                 '<img src="https://wakatime.com/badge/github/kcomain/dpextras.svg" alt="wakatime stats for the dpextras project">',
+        allowHTML: true
+    })
     tippy('#projects-cypher', {
           content: document.getElementById('projects-cypher').getAttribute("data-project-desc") + '<br>'+
                    '<img src="https://wakatime.com/badge/github/kcomain/cypher.svg" alt="wakatime stats for the cypher project">',
           allowHTML: true
     })
+    */
+    for (let i of document.getElementsByClassName("projects")){
+        tippy(i, {
+            content: i.getAttribute('data-project-desc') + "<br>" +
+                     `<img src="https://wakatime.com/badge/github/${i.getAttribute("data-wakatime-slug")}.svg" ` +
+                     `alt="wakatime stats for the ${i.getAttribute("data-project-name")} project" />`,
+            allowHTML: true
+        })
+    }
 </script>
 </body>
 </html>
