@@ -1,9 +1,15 @@
 function loadProjects() {
     for (let i of document.getElementsByClassName("projects")) {
+        if (i.hasAttribute('data-badge-license-disable') && i.getAttribute('data-badge-license-disable') === 'true') {
+            const licensetext = ''
+        } else {
+            const licensetext = `<img alt="GitHub" src="https://img.shields.io/github/license/${i.getAttribute('data-github-slug')}?color=7af">`
+        }
         tippy(i, {
             content: i.getAttribute('data-project-desc') + "<br>" +
                      `<img src="https://wakatime.com/badge/github/${i.getAttribute("data-wakatime-slug")}.svg" ` +
-                     `alt="wakatime stats for the ${i.getAttribute("data-project-name")} project" />`,
+                     `alt="wakatime stats for the ${i.getAttribute("data-project-name")} project" />` +
+                     licensetext,
             allowHTML: true
         })
     }
