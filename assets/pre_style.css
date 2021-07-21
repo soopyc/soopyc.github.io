@@ -63,6 +63,14 @@ small {
     color: lightsteelblue;
 }
 
+.footer {
+    background-color: rgba(164, 177, 245, 0.4);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 @media (hover: hover){
     .mobile {
         display: none
