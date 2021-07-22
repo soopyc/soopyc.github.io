@@ -89,13 +89,13 @@ small {
 }
 
 a {
-    color: var(--mblue);
+    color: white;
 }
 
 a:visited {
-    color: var(--apink);
+    color: #734f96;
 }
 
 a:active{
-    color: white;
+    color: #d70270;
 }
