@@ -88,14 +88,18 @@ small {
     color: #fff;
 }
 
-a {
+a:visited {
+    color: #7788ff
+}
+
+table a {
     color: #77dd77;
 }
 
-a:visited {
+table a:visited {
     color: #734f96;
 }
 
-a:active{
+table a:active{
     color: #d70270;
 }
