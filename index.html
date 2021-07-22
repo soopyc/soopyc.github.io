@@ -39,7 +39,7 @@
                 <td id="projects-dpextras" class="projects" data-project-desc="Extra utility modules for discord.py" data-github-slug="kcomain/dpextras" data-wakatime-slug="kcomain/dpextras" data-project-name="dpextras"><i class="fab fa-python"></i> <a href="https://github.com/kcomain/dpextras">dpextras</a></td>
             </tr>
             <tr>
-                <td id="info-pronouns" style="color: white;"><i class="fas fa-user-alt" aria-label="Pronouns" title="Pronouns"></i> she/her</td>
+                <td id="info-pronouns" style="color: white;"><i class="fas fa-user-alt" aria-label="Pronouns" title="Pronouns"></i> <span id='info-pronoun'>she/her</span></td>
                 <td><i class="fab fa-github-alt" aria-label="GitHub Profile" title="GitHub"></i> <a href="//github.com/kcomain">kcomain</a></td>
             </tr>
             <tr>
@@ -74,6 +74,7 @@
 </footer>
 <script src="/scripts/job_updater.js"></script>
 <script src="/scripts/load_poppers.js"></script>
+<script src="/scripts/pronouns.js"></script>
 <script>
     'use strict';
     const age = document.getElementById('age')
@@ -87,6 +88,7 @@
 
     loadPoppers()
     loadProjects()
+    loadPronouns()
 
     // for (let i of document.getElementsByClassName("projects")) {
     //     tippy(i, {
