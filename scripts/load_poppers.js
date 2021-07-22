@@ -6,10 +6,11 @@ function loadProjects() {
         } else {
             licensetext = `<img alt="GitHub" src="https://img.shields.io/github/license/${i.getAttribute('data-github-slug')}?color=7af">`
         }
+        console.log('license text is: ' + licensetext)
         tippy(i, {
             content: i.getAttribute('data-project-desc') + "<br>" +
                      `<img src="https://wakatime.com/badge/github/${i.getAttribute("data-wakatime-slug")}.svg" ` +
-                     `alt="wakatime stats for the ${i.getAttribute("data-project-name")} project" />` +
+                     `alt="wakatime stats for the ${i.getAttribute("data-project-name")} project" /> ` +
                      licensetext,
             allowHTML: true
         })

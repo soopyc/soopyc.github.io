@@ -21,7 +21,7 @@
     <p class="center"><a href="/about/javascript.html" data-jslicense="1"><i class="fab fa-js-square"></i> License</a></p>
     <div class="flex-container">
         <table style="width: 50%" class="mono">
-            <!-- this is a really really really really bad way of doing it but i can't be bothered -->
+            <!-- this is a really really really really bad way of doing this but i can't be bothered -->
             <tr>
                 <td class="head">personal stuff</td>
                 <td class="head">social media/sns</td>
@@ -69,7 +69,7 @@
     <p>
         <a href="https://github.com/kcomain/kcomain.github.io"><i class="fas fa-code-branch"></i> Source</a> |
         &copy; Copyright kcomain (2021-present) | 
-        <i class="fas fa-certificate"></i> MIT
+        <i class="fas fa-certificate" aria-label="License used" title="License"></i> MIT
     </p>
 </footer>
 <script src="/scripts/job_updater.js"></script>
@@ -82,21 +82,20 @@
 
     tippy('#info-discord', {content: "I might deny your friend request if you send me<br> " +
                                      "one out of the blue and we share no common servers.", allowHTML: true})
-
-    //tippy('#info-pronouns', {content: "(experimental) she/her",})
     
     tippy('#info-fsf', {content: "Become a FSF Associate Member"})
 
     loadPoppers()
+    loadProjects()
 
-    for (let i of document.getElementsByClassName("projects")) {
-        tippy(i, {
-            content: i.getAttribute('data-project-desc') + "<br>" +
-                     `<img src="https://wakatime.com/badge/github/${i.getAttribute("data-wakatime-slug")}.svg" ` +
-                     `alt="wakatime stats for the ${i.getAttribute("data-project-name")} project" />`,
-            allowHTML: true
-        })
-    }
+    // for (let i of document.getElementsByClassName("projects")) {
+    //     tippy(i, {
+    //         content: i.getAttribute('data-project-desc') + "<br>" +
+    //                  `<img src="https://wakatime.com/badge/github/${i.getAttribute("data-wakatime-slug")}.svg" ` +
+    //                  `alt="wakatime stats for the ${i.getAttribute("data-project-name")} project" />`,
+    //         allowHTML: true
+    //     })
+    // }
 </script>
 </body>
 </html>
