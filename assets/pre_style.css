@@ -14,7 +14,8 @@
 }
 
 html {
-    background-color: lightsteelblue;
+    background-color: #3b3b3b;
+    /*background-color: lightsteelblue;*/
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -60,7 +61,7 @@ small {
 }
 
 .hidden {
-    color: lightsteelblue;
+    color: transparent;
 }
 
 .footer {
@@ -77,6 +78,24 @@ small {
 
 @media (hover: hover){
     .mobile {
-        display: none
+        display: none;
     }
+}
+
+:root {
+    --mblue: #55cdfc;
+    --apink: #f7a8b8;
+    color: #fff;
+}
+
+a {
+    color: var(--mblue);
+}
+
+a:visited {
+    color: var(--apink);
+}
+
+a:active{
+    color: white;
 }
