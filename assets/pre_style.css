@@ -88,8 +88,12 @@ small {
     color: #fff;
 }
 
+a {
+    color: var(--mblue);
+}
+
 a:visited {
-    color: #7788ff
+    color: #7788ff;
 }
 
 table a {
