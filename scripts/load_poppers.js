@@ -1,9 +1,10 @@
 function loadProjects() {
     for (let i of document.getElementsByClassName("projects")) {
+        let licensetext
         if (i.hasAttribute('data-badge-license-disable') && i.getAttribute('data-badge-license-disable') === 'true') {
-            const licensetext = ''
+            licensetext = ''
         } else {
-            const licensetext = `<img alt="GitHub" src="https://img.shields.io/github/license/${i.getAttribute('data-github-slug')}?color=7af">`
+            licensetext = `<img alt="GitHub" src="https://img.shields.io/github/license/${i.getAttribute('data-github-slug')}?color=7af">`
         }
         tippy(i, {
             content: i.getAttribute('data-project-desc') + "<br>" +

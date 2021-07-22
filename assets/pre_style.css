@@ -71,6 +71,10 @@ small {
     width: 100%;
 }
 
+.footer p {
+    padding-left: 10%;
+}
+
 @media (hover: hover){
     .mobile {
         display: none
