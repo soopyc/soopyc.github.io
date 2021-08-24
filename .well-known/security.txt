@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:security@kcomain.dev
+Expires: 2021-12-31T16:00:00.000Z
+Encryption: https://raw.github.com/kcomain/kcomain/master/id_ed25519.pub
+Preferred-Languages: en, yue
+Canonical: https://kcomain.dev/.well-known/security.txt
+Canonical: https://github.com/kcomain/kcomain.github.io/blob/master/.well-known/security.txt
+
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQQxwgq7ng8y0bgd5MiiiP5d4JMp/QUCYSRtowAKCRCiiP5d4JMp
+/R9jAP0bCv/Eip62cIhG+rGikp+ijxS5FA54fexHBhUPtDP/ZgEAmtoDGwXGtbbX
+yTmfKHHxGeP390DFDA4VFSmssYVCvAY=
+=fBua
+-----END PGP SIGNATURE-----
