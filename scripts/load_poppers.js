@@ -1,25 +1,25 @@
 function loadProjects() {
     for (let i of document.getElementsByClassName("projects")) {
-        let licensetext
+        let licensetext;
         if (i.hasAttribute('data-badge-license-disable') && i.getAttribute('data-badge-license-disable') === 'true') {
-            licensetext = ''
+            licensetext = '';
         } else {
-            licensetext = `<img alt="GitHub" src="https://img.shields.io/github/license/${i.getAttribute('data-github-slug')}?color=7af">`
+            licensetext = `<img alt="GitHub" src="https://img.shields.io/github/license/${i.getAttribute('data-github-slug')}?color=7af">`;
         }
-        console.log('license text is: ' + licensetext)
+        console.log('license text is: ' + licensetext);
         tippy(i, {
             content: i.getAttribute('data-project-desc') + "<br>" +
                      `<img src="https://wakatime.com/badge/github/${i.getAttribute("data-wakatime-slug")}.svg" ` +
                      `alt="wakatime stats for the ${i.getAttribute("data-project-name")} project" /> ` +
                      licensetext,
             allowHTML: true
-        })
+        });
     }
 }
 
 function loadPoppers() {
-    const test = document.getElementById("test0")
+    const test = document.getElementById("test0");
     for (let i of document.getElementsByName('*')){
-        test.innerHTML += i
+        test.innerHTML += i;
     }
 }
