@@ -21,7 +21,11 @@
   "dependencies": {
     "autoprefixer": "^10.3.1",
     "cssnano": "^5.0.6",
+    "jshint": "^2.13.1",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1"
+  },
+  "jshintConfig": {
+    "esversion": 6
   }
 }
