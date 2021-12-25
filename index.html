@@ -94,7 +94,7 @@
     'use strict';
     const age = document.getElementById('age')
     const birth = new Date('2005-12-26')
-    age.innerText = `about ${Math.floor((new Date() - birth) / 31557600000)}`
+    age.innerText = `about ${Math.ceil((new Date() - birth) / 31557600000)}`
 
     tippy('#info-discord', {content: "I might deny your friend request if you send me<br> " +
                                      "one out of the blue and we share no common servers.", allowHTML: true})
