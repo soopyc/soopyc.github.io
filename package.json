@@ -1,23 +1,23 @@
 {
-  "name": "kcomain.github.io",
-  "version": "0.1.0",
-  "description": "kcomain's site",
+  "name": "soopyc.github.io",
+  "version": "0.1.1",
+  "description": "sooypc's site",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prefix": "npx postcss assets/pre_style.css --use autoprefixer > assets/style.css",
-    "build": "postcss assets/pre_style.css > assets/style.css"
+    "build": "postcss assets/pre_style.css > assets/style.css && rm -fr build && mkdir build -p && cp -r * .well-known build || true"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kcomain/kcomain.github.io.git"
+    "url": "git+https://github.com/soopyc/soopyc.github.io.git"
   },
-  "author": "kcomain",
+  "author": "soopyc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kcomain/kcomain.github.io/issues"
+    "url": "https://github.com/soopyc/soopyc.github.io/issues"
   },
-  "homepage": "https://github.com/kcomain/kcomain.github.io#readme",
+  "homepage": "https://github.com/soopyc/soopyc.github.io#readme",
   "dependencies": {
     "autoprefixer": "^10.3.1",
     "cssnano": "^5.0.6",

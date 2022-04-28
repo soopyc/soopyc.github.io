@@ -24,6 +24,7 @@
     <a href="//github.com/soopyc"><img src="//github.com/soopyc.png" alt="kcomain's avatar taken from github" class="avatar"></a>
 <!--        <h2 class="mono">home</h2>-->
     <p class="center">just a normal <span id="job" style="color: #007ddd">human</span></p>
+    <p class="center" style="color: rgb(111, 169, 255)"><i class="fas fa-info-circle"></i> This page sucks, I'm working on <a href="//preview.soopy.moe" title="link to the rewrite of the current site">a</a> new version. Expect your eyes to be burned. (it's light mode)</p>
     <p class="center"><a href="/about/javascript.html" data-jslicense="1"><i class="fab fa-js-square"></i> License</a></p>
     <div class="flex-container">
         <table style="width: 50%" class="mono">
@@ -40,13 +41,13 @@
                 <td id="projects-cypher" class="projects" data-project-desc="Versatile Discord server management bot" data-github-slug="tempus-dev/cypher" data-badge-license-disable="true" data-wakatime-slug="kcomain/cypher" data-project-name="cypher"><i class="fab fa-python"></i> <a href="//www.cypherbot.org">Cypher</a></td>
             </tr>
             <tr>
-                <td style="color: var(--apink);"><i class="fas fa-calendar-day" title="Age"></i> <span id="age" title="Birth date: 26th December, 2005"><small>js disabled, hover to see date</small></span></td>
-                <td><i class="fab fa-twitter" title="Twitter"></i> <a href="//twitter.com/kcomain1">@kcomain1</a></td>
+                <td style="color: var(--apink);"><i class="fas fa-calendar-day" title="Age"></i> <span id="age" title="Birthday: 26th December, 2005"><small>js disabled, hover to see date</small></span></td>
+                <td id="info-twitter"><del><i class="fab fa-twitter" title="Twitter"></i> <a href="//twitter.com/kcomain1">@kcomain1</a></del></td>
                 <td id="projects-dpextras" class="projects" data-project-desc="Extra utility modules for discord.py" data-github-slug="kcomain/dpextras" data-wakatime-slug="kcomain/dpextras" data-project-name="dpextras"><i class="fab fa-python"></i> <a href="https://github.com/kcomain/dpextras">dpextras</a></td>
             </tr>
             <tr>
                 <td id="info-pronouns" style="color: white;"><i class="fas fa-user-alt" title="Pronouns"></i> <span id='info-pronoun'>she/her</span></td>
-                <td id="info-discord" style="color: #5865F2 !important"><i class="fab fa-discord" title="Discord"></i> <a href="//discord.com/users/397029587965575170">soopyc#1600</a></td>
+                <td id="info-discord" style="color: #5865F2 !important"><i class="fab fa-discord" title="Discord"></i> <a href="//discord.com/users/397029587965575170">sophie#1320</a></td>
                 <td id="projects-unnamed-launcher" class="projects" data-project-desc="Yet another 2hu launcher" data-github-slug="kcomain/unnamed-launcher" data-wakatime-slug="kcomain/unnamed-launcher" data-project-name="unnamed-launcher"><i class="fab fa-python"></i> <a href="https://github.com/kcomain/unnamed-launcher">unnamed-launcher</a></td>
             </tr>
             <tr>
@@ -56,7 +57,7 @@
             </tr>
             <tr>
                 <td style="color: var(--mblue);"><i class="fas fa-globe-asia" title="Location"></i> Hong Kong</td>
-                <td style="color: #fc6d26"><i class="fab fa-gitlab" title="GitLab"></i> <a href="//gitlab.com/kcomain">kcomain</a></td>
+                <td style="color: #fc6d26"><i class="fab fa-gitlab" title="GitLab"></i> <a href="//koakuma.soopy.moe/soopyc">soopyc</a></td>
             </tr>
             <tr>
                 <td id="info-fsf"><i class="fas fa-heart"></i> <a href="https://my.fsf.org/join?referrer=5051898">open source</a></td>
@@ -64,7 +65,7 @@
             </tr>
             <tr>
                 <td><i class="far fa-chart-bar"></i> <a href="/stats.html">stats</a></td>
-                <td><i class="fab fa-mastodon" title="Mastodon"></i> <a rel="me" href="https://mastodon.social/@kcomain">kcomain</a></td>
+                <td><i class="fab fa-mastodon" title="Mastodon"></i> <a rel="me" href="https://tech.lgbt/@soopyc">soopyc@tech.lgbt</a></td>
             </tr>
             <tr>
                 <td></td>
@@ -95,11 +96,15 @@
     const age = document.getElementById('age')
     const birth = new Date('2005-12-26')
     age.innerText = `about ${Math.floor((new Date() - birth) / 31557600000)}`
+    // tippy.setDefaultProps({
+        
+    // })
 
-    tippy('#info-discord', {content: "I might deny your friend request if you send me<br> " +
-                                     "one out of the blue and we share no common servers.", allowHTML: true})
+    tippy('#info-discord', {content: "I might deny your friend request if you send me " +
+                                     "one out of the blue and we share no common servers.", allowHTML: true, placement: 'top-start'})
     
     tippy('#info-fsf', {content: "Become a FSF Associate Member"})
+    tippy('#info-twitter', {content: "Stopped using Twitter for the time being. Will probably start using mastodon, see link below."})
 
     loadPoppers()
     loadProjects()
