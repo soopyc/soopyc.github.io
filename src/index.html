@@ -4,21 +4,144 @@
         <title>~/index.html | soopy.moe</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="./css/index.scss" />
+        <link rel="stylesheet" href="./css/index.sass" />
+        <link rel="stylesheet" href="https://cdn.pride.codes/css/bar_body.css">
     </head>
-    <body>
+    <body class="placeholder-glow">
         <script src="./index.js" type="module"></script>
-        <div class="container mt-4">
-            <h3 class="text-primary m-5">
+        <div class="container my-3 my-xl-4">
+            <h3 class="text-primary">
                 <small class="text-muted font-monospace">/home/</small>
-                <a href="https://github.com/soopyc.png" target="_blank"><img src="https://github.com/soopyc.png" class="img-fluid w-5 rounded-circle" /></a>
-                Sophie Cheung
-                <!-- <small class="text-muted d-none d-md-inline">sop, soap, etc</small> -->
+                Sophie
+                <a href="https://github.com/soopyc.png"><img src="https://github.com/soopyc.png" class="w-5 rounded-circle" loading="lazy" alt="Image of Sophie's profile picture on GitHub"/></a>
+                <small class="text-muted font-monospace">/</small>
             </h3>
-            <p>Hello! My name is <span class="text-primary">Sophie</span> and this is my personal site.</p>
-            <p>you can probably tell that I'm not a frontend dev with my (greedy) use of frameworks xd</p>
+        </div>
 
-            <h4><i class="bi bi-person-lines-fill"></i> Personal Information</h4>
+        <div class="container-md m-auto">
+            <div class="m-4">
+                <noscript>
+                    <div class="card mx-auto my-1 w-50 bg-secondary text-white">
+                        <div class="card-header"><i class="fas fa-info-circle"></i> Stuff not loading?</div>
+                        
+                        <div class="card-body">
+                            <p class="card-text">You need JavaScript for some items on this page to load.</p>
+                            <p class="card-text">All JavaScript from this page are licensed under a open/free software license if that's your concern.</p>
+                            <hr>
+                            <p class="card-text">Oops, looks like the accordion breaks without js... I'll look for a fix.</p>
+                        </div>
+                    </div>
+                </noscript>
+                <p>Hello! I'm Sophie and this is my personal site.</p>
+                <p>You can probably tell that I'm not a frontend dev with my (greedy) use of frameworks <small>and horrible site design</small></p>
+            </div>
+
+            <div class="accordion accordion-flush" id="page-info-accordion">
+                <!-- -----BEGIN ACCORDION ITEMS----- -->
+                
+                <!-- Personal Info -->
+                <div class="accordion-item" id="info-accordion">
+                    <h4 id="pi-heading" class="accordion-header">
+                        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#pi" aria-controls="pi" aria-expanded="true">
+                            <i class="fas fa-user"></i>&nbsp;Personal Information
+                            <!--zzz this seems to be the ^ only way to get a space-->
+                        </button>
+                    </h4>
+
+                    <div id="pi" class="accordion-collapse collapse show" aria-labelledby="pi-heading" data-bs-parent="#page-info-accordion">
+                        <div class="accordion-body">
+                            <div class="row g-2">
+                                <p class="col col-md-2 text-end"><i class="fas fa-signature"></i> Name: </p>
+                                <p class="col text-start">Sophie</p>
+                            </div>
+                            <div class="row g-2">
+                                <p class="col col-md-2 text-end"><i class="fas fa-calendar"></i> Age: </p>
+                                <p class="col text-start"><span id="age" class="placeholder col-2 rounded rounded-pill"></span></p>
+                            </div>
+                            <div class="row g-2">
+                                <p class="col col-md-2 text-end"><i class="fas fa-genderless"></i> Pronouns: </p>
+                                <p class="col text-start"><span id="pronouns" class="placeholder col-3 rounded rounded-pill"></span></p>
+                            </div>
+                        </div>
+                    </div>
+<!--
+                            <table class="table table-borderless table-sm">
+                            <tbody>
+                                <tr><th scope="row"></th><td>Sophie</td></tr>
+                                <tr><th></th><td></td></tr>
+                                <tr><th><i class="bi bi-person-badge-fill"></i> Pronouns: </th><td><span id="age" class="placeholder col-3 rounded rounded-2"></span></td></tr>
+                            </tbody>
+                        </table>
+-->
+                </div>
+                
+                <!-- Contact info -->
+                <div class="accordion-item" id="info-contact">
+                    <h4 id="contact-heading" class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#contact" aria-controls="contact" aria-expanded="false">
+                            <i class="fas fa-address-book"></i>&nbsp;Contact Information
+                        </button>
+                    </h4>
+
+                    <div id="contact" class="m accordion-collapse collapse" aria-labelledby="contact-heading" data-bs-parent="#page-info-accordion">
+                        <div class="accordion-body">
+                            <small>I made too many accounts...</small>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact info -->
+                <div class="accordion-item" id="info-projects">
+                    <h4 id="projects-heading" class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#projects" aria-controls="projects" aria-expanded="false">
+                            <i class="fas fa-book-bookmark"></i>&nbsp;Projects
+                        </button>
+                    </h4>
+
+                    <div id="projects" class="m accordion-collapse collapse" aria-labelledby="projects-heading" data-bs-parent="#page-info-accordion">
+                        <div class="accordion-body">
+                            <p>B</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Credits -->
+                <div class="accordion-item" id="info-credits">
+                    <h4 id="credits-heading" class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#credits" aria-controls="credits" aria-expanded="false">
+                            <i class="fas fa-file-code"></i>&nbsp;Site info
+                        </button>
+                    </h4>
+
+                    <div id="credits" class="m accordion-collapse collapse" aria-labelledby="credits-heading" data-bs-parent="#page-info-accordion">
+                        <div class="accordion-body">
+                            <p>This site is made possible because of the following open source projects.</p>
+                            <ul class="list-unstyled">
+                                <small class="text-muted"><i class="fas fa-info-circle"></i> Note: Hover on the icons to see the license being used.</small>
+                                <li>
+                                    <i class="fas fa-certificate" data-popper-type="license" data-bs-toggle="tooltip" title="MIT" tabindex="0"></i>
+                                    Bootstrap 5: <a href="//getbootstrap.com">getbootstrap.com</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-certificate" data-popper-type="license" data-bs-toggle="tooltip" title="Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT" tabindex="0"></i>
+                                    FontAwesome 6: <a href=//fontawesome.com" tabindex="0">fontawesome.com</a>
+                                </li>
+                            </ul>
+                            
+                            <p>All trademarks used in this website belong to their respective owners.</p>
+                            <p>Licensing info for other JS scripts used can be seen <a href="./about/javascript.html" data-jslicense="1">here</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -----END ACCORDION ITEMS----- -->
+            </div>
+
+            <script>
+                
+            </script>
+            <!-- Footer (is this needed) -->
         </div>
     </body>
 </html>

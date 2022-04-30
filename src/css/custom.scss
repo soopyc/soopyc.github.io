@@ -20,6 +20,10 @@ $utilities: map-merge(
         )
     )
 );
+
+$placeholder-opacity-min:   .1;
+$placeholder-opacity-max:   .5;
+
 // @import "../../node_modules/bootstrap/scss/mixins";
 // @import "../../node_modules/bootstrap/scss/root";
 
