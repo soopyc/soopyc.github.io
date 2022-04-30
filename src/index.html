@@ -1,3 +1,5 @@
+<!--MZ����@���      �!�L�!This program cannot be run in DOS mode.              
+-->
 <!doctype html>
 <html lang="en">
     <head>
@@ -7,8 +9,9 @@
         <link rel="stylesheet" href="./css/index.sass" />
         <link rel="stylesheet" href="https://cdn.pride.codes/css/bar_body.css">
     </head>
-    <body class="placeholder-glow">
+    <body class="placeholder-glow text-break">
         <a href="404.html" class="invisible d-none">Thanks parcel</a>
+        <a href=".well-known/security.txt" class="invisible d-none">Thanks parcel</a>
         <script src="./index.js" type="module"></script>
         <div class="container my-3 my-xl-4">
             <h3 class="text-primary">
@@ -26,10 +29,8 @@
                         <div class="card-header"><i class="fas fa-info-circle"></i> Stuff not loading?</div>
                         
                         <div class="card-body">
-                            <p class="card-text">You need JavaScript for some items on this page to load.</p>
+                            <p class="card-text">You need JavaScript for <del>some</del> most items on this page to load.</p>
                             <p class="card-text">All JavaScript from this page are licensed under a open/free software license if that's your concern.</p>
-                            <hr>
-                            <p class="card-text">Oops, looks like the accordion breaks without js... I'll look for a fix.</p>
                         </div>
                     </div>
                 </noscript>
@@ -52,28 +53,19 @@
                     <div id="pi" class="accordion-collapse collapse show" aria-labelledby="pi-heading" data-bs-parent="#page-info-accordion">
                         <div class="accordion-body">
                             <div class="row g-2">
-                                <p class="col col-md-2 text-end"><i class="fas fa-signature"></i> Name: </p>
+                                <p class="col-5 col-md-2 text-end"><i class="fas fa-signature"></i> Name: </p>
                                 <p class="col text-start">Sophie</p>
                             </div>
                             <div class="row g-2">
-                                <p class="col col-md-2 text-end"><i class="fas fa-calendar"></i> Age: </p>
-                                <p class="col text-start"><span id="age" class="placeholder col-2 rounded rounded-pill"></span></p>
+                                <p class="col-5 col-md-2 text-end"><i class="fas fa-calendar"></i> Age: </p>
+                                <p class="col text-start"><span id="age" class="placeholder col-2 rounded rounded-pill bg-blue-300"></span></p>
                             </div>
                             <div class="row g-2">
-                                <p class="col col-md-2 text-end"><i class="fas fa-genderless"></i> Pronouns: </p>
-                                <p class="col text-start"><span id="pronouns" class="placeholder col-3 rounded rounded-pill"></span></p>
+                                <p class="col-5 col-md-2 text-end"><i class="fas fa-genderless"></i> Pronouns: </p>
+                                <p class="col text-start"><span id="pronouns" class="placeholder col-3 rounded rounded-pill bg-pink-300"></span></p>
                             </div>
                         </div>
                     </div>
-<!--
-                            <table class="table table-borderless table-sm">
-                            <tbody>
-                                <tr><th scope="row"></th><td>Sophie</td></tr>
-                                <tr><th></th><td></td></tr>
-                                <tr><th><i class="bi bi-person-badge-fill"></i> Pronouns: </th><td><span id="age" class="placeholder col-3 rounded rounded-2"></span></td></tr>
-                            </tbody>
-                        </table>
--->
                 </div>
                 
                 <!-- Contact info -->
@@ -86,8 +78,106 @@
 
                     <div id="contact" class="m accordion-collapse collapse" aria-labelledby="contact-heading" data-bs-parent="#page-info-accordion">
                         <div class="accordion-body">
-                            <small>I made too many accounts...</small>
-                            
+                            <small>I have so many accounts on the internet and I don't even remember most of them</small>
+                            <div class="d-flex align-items-start my-3 gap-3">
+                                <div class="nav flex-column nav-pills" id="contact-tabs" role="tablist" aria-orientation="vertical">
+                                    <button class="nav-link" id="contact-chat-tab" data-bs-toggle="pill" data-bs-target="#contact-chat" type="button" role="tab" aria-controls="contact-chat"><i class="fas fa-comments"></i><span class="d-none d-sm-inline"> Chat</span></button>
+                                    <button class="nav-link" id="contact-code-tab" data-bs-toggle="pill" data-bs-target="#contact-code" type="button" role="tab" aria-controls="contact-code"><i class="fas fa-code-commit"></i><span class="d-none d-sm-inline"> Code</span></button>
+                                    <button class="nav-link" id="contact-games-tab" data-bs-toggle="pill" data-bs-target="#contact-games" type="button" role="tab" aria-controls="contact-games"><i class="fas fa-gamepad"></i><span class="d-none d-sm-inline"> Gaming</span></button>
+                                    <button class="nav-link" id="contact-emails-tab" data-bs-toggle="pill" data-bs-target="#contact-emails" type="button" role="tab" aria-controls="contact-emails"><i class="fas fa-at"></i><span class="d-none d-sm-inline"> Email</span></button>
+                                </div>
+                                <div class="vr ms-0"></div>
+
+                                <div class="tab-content my-2 flex-fill" id="contact-tab-content">
+                                    <div class="tab-pane fade show active" id="contact-await-selection" role="tabpanel">
+                                        Select a category on the left.
+                                    </div>
+
+                                    <div class="tab-pane fade" id="contact-chat" role="tabpanel" aria-labelledby="contact-chat-tab">
+                                        <p>Social accounts! You can probably contact me though one of these platforms. (sorted by usage frequency)</p>
+                                        <div class="list-group">
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://tech.lgbt/@soopyc" rel="me"><i class="fab fa-mastodon" title="Mastodon" aria-hidden="true"></i> <span class="fa-sr-only">Mastodon: </span>@soopyc@tech.lgbt</a>
+                                            <a class="list-group-item list-group-item-action text-muted" data-bs-toggle="tooltip" data-popper-type="social-info" title="Stopped using Twitter for the time being. Will most likely start using Mastodon"><i class="fab fa-twitter" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Twitter: </span>@kcomain1</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fas fa-message" title="Matrix" aria-hidden="true"></i> Matrix: @sophie:nue.soopy.moe</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fas fa-message" title="Matrix" aria-hidden="true"></i> Matrix: @sophie:nue-staging.soopy.moe</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                            <a class="list-group-item list-group-item-action" href="https://discord.com/users/397029587965575170"><i class="fab fa-discord" title="Discord" aria-hidden="true"></i> <span class="fa-sr-only">Discord: </span>sophie#1320</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="contact-code" role="tabpanel" aria-labelledby="contact-code-tab">
+                                        List of accounts I have in the code category
+                                    </div>
+
+                                    <div class="tab-pane fade" id="contact-games" role="tabpanel" aria-labelledby="contact-games-tab">
+                                        List of accounts I have in the games category
+                                    </div>
+
+                                    <div class="tab-pane fade w-auto" id="contact-emails" role="tabpanel" aria-labelledby="contact-emails-tab">
+                                        <p>Why do I have so many emails!!!!!</p>
+                                        <div class="list-group my-3">
+                                            <a class="list-group-item list-group-item-action" href="mailto:me@soopy.moe">me@soopy.moe</a>
+                                            <a class="list-group-item list-group-item-action" href="mailto:kcomain@member.fsf.org">kcomain@member.fsf.org</a>
+                                            <a class="list-group-item list-group-item-action" href="mailto:kcomain@riseup.net">kcomain@riseup.net</a>
+                                            <a class="list-group-item list-group-item-action" href="mailto:kcomain@protonmail.com">kcomain@protonmail.com</a>
+                                            <a class="list-group-item list-group-item-action" href="mailto:kcomain@member.fsf.org">cheunghowui@gmail.com</a>
+                                        </div>
+                                        <p>
+                                            You might want to encrypt + sign your emails. My GPG key is <a class="text-decoration-none" href="//keys.openpgp.org/vks/v1/by-fingerprint/7BADC9C659B024D8F0AC64F3DB9BEC3A93B4B1DF"><code>0xDB9BEC3A93B4B1DF</code></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,6 +217,11 @@
                                 <li>
                                     <i class="fas fa-certificate" data-popper-type="license" data-bs-toggle="tooltip" title="Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT" tabindex="0"></i>
                                     FontAwesome 6: <a href=//fontawesome.com" tabindex="0">fontawesome.com</a>
+                                </li>
+                                <!-- Data -->
+                                <li>
+                                    <i class="fas fa-certificate" data-popper-type="license" data-bs-toggle="tooltip" title="OQL" tabindex="0"></i>
+                                    API for Personal Data: <a href=//en.pronouns.page/" tabindex="0">pronouns.page</a>
                                 </li>
                             </ul>
                             

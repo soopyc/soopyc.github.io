@@ -4,7 +4,7 @@ import {debug} from 'debug';
 localStorage.debug = '*'
 
 const mainLogger = debug("main");
-mainLogger("Hello");
+mainLogger("Hello world");
 
 /**
  * Initialize popper types
@@ -12,6 +12,7 @@ mainLogger("Hello");
  * @returns {Array}
  */
 function loadPoppers(type) {
+    mainLogger(`loading poppers with type ${type}`)
     const poppers = [].slice.call(document.querySelectorAll(`[data-bs-toggle="tooltip"][data-popper-type="${type}"]`));
     mainLogger(`Found ${poppers.length} popper elements with type ${type}`)
     const popperList = poppers.map(element => {
@@ -31,3 +32,4 @@ function loadPoppers(type) {
 //     module.hot.accept();
 // }
 loadPoppers("license");
+loadPoppers("social-info")
