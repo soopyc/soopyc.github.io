@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "parcel ./src/index.html",
     "prebuild": "yarn rimraf build",
-    "build": "parcel build --public-url ./ ./src/index.html --dist-dir build"
+    "build": "parcel build --public-url / ./src/index.html --dist-dir build",
+    "clean": "yarn rimraf build dist .parcel-cache"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   "dependencies": {},
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
+    "@parcel/reporter-bundle-analyzer": "^2.5.0",
     "@parcel/transformer-sass": "^2.5.0",
     "@popperjs/core": "^2.11.5",
     "@types/bootstrap": "^5.1.10",
