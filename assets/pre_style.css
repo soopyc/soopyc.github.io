@@ -107,3 +107,9 @@ table a:visited {
 table a:active, table a:hover{
     color: #d70270;
 }
+
+.d-none {
+  display: none;
+  visibility: hidden;
+}
+
