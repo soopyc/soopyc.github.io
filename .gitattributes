@@ -1,0 +1,6 @@
+static/fonts/KiwiMaru-Light.ttf filter=lfs diff=lfs merge=lfs -text
+static/fonts/KiwiMaru-Medium.ttf filter=lfs diff=lfs merge=lfs -text
+static/fonts/KiwiMaru-Regular.ttf filter=lfs diff=lfs merge=lfs -text
+static/fonts/KiwiMaru-Light.woff2 filter=lfs diff=lfs merge=lfs -text
+static/fonts/KiwiMaru-Medium.woff2 filter=lfs diff=lfs merge=lfs -text
+static/fonts/KiwiMaru-Regular.woff2 filter=lfs diff=lfs merge=lfs -text
