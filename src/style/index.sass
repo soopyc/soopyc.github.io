@@ -1,0 +1,133 @@
+@import "../../node_modules/firacode/distr/fira_code.css"
+@import "../../static/fonts/KiwiMaru"
+
+:root
+    color-scheme: light dark
+
+    --color-base: #191724
+    --color-surface: #1f1d2e
+    --color-overlay: #26233a
+    --color-muted: #6e6a86
+    --color-subtle: #908caa
+    --color-text: #e0def4
+    --color-love: #eb6f92
+    --color-gold: #f6c177
+    --color-rose: #ebbcba
+    --color-pine: #31748f
+    --color-foam: #9ccfd8
+    --color-iris: #c4a7e7
+    --hl-low: #21202e
+    --hl-med: #403d52
+    --hl-high: #524f67
+
+@media (prefers-color-scheme: light)
+    :root
+        --color-base: #faf4ed
+        --color-surface: #fffaf3
+        --color-overlay: #f2e9e1
+        --color-muted: #9893a5
+        --color-subtle: #797593
+        --color-text: #575279
+        --color-love: #b4637a
+        --color-gold: #ea9d34
+        --color-rose: #d7827e
+        --color-pine: #286983
+        --color-foam: #56949f
+        --color-iris: #907aa9
+        --hl-low: #f4ede8
+        --hl-med: #dfdad9
+        --hl-high: #cecacd
+
+html
+    background-color: var(--color-base)
+    transition: color 0.25s, background-color 0.15s
+    
+html, code, kbd, pre
+    font-family: "Fira Code VF", "Kiwi Maru Light", monospace
+    font-feature-settings: "cv01", "cv02", "ss01", "ss03", "ss05", "cv29", "ss02", "ss09"
+
+hr
+    width: 98%
+    border: none
+    margin-top: 1.5rem
+    margin-bottom: 1.5rem
+    border-top: 1px solid var(--color-subtle)
+
+small
+    color: var(--color-subtle)
+    font-size: 0.75em
+
+li
+    padding: 0.25rem
+
+code
+    padding: 1rem
+    border: solid 3px
+    border-color: var(--hl-med)
+    border-radius: 5px
+
+    display: block
+    transition: background-color 0.15s, border-color 0.25s
+    background-color: var(--hl-low)
+
+    &:hover, &:focus
+        border-color: var(--hl-high)
+
+h1, h2, h3, h4, h5, h6
+    font-weight: 300
+
+a
+    transition: color 0.25s
+    text-decoration: none
+    color: var(--color-pine)
+
+    &:hover, &:focus
+        color: var(--color-iris)
+        text-decoration: dashed underline
+
+.main
+    max-width: 650px
+    margin: auto
+
+.listing
+    div
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px dotted var(--color-muted)
+        padding: 5px 10px
+
+        &:hover, &:focus
+            background-color: var(--hl-low)
+
+    p
+        margin: 0
+
+.home
+    &::before
+        content: "~/"
+
+    &:hover::before, &:focus::before
+        content: "/home/"
+
+.hidden
+    display: none
+    visibility: hidden
+
+.cwd
+    color: var(--color-love)
+
+.gcb
+    font-weight: 200
+    font-variant-ligatures: none
+    user-select: all
+
+// List styles
+.list-none
+    list-style: none
+
+// THANKS TWEMOJI
+.emoji
+    display: inline-block
+    vertical-align: middle
+    height: 1.25em
