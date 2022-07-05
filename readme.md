@@ -1,5 +1,8 @@
 # soopyc.github.io
+Simple personal website
 
-simple personal webpage
+Live site at https://soopy.moe
 
-See current page at https://soopy.moe
+
+## Todo
+i forgor lmow
