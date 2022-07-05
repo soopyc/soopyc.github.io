@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        [
+            "git-version",
+            {
+                "showDirty": true,
+                "commitLength": 16
+            }
+        ]
+    ]
+}
