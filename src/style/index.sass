@@ -1,5 +1,11 @@
 @import "../../node_modules/firacode/distr/fira_code.css"
-@import "../../static/fonts/KiwiMaru"
+@import "../../static/fonts/ZenMaruGothic"
+
+$b-phone: 320px
+$b-tablet: 481px
+$b-smscreen: 769px
+$b-lgscreen: 1025px
+$b-xlscreen: 1201px
 
 :root
     color-scheme: light dark
@@ -43,7 +49,7 @@ html
     transition: color 0.25s, background-color 0.15s
     
 html, code, kbd, pre
-    font-family: "Fira Code VF", "Kiwi Maru Light", monospace
+    font-family: "Fira Code VF", "Zen Maru Gothic", monospace
     font-feature-settings: "cv01", "cv02", "ss01", "ss03", "ss05", "cv29", "ss02", "ss09"
 
 hr
@@ -87,7 +93,21 @@ a
 
 .main
     max-width: 650px
+    padding: 0 0.5em
     margin: auto
+
+.heading
+    .home
+        &::before
+            content: "~/"
+
+    &:hover, &:focus
+        .home::before
+            @media only screen and ( max-width: $b-smscreen )
+                content: "/h/s/"
+            
+            @media only screen and ( min-width: $b-smscreen )
+                content: "/home/soopyc/"
 
 .listing
     div
@@ -102,13 +122,6 @@ a
 
     p
         margin: 0
-
-.home
-    &::before
-        content: "~/"
-
-    &:hover::before, &:focus::before
-        content: "/home/"
 
 .hidden
     display: none
