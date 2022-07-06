@@ -2,7 +2,7 @@
 // Licensed under OFL-1.1
 
 @font-face {
-    font-family: 'Kiwi Maru';
+    font-family: 'Zen Maru Gothic';
     font-weight: 300;
     font-style: normal;
     src: url('/static/fonts/ZenMaruGothic-Light.woff2') format('woff2'),
@@ -10,31 +10,23 @@
 }
 
 @font-face {
-    font-family: 'Kiwi Maru Light';
-    font-weight: 300;
-    font-style: normal;
-    src: url('/static/fonts/ZenMaruGothic-Light.woff2') format('woff2'),
-         url('/static/fonts/ZenMaruGothic-Light.ttf') format('ttf')
-}
-
-@font-face {
-    font-family: 'Kiwi Maru';
+    font-family: 'Zen Maru Gothic';
     font-weight: 400;
     font-style: normal;
-    src: url('/static/fonts/ZenMaruGothic-Regular.woff2') format('woff2')
-         url('/static/fonts/ZenMaruGothic-Regular.ttf') format('ttf');
+    src: url('/static/fonts/ZenMaruGothic-Regular.woff2') format('woff2'),
+         url('/static/fonts/ZenMaruGothic-Regular.ttf') format('ttf')
 }
 
 @font-face {
-    font-family: 'Kiwi Maru';
+    font-family: 'Zen Maru Gothic';
     font-weight: 500;
     font-style: normal;
-    src: url('/static/fonts/ZenMaruGothic-Medium.woff2') format('woff2')
-         url('/static/fonts/ZenMaruGothic-Medium.ttf') format('ttf');
+    src: url('/static/fonts/ZenMaruGothic-Medium.woff2') format('woff2'),
+         url('/static/fonts/ZenMaruGothic-Medium.ttf') format('ttf')
 }
 
 @font-face {
-    font-family: 'Kiwi Maru';
+    font-family: 'Zen Maru Gothic';
     font-weight: 700;
     font-style: normal;
     src: url('/static/fonts/ZenMaruGothic-Bold.woff2') format('woff2'),
@@ -42,7 +34,7 @@
 }
 
 @font-face {
-    font-family: 'Kiwi Maru';
+    font-family: 'Zen Maru Gothic';
     font-weight: 900;
     font-style: normal;
     src: url('/static/fonts/ZenMaruGothic-Black.woff2') format('woff2'),
