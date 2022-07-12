@@ -113,20 +113,6 @@ a
         margin-bottom: 1.5rem
         border-top: 1px solid var(--color-subtle)
 
-.listing
-    div
-        display: flex
-        justify-content: space-between
-        align-items: center
-        border-bottom: 1px dotted var(--color-muted)
-        padding: 5px 10px
-
-        &:hover, &:focus
-            background-color: var(--hl-low)
-
-    p
-        margin: 0
-
 .hidden
     display: none
     visibility: hidden
@@ -147,6 +133,14 @@ a
 .emoji
     display: inline-block
     vertical-align: middle
-    height: 1.25em
+    height: 1em
+
+.hover-visible
+    transition: color 0.25s
+    color: var(--color-base)
+
+    &:hover, &:focus
+        color: var(--color-text)
+
 
 @import "./colors"
