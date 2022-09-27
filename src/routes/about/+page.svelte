@@ -5,6 +5,7 @@
 
     import Fediverse from "$lib/icons/fediverse.svelte";
     import Discord from "@svicons/simple-icons/discord.svelte";
+    import Discourse from "@svicons/simple-icons/discourse.svelte";
     import Osu from "@svicons/simple-icons/osu.svelte";
     import Matrix from "@svicons/simple-icons/matrix.svelte";
     import Box from "@svicons/bootstrap/box.svelte";
@@ -44,7 +45,7 @@
         <span class="text-gold">Physics</span> and <span class="text-gold">Computer Science</span>.
     </p>
     <p>
-        I also manages my own network of services and the infrastructure of them.
+        I also manage my own network of services and the infrastructure of them.
         See <a href="/sites">~/Sites</a> for more details
     </p>
 
@@ -94,8 +95,19 @@
                 </li>
                 <li>
                     <At height="1em" style="vertical-align: middle" />
-                    <span>Email: <a href="https://keyoxide.org/7badc9c659b024d8f0ac64f3db9bec3a93b4b1df">Keyoxide</a></span>
+                    <span>Email: <a href="https://keyoxide.org/hkp/me%40soopy.moe">Keyoxide</a></span>
                 </li>
+            </ul>
+        </div>
+    </details>
+
+    <hr>
+    <details open>
+        <summary>Services</summary>
+        <div class="list-none">
+            <ul>
+                <Discourse height="1em" style="vertical-align: middle" />
+                Discourse: <a href="//f.soopy.moe/u/sophie">@sophie (@f.soopy.moe)</a>
             </ul>
         </div>
     </details>
