@@ -1,2 +1,0 @@
-static/fonts/*.ttf filter=lfs diff=lfs merge=lfs -text
-static/fonts/*.woff2 filter=lfs diff=lfs merge=lfs -text
