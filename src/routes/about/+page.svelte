@@ -6,6 +6,7 @@
     import Fediverse from "$lib/icons/fediverse.svelte";
     import Discord from "@svicons/simple-icons/discord.svelte";
     import Discourse from "@svicons/simple-icons/discourse.svelte";
+    import Keybase from "@svicons/simple-icons/keybase.svelte"
     import Osu from "@svicons/simple-icons/osu.svelte";
     import Matrix from "@svicons/simple-icons/matrix.svelte";
     import Box from "@svicons/bootstrap/box.svelte";
@@ -60,6 +61,7 @@
     </p>
 
     <hr />
+    <!-- TODO: replace design with grid-like/table entries without username -->
     <details open>
         <summary>
             <abbr title="Social Networking Services" use:tippy={{}}>SNS</abbr>
@@ -85,6 +87,10 @@
                     <a href="https://m.soopy.moe/@sophie">@sophie@m.soopy.moe</a>
                 </li>
                 <li>
+                    <Keybase height="1em" style="vertical-align: middle" />
+                    Keybase: <a href="//keybase.io/kcomain">kcomain</a>
+                </li>
+                <li>
                     <span class="text-gold" use:tippy={{}} title="Avoid Discord where possible.">
                         <Discord height="1em" style="vertical-align: middle" />
                         Discord:
@@ -106,8 +112,10 @@
         <summary>Services</summary>
         <div class="list-none">
             <ul>
-                <Discourse height="1em" style="vertical-align: middle" />
-                Discourse: <a href="//f.soopy.moe/u/sophie">@sophie (@f.soopy.moe)</a>
+                <li>
+                    <Discourse height="1em" style="vertical-align: middle" />
+                    Discourse: <a href="//f.soopy.moe/u/sophie">@sophie (@f.soopy.moe)</a>
+                </li>
             </ul>
         </div>
     </details>
