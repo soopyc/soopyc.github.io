@@ -1,19 +1,49 @@
 <script lang="ts">
     import 'tippy.js/dist/tippy.css';
     import "../app.sass";
+    import { afterNavigate, beforeNavigate } from '$app/navigation';
     import { browser } from "$app/environment";
     import { page } from "$app/stores";
     import twemoji from "$lib/actions/twemoji";
 
+    // let navigating = false;
+    let navprogress = 30;
+    let navInterval: number;
+    let showProgress = false;
+
     export let timeDisplay: string = new Date().toLocaleString();
     setInterval(() => {
         timeDisplay = new Date().toLocaleString();
-    }, 255);
+    }, 250);
+
+    beforeNavigate(() => {
+        showProgress = true
+        navInterval = setInterval(() => {
+            navprogress += navprogress <= 90 ? 2.5 : navprogress < 95 ? 0.1 : 0
+        }, 500)
+    })
+
+    afterNavigate(() => {
+        console.log('interval', navInterval)
+        clearInterval(navInterval)
+        navprogress = 100;
+
+        setTimeout(() => {
+            showProgress = false
+        }, 300)
+
+        setTimeout(() => {
+            navprogress = 15
+        }, 500)
+    })
 </script>
 
 <svelte:head>
     <link rel="icon" href="https://github.com/soopyc.png" />
 </svelte:head>
+
+<div id="loadingBar" style:width={`${navprogress}%`} class:active={showProgress} />
+<!-- possible to set to active on startup, but need to find way to animate. -->
 
 <noscript>
     <div id="nojs">
@@ -95,6 +125,18 @@
 
     .current
         color: var(--color-rose)
+
+    #loadingBar
+        position: fixed
+        top: 0
+        left: 0
+        height: 0
+        background-color: var(--color-love)
+        transition-property: width, height
+        transition-duration: 150ms
+
+        &.active
+            height: 0.2rem
 
     #footer
         margin: 0 1rem
