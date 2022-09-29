@@ -71,7 +71,7 @@
         ->
         <a href="https://dev.to/galtzo/im-leaving-github-50ba" class="text-rose">Why not GitHub</a>
     </p>
-    <p>@ -> <a href="mailto:me@soopy.moe?title=Hello!" class="u-email">me@soopy.moe</a></p>
+    <p>@ -> <a href="mailto:me@soopy.moe?subject=Hello!" class="u-email">me@soopy.moe</a></p>
     <!-- What am I doing on Shitcord right now!? -->
 
     <p class="separator">transgender rights are human rights</p>
