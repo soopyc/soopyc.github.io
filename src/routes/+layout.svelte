@@ -14,9 +14,11 @@
     export let timeDisplay: string = new Date().toLocaleString();
     setInterval(() => {
         timeDisplay = new Date().toLocaleString();
-    }, 250);
+    }, 500);
 
+    // the first thing i did completely by myself without looking up guides and i'm happy with it
     beforeNavigate(() => {
+        navprogress = 5
         showProgress = true
         navInterval = setInterval(() => {
             navprogress += navprogress <= 90 ? 2.5 : navprogress < 95 ? 0.1 : 0
@@ -33,13 +35,13 @@
         }, 300)
 
         setTimeout(() => {
-            navprogress = 15
+            navprogress = 0
         }, 500)
     })
 </script>
 
 <svelte:head>
-    <link rel="icon" href="https://github.com/soopyc.png" />
+    <link rel="icon" href="https://www.libravatar.org/avatar/58a08528a7e2b3fd738b25d0c63f5c82?s=1024" />
 </svelte:head>
 
 <div id="loadingBar" style:width={`${navprogress}%`} class:active={showProgress} />
@@ -76,6 +78,7 @@
 <div id="nav">
     <a href="/" class:current={$page.url.pathname == "/"}>~/Home</a>
     <a href="/sites" class:current={$page.url.pathname == "/sites"}>~/Sites</a>
+    <a href="/projects" class:current={$page.url.pathname == "/projects"}>~/Projects</a>
     <a href="/about" class:current={$page.url.pathname == "/about"}>~/About</a>
 </div>
 <hr />

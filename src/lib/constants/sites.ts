@@ -7,7 +7,8 @@ const sites = {
     },
     lanyard: {
         websocket: "https://shitcord.soopy.moe/socket",
-        rest(userId: string) {return `https://shitcord.soopy.moe/v1/users/${userId}`}
+        rest(userId: string) {return `https://shitcord.soopy.moe/v1/users/${userId}`},
+        avatar(userId: string) {return `https://shitcord.soopy.moe/${userId}.webp`}
     },
     shitcord: {
         asset(appId: string, assetId: string) {return `https://cdn.discordapp.com/app-assets/${appId}/${assetId}.png`}
