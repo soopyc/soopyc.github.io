@@ -13,6 +13,8 @@
 <div class="content">
     <h2>Sites</h2>
     <p>An ever-expanding list because I don't like big corps having my data.</p>
+    <p><b>Service status: </b><a href="//status.soopy.moe">status.soopy.moe (GitHub)</a></p>
+    <!--TODO: Setup redundancy Incase server dies for below.-->
     <p>Running {data.xnix} {data.kernel}</p>
     <noscript>
         <p>
