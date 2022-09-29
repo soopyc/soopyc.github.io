@@ -45,7 +45,7 @@
     <p>
         <a href="//github.com/soopyc" class="text-muted">GitHub</a>
         ->
-        <a href="https://sanctum.geek.nz/why-not-github.html">Why not GitHub</a>
+        <a href="https://dev.to/galtzo/im-leaving-github-50ba">Why not GitHub</a>
     </p>
 
     <!-- What am I doing on Shitcord right now!? -->
