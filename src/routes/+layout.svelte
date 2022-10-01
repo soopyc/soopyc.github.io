@@ -94,7 +94,10 @@
         The source code of this site can be viewed
         <a href="//github.com/soopyc/soopyc.github.io">here</a>
     </p>
-    <p>future webrings here</p>
+    <p>
+        <a href="/badges">badges</a>
+        <span>future webrings here</span>
+    </p>
 </div>
 
 <style lang="sass">

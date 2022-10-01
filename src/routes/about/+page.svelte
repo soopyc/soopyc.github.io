@@ -54,7 +54,7 @@
         details
     </p>
 
-    <p>i use arch btw</p>
+    <p>arch linux user :33</p>
 
     <hr />
 
@@ -174,7 +174,8 @@
     //         padding: 0.5rem 1rem
 
     ul
-        margin-top: 0.15rem
+        padding-top: 0.15rem
+        margin: 0
 
     li
         padding-top: 0.25rem
@@ -186,10 +187,6 @@
 
     details > summary
         cursor: pointer
-
-    .no-space
-        margin: 0
-        padding: 0
 
     #discordAvatar
         border-radius: 50%
