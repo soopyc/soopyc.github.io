@@ -96,10 +96,16 @@
     </p>
     <p>
         <a href="/badges">badges</a>
+        <!--TODO: fix css because with this i can only be in 2 else it breaks on mobile and eventually on widescreen-->
         <span class="webring">
             <a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%97%93%E2%9C%B3%EF%B8%8F/previous">&lt;-</a>
             <a href="https://xn--sr8hvo.ws" title="IndieWeb Webring">🕸💍</a>
             <a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%97%93%E2%9C%B3%EF%B8%8F/next">-&gt;</a>
+        </span>
+        <span class="webring">
+            <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=soopyc">&lt;-</a>
+            <a href="https://webring.bucketfish.me/">🪣💍</a>
+            <a href="https://webring.bucketfish.me/redirect.html?to=next&name=soopyc">-&gt;</a>
         </span>
     </p>
 </div>
