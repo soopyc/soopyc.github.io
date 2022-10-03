@@ -120,6 +120,17 @@
                 <li>
                     <At height="1em" style="vertical-align: middle" />
                     <span>Email <a href="https://keyoxide.org/hkp/me%40soopy.moe">Keyoxide</a></span>
+                    <ul>
+                        <li>
+                            <a href="https://keys.openpgp.org/pks/lookup?op=get&options=mr&search=cheunghowui@gmail.com">OpenPGP Key via openpgp.org</a>
+                        </li>
+                        <li>
+                            <a href="https://openpgpkey.soopy.moe/.well-known/openpgpkey/soopy.moe/hu/s8y7oh5xrdpu9psba3i5ntk64ohouhga">... with WKD</a>
+                        </li>
+                        <li>
+                            <a href="/pgpkey.asc">... directly</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <span class="text-gold" use:tippy={{}} title="Avoid Discord where possible.">
