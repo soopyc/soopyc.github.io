@@ -1,0 +1,71 @@
+@import "../node_modules/firacode/distr/fira_code.css"
+@import "../static/fonts/KosugiMaru"
+
+$b-phone: 320px
+$b-tablet: 481px
+$b-smscreen: 769px
+$b-lgscreen: 1025px
+$b-xlscreen: 1201px
+
+:root
+    color-scheme: light dark
+    color: var(--color-text)
+
+    --color-base: #191724
+    --color-surface: #1f1d2e
+    --color-overlay: #26233a
+    --color-muted: #6e6a86
+    --color-subtle: #908caa
+    --color-text: #e0def4
+    --color-love: #eb6f92
+    --color-gold: #f6c177
+    --color-rose: #ebbcba
+    --color-pine: #31748f
+    --color-foam: #9ccfd8
+    --color-iris: #c4a7e7
+    --hl-low: #21202e
+    --hl-med: #403d52
+    --hl-high: #524f67
+
+@media (prefers-color-scheme: light)
+    :root
+        --color-base: #faf4ed
+        --color-surface: #fffaf3
+        --color-overlay: #f2e9e1
+        --color-muted: #9893a5
+        --color-subtle: #797593
+        --color-text: #575279
+        --color-love: #b4637a
+        --color-gold: #ea9d34
+        --color-rose: #d7827e
+        --color-pine: #286983
+        --color-foam: #56949f
+        --color-iris: #907aa9
+        --hl-low: #f4ede8
+        --hl-med: #dfdad9
+        --hl-high: #cecacd
+
+html
+    background-color: var(--color-base)
+    transition: color 0.25s, background-color 0.15s
+    scroll-behavior: smooth
+
+html, code, kbd, pre
+    font-family: "Fira Code VF", "Kosugi Maru", monospace
+    font-feature-settings: "cv01", "cv02", "ss01", "ss03", "ss05", "cv29", "ss02", "ss09"
+    overflow: scroll
+    overflow-wrap: break-word
+
+hr
+    max-width: 100vw
+    border: none
+    border-top: 1px solid var(--color-subtle)
+
+body
+    margin: auto
+    max-width: $b-smscreen
+
+@import './sass/icons'
+@import './sass/list'
+@import './sass/text'
+@import './sass/colors'

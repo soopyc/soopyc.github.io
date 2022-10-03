@@ -1,0 +1,27 @@
+// List styles
+
+li::before
+    content: "-> " !important
+    display: none
+    visibility: none
+
+.list-none
+    ul, ol
+        list-style: none
+        padding-left: 0.5rem
+        margin-left: 0.25rem
+
+// defaults
+.list-default
+    ul
+        list-style: "-> "
+
+    ol, ul
+        padding-left: 1rem
+        margin-left: 0.5rem
+        margin-right: 1rem
+
+        & > ol, ul
+            margin: 0px
+            padding: 0.5rem
+
