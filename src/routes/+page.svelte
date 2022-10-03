@@ -74,7 +74,7 @@
     <p>@ -> <a href="mailto:me@soopy.moe?subject=Hello!" class="u-email">me@soopy.moe</a></p>
     <!-- What am I doing on Shitcord right now!? -->
 
-    <p class="separator">transgender rights are human rights</p>
+    <p class="separator">trans rights are human rights</p>
 </div>
 
 <style lang="sass">

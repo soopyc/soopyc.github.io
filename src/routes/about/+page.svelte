@@ -4,7 +4,7 @@
     import { onMount } from "svelte";
     import tippy from "$lib/actions/tippy";
     import Accordion from "$lib/actions/accordion";
-    import sites from '$lib/constants/sites'
+    import sites from "$lib/constants/sites";
     import parser from "$lib/cstmparser";
 
     import Fediverse from "$lib/icons/fediverse.svelte";
@@ -15,6 +15,10 @@
     import Matrix from "@svicons/simple-icons/matrix.svelte";
     import Box from "@svicons/bootstrap/box.svelte";
     import At from "@svicons/bootstrap/at.svelte";
+    import Git from "@svicons/simple-icons/git.svelte";
+    import Github from "@svicons/simple-icons/github.svelte";
+    import Gitlab from "@svicons/simple-icons/gitlab.svelte";
+    import Lastfm from "@svicons/simple-icons/lastdotfm.svelte";
 
     export let content: HTMLElement;
     export let data: PageData;
@@ -73,7 +77,7 @@
         <div class="list-none">
             <ul>
                 <li>
-                    <Matrix height="1em" style="vertical-align: middle" /> Matrix:
+                    <Matrix height="1em" style="vertical-align: middle" /> Matrix
                     <ul>
                         <li>
                             <a href="https://matrix.to/#/@sophie:nue-staging.soopy.moe">
@@ -86,27 +90,50 @@
                     </ul>
                 </li>
                 <li>
+                    <Git height="1em" style="vertical-align: middle"/>
+                    Personal Git
+                    <a href="https://koakuma.soopy.moe/sophie">@sophie</a>
+                </li>
+                <li>
                     <Fediverse />
-                    <abbr title="Fediverse" use:tippy={{}}>Fedi:</abbr>
+                    <abbr title="Fediverse" use:tippy={{}}>Fedi</abbr>
                     <a href="https://m.soopy.moe/@sophie">@sophie@m.soopy.moe</a>
                 </li>
                 <li>
                     <Keybase height="1em" style="vertical-align: middle" />
-                    Keybase: <a href="//keybase.io/kcomain">kcomain</a>
+                    Keybase <a href="//keybase.io/kcomain">kcomain</a>
+                </li>
+                <li>
+                    <Gitlab height="1em" style="vertical-align: middle" />
+                    GitLab <a href="//gitlab.com/kcomain">kcomain</a>
+                </li>
+                <li class="text-muted">
+                    <span
+                        use:tippy={{}}
+                        title="Avoid GitHub, link to why in homepage. Funny how I'm currently using github for this. Will switch when possible."
+                    >
+                        <Github height="1em" style="vertical-align: middle" />
+                        GitHub
+                    </span>
+                    <a href="//github.com/kcomain">soopyc</a>
                 </li>
                 <li>
                     <At height="1em" style="vertical-align: middle" />
-                    <span>Email: <a href="https://keyoxide.org/hkp/me%40soopy.moe">Keyoxide</a></span>
+                    <span>Email <a href="https://keyoxide.org/hkp/me%40soopy.moe">Keyoxide</a></span>
                 </li>
                 <li>
                     <span class="text-gold" use:tippy={{}} title="Avoid Discord where possible.">
                         <Discord height="1em" style="vertical-align: middle" />
-                        Discord:
+                        Discord
                     </span>
                     {#if parser(data.lanyardkv.avatar)}
                         <!--the ?.url is not needed because the output is guaranteed to not be undefined but ts be like no.-->
                         <a href={parser(data.lanyardkv.avatar)?.url}>
-                            <img id="discordAvatar" alt="[avatar of soopyc on discord]" src={sites.lanyard.avatar(data.discordUser.id)} />
+                            <img
+                                id="discordAvatar"
+                                alt="[avatar of soopyc on discord]"
+                                src={sites.lanyard.avatar(data.discordUser.id)}
+                            />
                         </a>
                     {/if}
                     <a href="https://discord.com/users/{data.discordUser.id}">
@@ -124,7 +151,11 @@
             <ul>
                 <li>
                     <Discourse height="1em" style="vertical-align: middle" />
-                    Discourse: <a href="//f.soopy.moe/u/sophie">@sophie (@f.soopy.moe)</a>
+                    Discourse <a href="//f.soopy.moe/u/sophie">@sophie (@f.soopy.moe)</a>
+                </li>
+                <li>
+                    <Lastfm height="1em" style="vertical-align: middle" />
+                    Last.fm <a href="//last.fm/user/kcomain">@kcomain</a>
                 </li>
             </ul>
         </div>
