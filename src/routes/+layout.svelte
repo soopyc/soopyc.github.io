@@ -96,7 +96,11 @@
     </p>
     <p>
         <a href="/badges">badges</a>
-        <span>future webrings here</span>
+        <span class="webring">
+            <a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%97%93%E2%9C%B3%EF%B8%8F/previous">&lt;-</a>
+            <a href="https://xn--sr8hvo.ws" title="IndieWeb Webring">🕸💍</a>
+            <a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%97%93%E2%9C%B3%EF%B8%8F/next">-&gt;</a>
+        </span>
     </p>
 </div>
 
@@ -151,6 +155,13 @@
         p
             margin-top: 0.25rem
             margin-bottom: 0
+
+    .webring
+        padding: 0.2rem 0.5rem
+        border-width: 2px
+        border-radius: 30px
+        border-style: solid
+        border-color: var(--hl-med)
 
     #nojs
         margin: 0
