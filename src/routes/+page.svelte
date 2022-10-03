@@ -26,11 +26,12 @@
                 alt="avatar of soopyc"
             />
         </a>
-        <span class="p-name text-gold">sophie</span>
+        <span class="p-name text-gold">ミズキ</span>
+        <span class="p-name text-love">sophie</span>
         <span class="p-name text-iris">selene</span>
         <span class="text-muted">
             <span class="p-nickname">soopyc</span>
-            <span class="p-nickname">soap</span>
+            <span style="display: none" class="p-nickname">soap</span>
             ...
         </span>
     </p>
