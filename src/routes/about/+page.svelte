@@ -9,6 +9,7 @@
 
     import Fediverse from "$lib/icons/fediverse.svelte";
     import Discord from "@svicons/simple-icons/discord.svelte";
+    import Twitter from "@svicons/simple-icons/twitter.svelte";
     import Discourse from "@svicons/simple-icons/discourse.svelte";
     import Keybase from "@svicons/simple-icons/keybase.svelte";
     import Osu from "@svicons/simple-icons/osu.svelte";
@@ -55,7 +56,10 @@
     </p>
     <p>
         I also manage my own network of services and the infrastructure of them. See <a href="/sites">~/Sites</a> for more
-        details
+        details.
+    </p>
+    <p>
+        i also own <a href="https://xn--nckza7h.dev">ミズキ.dev</a>
     </p>
 
     <p>arch linux user :33</p>
@@ -92,7 +96,8 @@
                 <li>
                     <Git height="1em" style="vertical-align: middle"/>
                     Personal Git
-                    <a href="https://koakuma.soopy.moe/sophie">@sophie</a>
+                    <a href="https://patchy.soopy.moe/sophie">@sophie(@patchy)</a>
+                    <a href="https://koakuma.soopy.moe/sophie" class="deprecated">@sophie(@koakuma)</a>
                 </li>
                 <li>
                     <Fediverse />
@@ -133,7 +138,15 @@
                     </ul>
                 </li>
                 <li>
-                    <span class="text-gold" use:tippy={{}} title="Avoid Discord where possible.">
+                    <span class="text-gold" use:tippy={{}} title="Avoid Twitter where possible, use the fediverse instead.">
+                        <Twitter height="1em" style="vertical-align: middle" />
+                        <!-- twatter, shitter -->
+                        Twitter
+                    </span>
+                    <a href="https://twitter.com/soopyc_">@soopyc_</a>
+                </li>
+                <li>
+                    <span class="text-gold" use:tippy={{}} title="Avoid Discord where possible, use matrix or other plaforms instead.">
                         <Discord height="1em" style="vertical-align: middle" />
                         Discord
                     </span>
@@ -222,6 +235,10 @@
     li
         padding-top: 0.25rem
         vertical-align: middle
+
+    .deprecated
+        color: var(--color-muted) !important
+        text-decoration: wavy line-through
 
     details
         margin: 0
