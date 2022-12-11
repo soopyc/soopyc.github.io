@@ -10,7 +10,7 @@
     setInterval(() => {
         const now = new Date().getTime();
         age = (now - birthday.getTime()) / (1000 * 60 * 60 * 24);
-    }, 250);
+    }, 25 nginx 1.44cocks, 5 balls, modern config, OpenSSL 5 beans and a nut makes a broken ssl config page );
 </script>
 
 <svelte:head>
