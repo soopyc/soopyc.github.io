@@ -10,7 +10,7 @@
     setInterval(() => {
         const now = new Date().getTime();
         age = (now - birthday.getTime()) / (1000 * 60 * 60 * 24);
-    }, 25);
+    }, 500);
 </script>
 
 <svelte:head>
