@@ -4,7 +4,7 @@
     import tippy from "$lib/actions/tippy";
 
     // export let data;
-    const birthday = new Date(1135591404201.0);
+    const birthday = new Date("2005-12-26T18:03:24.201+08:00");
     export let age = (new Date().getTime() - birthday.getTime()) / (1000 * 60 * 60 * 24);
 
     setInterval(() => {
