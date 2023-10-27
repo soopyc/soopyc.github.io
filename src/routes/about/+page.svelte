@@ -3,33 +3,33 @@
 
     import { onMount } from "svelte";
     import tippy from "$lib/actions/tippy";
-    import Accordion from "$lib/actions/accordion";
+    // import Accordion from "$lib/actions/accordion";
     import sites from "$lib/constants/sites";
     import parser from "$lib/cstmparser";
 
-    import Fediverse from "$lib/icons/fediverse.svelte";
-    import Discord from "@svicons/simple-icons/discord.svelte";
-    import Twitter from "@svicons/simple-icons/twitter.svelte";
-    import Discourse from "@svicons/simple-icons/discourse.svelte";
-    import Keybase from "@svicons/simple-icons/keybase.svelte";
-    import Osu from "@svicons/simple-icons/osu.svelte";
-    import Matrix from "@svicons/simple-icons/matrix.svelte";
-    import Box from "@svicons/bootstrap/box.svelte";
-    import At from "@svicons/bootstrap/at.svelte";
-    import Git from "@svicons/simple-icons/git.svelte";
-    import Github from "@svicons/simple-icons/github.svelte";
-    import Gitlab from "@svicons/simple-icons/gitlab.svelte";
-    import Lastfm from "@svicons/simple-icons/lastdotfm.svelte";
+    // icons
+    import IconMatrix from "~icons/simple-icons/matrix"
+    import IconForgejo from "~icons/simple-icons/forgejo"
+    import IconFediverse from "~icons/arcticons/fediverse"
+    import IconKeybase from "~icons/simple-icons/keybase"
+    import IconGitlab from "~icons/simple-icons/gitlab"
+    import IconGithub from "~icons/octicon/mark-github-16"
+    import IconAt from "~icons/ph/at-bold"
+    import IconTwitter from "~icons/simple-icons/twitter"
+    import IconDiscord from "~icons/simple-icons/discord"
+    import IconLastfm from "~icons/fa-brands/lastfm-square"
+    import IconOsuAmpersandPound33Semicolon from "~icons/simple-icons/osu"
 
     export let content: HTMLElement;
     export let data: PageData;
     onMount(() => {
-        content.querySelectorAll("details").forEach((el) => {
-            new Accordion(el, {
-                easing: "ease",
-                animationDuration: 500,
-            });
-        });
+        // FIXME: broken on smaller details.
+        // content.querySelectorAll("details").forEach((el) => {
+        //     new Accordion(el, {
+        //         easing: "ease",
+        //         animationDuration: 500,
+        //     });
+        // });
 
         // content.querySelectorAll(".copy").forEach((el) => {
         //     // add copy logic here
@@ -81,7 +81,7 @@
         <div class="list-none">
             <ul>
                 <li>
-                    <Matrix height="1em" style="vertical-align: middle" /> Matrix
+                    <IconMatrix /> Matrix
                     <ul>
                         <li>
                             <a href="https://matrix.to/#/@sophie:nue-staging.soopy.moe">
@@ -94,22 +94,21 @@
                     </ul>
                 </li>
                 <li>
-                    <Git height="1em" style="vertical-align: middle"/>
-                    Personal Git
-                    <a href="https://patchy.soopy.moe/sophie">@sophie(@patchy)</a>
-                    <a href="https://koakuma.soopy.moe/sophie" class="deprecated">@sophie(@koakuma)</a>
+                    <IconForgejo />
+                    Forgejo
+                    <a href="https://patchy.soopy.moe/cassie">@cassie@patchy.soopy.moe</a>
                 </li>
                 <li>
-                    <Fediverse />
+                    <IconFediverse />
                     <abbr title="Fediverse" use:tippy={{}}>Fedi</abbr>
                     <a href="https://m.soopy.moe/@sophie">@sophie@m.soopy.moe</a>
                 </li>
                 <li>
-                    <Keybase height="1em" style="vertical-align: middle" />
+                    <IconKeybase height="1em" style="vertical-align: middle" />
                     Keybase <a href="//keybase.io/kcomain">kcomain</a>
                 </li>
                 <li>
-                    <Gitlab height="1em" style="vertical-align: middle" />
+                    <IconGitlab />
                     GitLab <a href="//gitlab.com/kcomain">kcomain</a>
                 </li>
                 <li class="text-muted">
@@ -117,15 +116,22 @@
                         use:tippy={{}}
                         title="Avoid GitHub, link to why in homepage. Funny how I'm currently using github for this. Will switch when possible."
                     >
-                        <Github height="1em" style="vertical-align: middle" />
+                        <IconGithub />
                         GitHub
                     </span>
                     <a href="//github.com/kcomain">soopyc</a>
                 </li>
                 <li>
-                    <At height="1em" style="vertical-align: middle" />
+                    <IconAt />
                     <span>Email <a href="https://keyoxide.org/hkp/me%40soopy.moe">Keyoxide</a></span>
-                    <ul>
+                    <details>
+                        <summary>Age public keys</summary>
+                        <ul>
+                            <li class="copy">age1yubikey1qgmfcf0vddslyza7djdekjjk3t3u29d474c5xscmcdye8x3spvhlxxj23xz</li>
+                            <li class="muted">(backup) <span class="copy">age17t2t5j2pnt45saq5fy2e7gn2w6q99h5myret58tqckwc283vvccs3qlqkl</span></li>
+                        </ul>
+                    </details>
+                    <!-- <ul>
                         <li>
                             <a href="https://keys.openpgp.org/pks/lookup?op=get&options=mr&search=cheunghowui@gmail.com">OpenPGP Key via openpgp.org</a>
                         </li>
@@ -135,19 +141,19 @@
                         <li>
                             <a href="/pgpkey.asc">... directly</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
                     <span class="text-gold" use:tippy={{}} title="Avoid Twitter where possible, use the fediverse instead.">
-                        <Twitter height="1em" style="vertical-align: middle" />
-                        <!-- twatter, shitter -->
+                        <IconTwitter />
+                        <!-- I will not call it X -->
                         Twitter
                     </span>
                     <a href="https://twitter.com/soopyc_">@soopyc_</a>
                 </li>
                 <li>
                     <span class="text-gold" use:tippy={{}} title="Avoid Discord where possible, use matrix or other plaforms instead.">
-                        <Discord height="1em" style="vertical-align: middle" />
+                        <IconDiscord />
                         Discord
                     </span>
                     {#if parser(data.lanyardkv.avatar)}
@@ -156,7 +162,7 @@
                             <img
                                 id="discordAvatar"
                                 alt="[avatar of soopyc on discord]"
-                                src={sites.lanyard.avatar(data.discordUser.id)}
+                                src={sites.lanyard.avatar(data.discordUser?.id)}
                             />
                         </a>
                     {/if}
@@ -174,11 +180,7 @@
         <div class="list-none">
             <ul>
                 <li>
-                    <Discourse height="1em" style="vertical-align: middle" />
-                    Discourse <a href="//f.soopy.moe/u/sophie">@sophie (@f.soopy.moe)</a>
-                </li>
-                <li>
-                    <Lastfm height="1em" style="vertical-align: middle" />
+                    <IconLastfm />
                     Last.fm <a href="//last.fm/user/kcomain">@kcomain</a>
                 </li>
             </ul>
@@ -207,14 +209,26 @@
                     </ul>
                 </li>
                 <li>
-                    <span title="osu!"><Osu height="1.5em" style="vertical-align: middle" />:</span>
+                    <abbr
+                        use:tippy={{ allowHTML: true, maxWidth: "600px"}}
+                        title="ワールドダイスター 夢のステラリウム<br>World Dai Star: Yume no Stellarium"
+                    >ユメステ:</abbr>
+                    <ul>
+                        <li class="muted">This game is currently only available in JP markets.</li>
+                        <li>JP: <span class="copy">5007270775</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <span title="osu!">
+                        <IconOsuAmpersandPound33Semicolon />
+                    </span>
                     <a href="//osu.ppy.sh/u/soopyc">
                         <span class="text-hide">osu!</span>
                         soopyc
                     </a>
                 </li>
                 <li>
-                    <Box height="1em" style="vertical-align: middle" /> Minecraft: CatgirlSelene
+                    Minecraft: CatgirlSelene
                 </li>
             </ul>
         </div>
@@ -236,9 +250,9 @@
         padding-top: 0.25rem
         vertical-align: middle
 
-    .deprecated
+    .muted
         color: var(--color-muted) !important
-        text-decoration: wavy line-through
+    //    text-decoration: wavy line-through
 
     details
         margin: 0
