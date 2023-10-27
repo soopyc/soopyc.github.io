@@ -10,25 +10,28 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-netlify": "next",
-		"@sveltejs/kit": "latest",
-		"@svicons/bootstrap": "^0.1.11",
-		"@svicons/simple-icons": "^0.1.11",
+		"@iconify-json/arcticons": "^1.1.79",
+		"@iconify-json/fa-brands": "^1.1.5",
+		"@iconify-json/octicon": "^1.1.49",
+		"@iconify-json/ph": "^1.1.6",
+		"@iconify-json/simple-icons": "^1.1.76",
+		"@sveltejs/adapter-netlify": "^2.0.8",
+		"@sveltejs/kit": "^1.27.1",
 		"firacode": "^6.2.0",
 		"js-yaml": "^4.1.0",
-		"sass": "^1.54.5",
-		"svelte": "^3.44.0",
-		"svelte-check": "^2.7.1",
-		"svelte-preprocess": "^4.10.6",
+		"sass": "^1.69.5",
+		"svelte": "^4.2.2",
+		"svelte-check": "^3.5.2",
+		"svelte-preprocess": "^5.0.4",
 		"tippy.js": "^6.3.7",
-		"tslib": "^2.3.1",
+		"tslib": "^2.6.2",
 		"twemoji": "^14.0.2",
-		"vite": "3.2.7"
+		"unplugin-icons": "^0.17.1",
+		"vite": "^4.5.0"
 	},
 	"type": "module",
-	"packageManager": "yarn@3.2.3",
+	"packageManager": "pnpm@8.3.1",
 	"dependencies": {
-		"typescript": "^4.8.4"
+		"typescript": "^5.2.2"
 	}
 }
