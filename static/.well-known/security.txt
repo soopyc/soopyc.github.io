@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
-Contact: mailto:security@soopy.moe
-Expires: 2023-05-01T08:00:00.000Z
-Encryption: https://raw.github.com/soopyc/soopyc/master/id_ed25519.pub
-Preferred-Languages: en, yue
+Contact: mailto:me@soopy.moe
+Expires: 2026-01-01T00:00:00.000Z
+Encryption: age1yubikey1qgmfcf0vddslyza7djdekjjk3t3u29d474c5xscmcdye8x3spvhlxxj23xz
+Encryption: age17t2t5j2pnt45saq5fy2e7gn2w6q99h5myret58tqckwc283vvccs3qlqkl
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/8F3B277901484C6EA7E63F82D539637D518022C6
+Preferred-Languages: en
 Canonical: https://soopy.moe/.well-known/security.txt
-Canonical: https://github.com/soopyc/soopyc.github.io/blob/master/.well-known/security.txt
+Canonical: https://soopy.moe/security.txt
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQQxwgq7ng8y0bgd5MiiiP5d4JMp/QUCYzssewAKCRCiiP5d4JMp
-/WDHAP466xhUO6DZG9aYkrE5HNAt07nzDW8W/ale/VBV4MDhjwEA+FK2EzgTs2bB
-unvPrsA9HfMITeTdcv5pukRfOqPzNQc=
-=A/J1
+iHUEARYKAB0WIQSPOyd5AUhMbqfmP4LVOWN9UYAixgUCZTvrhgAKCRDVOWN9UYAi
+xpVHAQCsi4EwFtA6K8oF+MUarfUegLN4kHq1quz1gJuICUMynAD/R+Sis/nJFHPA
+AKQ50YR8l6zjS5f9GZU/qPbUZZNDIwE=
+=WJN+
 -----END PGP SIGNATURE-----
