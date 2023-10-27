@@ -1,11 +1,12 @@
 <script lang="ts">
-    import KeyFill from "@svicons/bootstrap/key-fill.svelte";
-    import type { PageData } from "./$types";
-    import tippy from "$lib/actions/tippy";
+    // import FaKey from 'svelte-icons/fa/FaKey.svelte'
+    // import type { PageData } from "./$types";
+    // import tippy from "$lib/actions/tippy";
 
     // export let data;
     const birthday = new Date("2005-12-26T18:03:24.201+08:00");
     export let age = (new Date().getTime() - birthday.getTime()) / (1000 * 60 * 60 * 24);
+    export const fumo = ["cheers.webp", "lamp.jpg"][Math.floor(Math.random() * 2)]
 
     setInterval(() => {
         const now = new Date().getTime();
@@ -26,11 +27,12 @@
                 alt="avatar of soopyc"
             />
         </a>
-        <span class="p-name text-gold">ミズキ</span>
+        <span class="p-name text-gold">cassie</span>
         <span class="p-name text-love">sophie</span>
         <span class="p-name text-iris">selene</span>
         <span class="text-muted">
             <span class="p-nickname">soopyc</span>
+            <span style="display: none" class="p-nickname">ミズキ</span>
             <span style="display: none" class="p-nickname">soap</span>
             ...
         </span>
@@ -46,34 +48,34 @@
     <p class="separator p-note">full-time student</p>
     <p class="p-note">sysadmin cosplayer<sup><a href="https://youtube.com/c/JeffGeerling">?</a></sup></p>
     <p class="p-note">big mizuki (prsk) fan</p>
-    <p class="p-note">obsessed with 2hu</p>
+    <p class="p-note"><a href="/images/fumo/{fumo}">fumo fan</a></p>
     <p><span class="p-region">Hong Kong</span>er</p>
     <p class="p-note p-gender-identity">trans demigirl</p>
 
     <p class="separator">quick links</p>
     <p>
-        <a href="https://pronouns.page/@soopyc" rel="me" class="u-url">Pronounce -> pronouns.page</a>
+        <a href="https://pronouns.page/@soopyc" rel="me" class="u-url">Pronounce -&gt; pronouns.page</a>
     </p>
     <p>
-        <a href="https://koakuma.soopy.moe/sophie" rel="me" class="u-url">GitLab -> //koakuma.soopy.moe</a>
+        <a href="https://koakuma.soopy.moe/sophie" rel="me" class="u-url">GitLab -&gt; //koakuma.soopy.moe</a>
     </p>
     <p>
-        <a href="https://patchy.soopy.moe/mizuki" rel="me" class="u-url">Forgejo -> //patchy.soopy.moe</a>
+        <a href="https://patchy.soopy.moe/mizuki" rel="me" class="u-url">Forgejo -&gt; //patchy.soopy.moe</a>
     </p>
     <!-- i dont really use gitlab kekO -->
-    <p><a href="https://gitlab.com/kcomain" rel="me" class="u-url">GitLab SaaS -> //gitlab.com</a></p>
+    <p><a href="https://gitlab.com/kcomain" rel="me" class="u-url">GitLab SaaS -&gt; //gitlab.com</a></p>
     <p>
         <a
             href="https://keys.openpgp.org/vks/v1/by-fingerprint/7BADC9C659B024D8F0AC64F3DB9BEC3A93B4B1DF"
             rel="pgpkey"
             class="u-key"
         >
-            OpenPGP -> 0xDB9BEC3A93B4B1DF
+            OpenPGP -&gt; ed25519/0xD539637D518022C6
         </a>
     </p>
     <p>
         <a href="https://github.com/soopyc" rel="me" class="text-muted u-url">GitHub</a>
-        ->
+        -&gt;
         <a href="https://dev.to/galtzo/im-leaving-github-50ba" class="text-rose">Why not GitHub</a>
     </p>
     <p>@ -> <a href="mailto:me@soopy.moe?subject=Hello!" class="u-email">me@soopy.moe</a></p>
