@@ -5,6 +5,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     plugins: [
         sveltekit(),
-        Icons({ compiler: "svelte" })
+        Icons({ compiler: "svelte", defaultStyle: "vertical-align: middle;" })
     ]
 })
