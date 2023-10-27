@@ -1,4 +1,5 @@
 // Thank you https://css-tricks.com/how-to-animate-the-details-element-using-waapi/
+// sorry this sucks :(
 
 interface AccordionOptions {
     easing?: string
