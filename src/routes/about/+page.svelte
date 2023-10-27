@@ -51,7 +51,8 @@
 
     <h3 id="whoami">Who am I?</h3>
     <p>
-        I'm a Secondary 5 student in 🇭🇰 Hong Kong. I study <span class="text-gold">Biology</span>,
+        My name is Cassie, but you can also call me Sophie or any other names listed on the
+        front page. I'm a Secondary 6 student in 🇭🇰 Hong Kong. I study <span class="text-gold">Biology</span>,
         <span class="text-gold">Physics</span> and <span class="text-gold">Computer Science</span>.
     </p>
     <p>
@@ -59,10 +60,8 @@
         details.
     </p>
     <p>
-        i also own <a href="https://xn--nckza7h.dev">ミズキ.dev</a>
+        proud owner of <a href="//bnuuy.moe">bnuuy.moe</a>
     </p>
-
-    <p>arch linux user :33</p>
 
     <hr />
 
