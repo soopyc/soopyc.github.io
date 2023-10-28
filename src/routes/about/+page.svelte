@@ -8,20 +8,33 @@
     import parser from "$lib/cstmparser";
 
     // icons
-    import IconMatrix from "~icons/simple-icons/matrix"
-    import IconForgejo from "~icons/simple-icons/forgejo"
-    import IconFediverse from "~icons/arcticons/fediverse"
-    import IconKeybase from "~icons/simple-icons/keybase"
-    import IconGitlab from "~icons/simple-icons/gitlab"
-    import IconGithub from "~icons/octicon/mark-github-16"
-    import IconAt from "~icons/ph/at-bold"
-    import IconTwitter from "~icons/simple-icons/twitter"
-    import IconDiscord from "~icons/simple-icons/discord"
-    import IconLastfm from "~icons/fa-brands/lastfm-square"
-    import IconOsuAmpersandPound33Semicolon from "~icons/simple-icons/osu"
+    import IconAt from "~icons/ph/at-bold";
+    import IconMatrix from "~icons/simple-icons/matrix";
+    import IconForgejo from "~icons/simple-icons/forgejo";
+    import IconKeybase from "~icons/simple-icons/keybase";
+    import IconGitlab from "~icons/simple-icons/gitlab";
+    import IconOsuAmpersandPound33Semicolon from "~icons/simple-icons/osu";
+    import IconTwitter from "~icons/simple-icons/twitter";
+    import IconDiscord from "~icons/simple-icons/discord";
+    import IconMisskey from "~icons/simple-icons/misskey";
+    import IconGithub from "~icons/octicon/mark-github-16";
+    import IconFediverse from "~icons/arcticons/fediverse";
+    import IconAkkoma from "~icons/arcticons/akkoma";
+    import IconGoToSocial from "~icons/arcticons/gotosocial"
+    import IconLastfm from "~icons/fa-brands/lastfm-square";
 
     export let content: HTMLElement;
     export let data: PageData;
+
+    export const a4bc2e953c08d8 = "bWVAc29vcHkubW9l";
+    export let e22c90f8e8a495 = a4bc2e953c08d8;
+    function YXRvYm5jb3B5(dmFy: string) {
+        navigator.clipboard.writeText(atob(dmFy));
+        e22c90f8e8a495 = "Copied!";
+        setTimeout(() => {
+            e22c90f8e8a495 = a4bc2e953c08d8;
+        }, 1000);
+    }
     onMount(() => {
         // FIXME: broken on smaller details.
         // content.querySelectorAll("details").forEach((el) => {
@@ -30,7 +43,6 @@
         //         animationDuration: 500,
         //     });
         // });
-
         // content.querySelectorAll(".copy").forEach((el) => {
         //     // add copy logic here
         // });
@@ -47,12 +59,13 @@
     <p class="no-space">
         <a href="#whoami">whoami</a>
         <a href="#contact">finger</a>
+        <a href="#keys">keys</a>
     </p>
 
     <h3 id="whoami">Who am I?</h3>
     <p>
-        My name is Cassie, but you can also call me Sophie or any other names listed on the
-        front page. I'm a Secondary 6 student in 🇭🇰 Hong Kong. I study <span class="text-gold">Biology</span>,
+        My name is Cassie, but you can also call me Sophie or any other names listed on the front page. I'm a Secondary
+        6 student in 🇭🇰 Hong Kong. I study <span class="text-gold">Biology</span>,
         <span class="text-gold">Physics</span> and <span class="text-gold">Computer Science</span>.
     </p>
     <p>
@@ -83,24 +96,32 @@
                     <IconMatrix /> Matrix
                     <ul>
                         <li>
-                            <a href="https://matrix.to/#/@sophie:nue-staging.soopy.moe">
-                                @sophie:nue-staging.soopy.moe
-                            </a>
+                            <a href="https://matrix.to/#/@sophie:nue-staging.soopy.moe">@sophie:nue-staging.soopy.moe</a
+                            >
+                        </li>
+                        <li><a href="https://matrix.to/#/@sophie:nue.soopy.moe">@sophie:nue.soopy.moe</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <IconFediverse /> Fediverse
+                    <ul>
+                        <li>
+                            <span> <IconMisskey /> Misskey </span>
+                            <a href="https://mk.bnuuy.moe/@sophie">@cassie@mk.bnuuy.moe</a>
+                        </li>
+                        <!-- i realize these icons are literally unreadable but this is currently the only option we have -->
+                        <li>
+                            <span> <IconAkkoma /> Akkoma </span>
+                            <a href="//a.soopy.moe/mizuki">@mizuki@a.soopy.moe</a>
                         </li>
                         <li>
-                            <a href="https://matrix.to/#/@sophie:nue.soopy.moe">@sophie:nue.soopy.moe</a>
+                            <span><IconGoToSocial /> <abbr title="GoToSocial" use:tippy={{}}>GTS</abbr></span>
+                            <a href="https://gts.soopy.moe/@cassie">@cassie@gts.soopy.moe</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <IconForgejo />
-                    Forgejo
-                    <a href="https://patchy.soopy.moe/cassie">@cassie@patchy.soopy.moe</a>
-                </li>
-                <li>
-                    <IconFediverse />
-                    <abbr title="Fediverse" use:tippy={{}}>Fedi</abbr>
-                    <a href="https://m.soopy.moe/@sophie">@sophie@m.soopy.moe</a>
+                    <IconForgejo /> Forgejo <a href="https://patchy.soopy.moe/cassie">@cassie@patchy.soopy.moe</a>
                 </li>
                 <li>
                     <IconKeybase height="1em" style="vertical-align: middle" />
@@ -118,18 +139,23 @@
                         <IconGithub />
                         GitHub
                     </span>
-                    <a href="//github.com/kcomain">soopyc</a>
+                    <a href="//github.com/soopyc">soopyc</a>
                 </li>
                 <li>
                     <IconAt />
-                    <span>Email <a href="https://keyoxide.org/hkp/me%40soopy.moe">Keyoxide</a></span>
-                    <details>
-                        <summary>Age public keys</summary>
-                        <ul>
-                            <li class="copy">age1yubikey1qgmfcf0vddslyza7djdekjjk3t3u29d474c5xscmcdye8x3spvhlxxj23xz</li>
-                            <li class="muted">(backup) <span class="copy">age17t2t5j2pnt45saq5fy2e7gn2w6q99h5myret58tqckwc283vvccs3qlqkl</span></li>
-                        </ul>
-                    </details>
+                    <span>
+                        Email
+                        <span
+                            class="click"
+                            tabindex="0"
+                            role="button"
+                            on:keypress={() => YXRvYm5jb3B5(a4bc2e953c08d8)}
+                            on:click={() => YXRvYm5jb3B5(a4bc2e953c08d8)}
+                        >
+                            {e22c90f8e8a495}
+                        </span>
+                        <a href="https://keyoxide.org/hkp/me%40soopy.moe">(Keyoxide)</a>
+                    </span>
                     <!-- <ul>
                         <li>
                             <a href="https://keys.openpgp.org/pks/lookup?op=get&options=mr&search=cheunghowui@gmail.com">OpenPGP Key via openpgp.org</a>
@@ -143,7 +169,11 @@
                     </ul> -->
                 </li>
                 <li>
-                    <span class="text-gold" use:tippy={{}} title="Avoid Twitter where possible, use the fediverse instead.">
+                    <span
+                        class="text-gold"
+                        use:tippy={{}}
+                        title="Avoid Twitter where possible, use the fediverse instead."
+                    >
                         <IconTwitter />
                         <!-- I will not call it X -->
                         Twitter
@@ -151,7 +181,11 @@
                     <a href="https://twitter.com/soopyc_">@soopyc_</a>
                 </li>
                 <li>
-                    <span class="text-gold" use:tippy={{}} title="Avoid Discord where possible, use matrix or other plaforms instead.">
+                    <span
+                        class="text-gold"
+                        use:tippy={{}}
+                        title="Avoid Discord where possible, use matrix or other plaforms instead."
+                    >
                         <IconDiscord />
                         Discord
                     </span>
@@ -209,9 +243,10 @@
                 </li>
                 <li>
                     <abbr
-                        use:tippy={{ allowHTML: true, maxWidth: "600px"}}
+                        use:tippy={{ allowHTML: true, maxWidth: "600px" }}
                         title="ワールドダイスター 夢のステラリウム<br>World Dai Star: Yume no Stellarium"
-                    >ユメステ:</abbr>
+                        >ユメステ:</abbr
+                    >
                     <ul>
                         <li class="muted">This game is currently only available in JP markets.</li>
                         <li>JP: <span class="copy">5007270775</span></li>
@@ -226,11 +261,32 @@
                         soopyc
                     </a>
                 </li>
-                <li>
-                    Minecraft: CatgirlSelene
-                </li>
+                <li>Minecraft: CatgirlSelene</li>
             </ul>
         </div>
+    </details>
+
+    <hr />
+    <details class="list-none" open id="keys">
+        <summary>Public keys</summary>
+        <ul>
+            <li>
+                <span class="text-rose">Age keys</span>
+                <ul>
+                    <li class="copy">age1yubikey1qgmfcf0vddslyza7djdekjjk3t3u29d474c5xscmcdye8x3spvhlxxj23xz</li>
+                    <li class="muted">
+                        (backup) <span class="copy">age17t2t5j2pnt45saq5fy2e7gn2w6q99h5myret58tqckwc283vvccs3qlqkl</span
+                        >
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="text-rose">Minisign keys</span>
+                <ul>
+                    <li class="copy">RWTwHbCTKdHg/muMS/0Uxlz27Jw7C1ccDxnDx+GIpM+1IeeWzIu6aAi9</li>
+                </ul>
+            </li>
+        </ul>
     </details>
 </div>
 
@@ -246,6 +302,7 @@
         margin: 0
 
     li
+        padding-left: 0.5rem
         padding-top: 0.25rem
         vertical-align: middle
 
@@ -267,4 +324,7 @@
 
     .copy
         user-select: all
+
+    .click
+        cursor: pointer
 </style>
