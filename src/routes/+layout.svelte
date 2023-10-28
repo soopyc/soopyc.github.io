@@ -1,9 +1,9 @@
 <script lang="ts">
-    import 'tippy.js/dist/tippy.css';
+    import "tippy.js/dist/tippy.css";
     import "../app.sass";
-    import { afterNavigate, beforeNavigate } from '$app/navigation';
+    import { afterNavigate, beforeNavigate } from "$app/navigation";
     import { browser } from "$app/environment";
-    import { page } from "$app/stores";
+    import { navigating, page } from "$app/stores";
     import twemoji from "$lib/actions/twemoji";
 
     // let navigating = false;
@@ -18,26 +18,35 @@
 
     // the first thing i did completely by myself without looking up guides and i'm happy with it
     beforeNavigate(() => {
-        navprogress = 5
-        showProgress = true
+        navprogress = 5;
+        showProgress = true;
         navInterval = setInterval(() => {
-            navprogress += navprogress <= 90 ? 2.5 : navprogress < 95 ? 0.1 : 0
-        }, 500)
-    })
+            navprogress += navprogress <= 90 ? 2.5 : navprogress < 95 ? 0.1 : 0;
+        }, 500);
+        let watchdogInterval = setInterval(() => {
+            if (!navigating) {
+                if (showProgress) resetProgress();
+                console.log("clearing watchdog interval", watchdogInterval)
+                clearInterval(watchdogInterval);
+            }
+        }, 2000);
+    });
 
-    afterNavigate(() => {
-        console.log('interval', navInterval)
-        clearInterval(navInterval)
+    function resetProgress() {
+        console.log("clearing progress interval", navInterval);
+        clearInterval(navInterval);
         navprogress = 100;
 
         setTimeout(() => {
-            showProgress = false
-        }, 300)
+            showProgress = false;
+        }, 300);
 
         setTimeout(() => {
-            navprogress = 0
-        }, 500)
-    })
+            navprogress = 0;
+        }, 500);
+    }
+
+    afterNavigate(resetProgress);
 </script>
 
 <svelte:head>
@@ -49,14 +58,8 @@
 
 <noscript>
     <div id="nojs">
-        <p>
-            You currently do not have JavaScript enabled, though this site
-            should still work fine.
-        </p>
-        <p>
-            If you notice any accessibility issues, please do not hesitate to
-            shoot me a message.
-        </p>
+        <p>You currently do not have JavaScript enabled, though this site should still work fine.</p>
+        <p>If you notice any accessibility issues, please do not hesitate to shoot me a message.</p>
         <p>
             You can find methods to contact me on
             {#if $page.url.pathname == "/about"}
