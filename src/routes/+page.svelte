@@ -18,6 +18,7 @@
     <title>site@soopy.moe ~/Home</title>
 </svelte:head>
 
+<link rel="authorization_endpoint" href="https://indieauth.com/auth">
 <div class="content h-card">
     <p class="separator">
         <a href="https://www.pixiv.net/en/artworks/52956249">
