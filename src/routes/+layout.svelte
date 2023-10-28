@@ -80,7 +80,7 @@
 
 <div id="nav">
     <a href="/" class:current={$page.url.pathname == "/"}>~/Home</a>
-    <a href="/sites" class:current={$page.url.pathname == "/sites"}>~/Sites</a>
+    <a href="/services" class:current={$page.url.pathname == "/services"}>~/Services</a>
     <a href="/projects" class:current={$page.url.pathname == "/projects"}>~/Projects</a>
     <a href="/about" class:current={$page.url.pathname == "/about"}>~/About</a>
 </div>

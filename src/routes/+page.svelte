@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-    <title>u@soopy.moe ~/Home</title>
+    <title>site@soopy.moe ~/Home</title>
 </svelte:head>
 
 <div class="content h-card">

@@ -6,14 +6,12 @@
 </script>
 
 <svelte:head>
-    <title>u@soopy.moe ~/Sites</title>
+    <title>site@soopy.moe ~/Sites</title>
 </svelte:head>
 
 <div class="content">
     <h2>Projects</h2>
-    <p>What I've been working on</p>
-    <pre>{JSON.stringify(data, undefined, 4)}</pre>
-    <!-- definitely use svelte logic stuff later to stop repeating myself-->
+    <p>A list of my current projects</p>
 
 
 </div>

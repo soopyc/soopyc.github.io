@@ -51,7 +51,7 @@
 </script>
 
 <svelte:head>
-    <title>u@soopy.moe ~/About</title>
+    <title>site@soopy.moe ~/About</title>
 </svelte:head>
 
 <div class="content" bind:this={content}>
