@@ -108,8 +108,9 @@
         <a href="/badges">badges</a>
         <!--TODO: fix css because with this i can only be in 2 else it breaks on mobile and eventually on widescreen-->
         <span class="webring">
+            <a title="Back" href="https://xn--sr8hvo.ws/previous"><IconArrowLeft /></a>
             <a href="https://xn--sr8hvo.ws" title="IndieWeb Webring">🕸💍</a>
-            <a href="https://xn--sr8hvo.ws/next"><IconShuffle /></a>
+            <a title="Next/Shuffle" rel="noreferrer noopener" href="https://xn--sr8hvo.ws/next"><IconShuffle /></a>
         </span>
         <span class="webring">
             <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=soopyc"><IconArrowLeft /></a>

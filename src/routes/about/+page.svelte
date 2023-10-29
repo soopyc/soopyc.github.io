@@ -222,7 +222,7 @@
 
     <hr />
     <details open>
-        <summary>Games</summary>
+        <summary>Games</summary> <!-- TODO: write and use a header/anchor type component that a. spans the entire page width and b. becomes highlighted when the current url fragment matches its id -->
         <div class="list-none">
             <ul>
                 <li>
