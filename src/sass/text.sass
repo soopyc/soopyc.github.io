@@ -32,10 +32,12 @@ a
     transition: color 0.25s
     text-decoration: none
     color: var(--color-foam)
+    text-decoration: dashed underline var(--color-muted)
+    text-underline-offset: 3px
 
     &:hover, &:focus
+        text-decoration-style: solid
         color: var(--color-iris)
-        text-decoration: dashed underline
 
 h1, h2, h3
     font-weight: 300
