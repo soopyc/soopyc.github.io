@@ -5,6 +5,7 @@
     import { browser } from "$app/environment";
     import { navigating, page } from "$app/stores";
     import twemoji from "$lib/actions/twemoji";
+    import { onMount } from "svelte";
 
     // let navigating = false;
     let navprogress = 30;
@@ -23,14 +24,16 @@
         navInterval = setInterval(() => {
             navprogress += navprogress <= 90 ? 2.5 : navprogress < 95 ? 0.1 : 0;
         }, 500);
-        let watchdogInterval = setInterval(() => {
+    });
+
+    onMount(() => {
+        // TODO: PERF: check if this explodes performance
+        setInterval(() => {
             if (!navigating) {
                 if (showProgress) resetProgress();
-                console.log("clearing watchdog interval", watchdogInterval)
-                clearInterval(watchdogInterval);
             }
         }, 2000);
-    });
+    })
 
     function resetProgress() {
         console.log("clearing progress interval", navInterval);
