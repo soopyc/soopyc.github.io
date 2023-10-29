@@ -1,17 +1,18 @@
 <script lang="ts">
-    // import FaKey from 'svelte-icons/fa/FaKey.svelte'
-    // import type { PageData } from "./$types";
-    // import tippy from "$lib/actions/tippy";
-
     // export let data;
-    const birthday = new Date("2005-12-26T18:03:24.201+08:00");
-    export let age = (new Date().getTime() - birthday.getTime()) / (1000 * 60 * 60 * 24);
+    import dayjs from "dayjs";
+    // TODO: maybe add humanized display?
+    // const birthday = dayjs("2005-12-26T18:03:24.201+08:00");
+    const birthday = dayjs("2005-12-26T00:00:00+08:00");
+    export let now = dayjs();
+    export let age = now.diff(birthday, "years", true)
     export const fumo = ["cheers.webp", "lamp.jpg"][Math.floor(Math.random() * 2)]
 
     setInterval(() => {
-        const now = new Date().getTime();
-        age = (now - birthday.getTime()) / (1000 * 60 * 60 * 24);
-    }, 500);
+        // now = dayjs("2023-12-26T16:00:00.000Z");
+        now = dayjs();
+        age = now.diff(birthday, "years", true)
+    }, 550);
 </script>
 
 <svelte:head>
@@ -42,9 +43,13 @@
     <a style="display: none" class="u-url u-uid" href="https://rewrite.soopy.moe">rewrite.soopy.moe</a>
     <p>
         born on
-        <span class="dt-bday">{birthday.getFullYear()}-{birthday.getMonth() + 1}-{birthday.getDate()}</span>
+        <span class="dt-bday">{birthday.format("YYYY-MM-DD")}</span>
     </p>
-    <p>{String(Math.round((age / 365) * 10000000000) / 10000000000).padEnd(13, "0")} years old</p>
+    <!-- least cursed leap year detection -->
+    <p>{String((Math.round(age * 10000000) / 10000000)).padEnd(10, "0")} years old</p>
+    {#if now.diff(birthday, "years") == 18}
+        <p>i am now legal. <img class="inline-img" src="/images/yippee.gif" alt="GIF of the autism creature/TBH with confetti"/> </p>
+    {/if}
 
     <p class="separator p-note">full-time student</p>
     <p class="p-note">sysadmin cosplayer<sup><a href="https://youtube.com/c/JeffGeerling">?</a></sup></p>
@@ -95,4 +100,8 @@
         border-radius: 50%
         height: 2em
         vertical-align: middle
+
+    .inline-img
+        vertical-align: middle
+        height: 3rem
 </style>
