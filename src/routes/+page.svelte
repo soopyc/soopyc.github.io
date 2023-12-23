@@ -1,17 +1,25 @@
 <script lang="ts">
     // export let data;
     import dayjs from "dayjs";
+    import relativeTime from "dayjs/plugin/relativeTime";
+    import duration from "dayjs/plugin/duration";
+    dayjs.extend(relativeTime)
+    dayjs.extend(duration)
+
     // TODO: maybe add humanized display?
     // const birthday = dayjs("2005-12-26T18:03:24.201+08:00");
     const birthday = dayjs("2005-12-26T00:00:00+08:00");
+    const birthdayThisYear = birthday.year(dayjs().year())
     export let now = dayjs();
     export let age = now.diff(birthday, "years", true)
+    export let daysLeft = dayjs.duration(now.diff(birthdayThisYear))
     export const fumo = ["cheers.webp", "lamp.jpg"][Math.floor(Math.random() * 2)]
 
     setInterval(() => {
         // now = dayjs("2023-12-26T16:00:00.000Z");
         now = dayjs();
         age = now.diff(birthday, "years", true)
+        daysLeft = dayjs.duration(now.diff(birthdayThisYear))
     }, 550);
 </script>
 
@@ -47,6 +55,9 @@
     </p>
     <!-- least cursed leap year detection -->
     <p>{String((Math.round(age * 10000000) / 10000000)).padEnd(10, "0")} years old</p>
+    {#if daysLeft.days() <= 31 && daysLeft.days() < 0}
+        <p>can you believe it folks‽ birthday! just {(daysLeft).humanize()} away‼</p>
+    {/if}
     {#if now.diff(birthday, "years") == 18}
         <p>i am now legal. <img class="inline-img" src="/images/yippee.gif" alt="GIF of the autism creature/TBH with confetti"/> </p>
     {/if}
