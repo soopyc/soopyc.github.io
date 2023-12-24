@@ -55,7 +55,7 @@
     </p>
     <!-- least cursed leap year detection -->
     <p>{String((Math.round(age * 10000000) / 10000000)).padEnd(10, "0")} years old</p>
-    {#if daysLeft.days() <= 31 && daysLeft.days() < 0}
+    {#if daysLeft.days() <= 31 && daysLeft.asSeconds() < 0}
         <p>can you believe it folks‽ birthday! just {(daysLeft).humanize()} away‼</p>
     {/if}
     {#if now.diff(birthday, "years") == 18}
