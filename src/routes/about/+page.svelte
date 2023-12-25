@@ -20,8 +20,20 @@
     import IconGithub from "~icons/octicon/mark-github-16";
     import IconFediverse from "~icons/arcticons/fediverse";
     import IconAkkoma from "~icons/arcticons/akkoma";
-    import IconGoToSocial from "~icons/arcticons/gotosocial"
+    import IconGoToSocial from "~icons/arcticons/gotosocial";
     import IconLastfm from "~icons/fa-brands/lastfm-square";
+    import IconMinecraft from "~icons/mdi/minecraft";
+    import IconMusicbrainz from "~icons/simple-icons/musicbrainz";
+    import IconArchive from "~icons/ph/archive-box-fill";
+    import IconCat from "~icons/mdi/cat";
+    import IconAccount from "~icons/mdi/account";
+    import IconAccountPlus from "~icons/mdi/account-plus";
+    import IconD20 from "~icons/mdi/dice-d20";
+    import IconFire from "~icons/mdi/fire";
+    import IconGenericMusic from "~icons/ph/music-notes-fill";
+    import IconKey from "~icons/mdi/key";
+    import IconCertificateFill from "~icons/ph/certificate-fill";
+    import IconAccountOutline from "~icons/mdi/account-outline";
 
     export let content: HTMLElement;
     export let data: PageData;
@@ -124,10 +136,6 @@
                     <IconForgejo /> Forgejo <a href="https://patchy.soopy.moe/cassie">@cassie@patchy.soopy.moe</a>
                 </li>
                 <li>
-                    <IconKeybase height="1em" style="vertical-align: middle" />
-                    Keybase <a href="//keybase.io/kcomain">kcomain</a>
-                </li>
-                <li>
                     <IconGitlab />
                     GitLab <a href="//gitlab.com/kcomain">kcomain</a>
                 </li>
@@ -154,7 +162,6 @@
                         >
                             {e22c90f8e8a495}
                         </span>
-                        <a href="https://keyoxide.org/hkp/me%40soopy.moe">(Keyoxide)</a>
                     </span>
                     <!-- <ul>
                         <li>
@@ -216,59 +223,121 @@
                     <IconLastfm />
                     Last.fm <a href="//last.fm/user/kcomain">@kcomain</a>
                 </li>
+                <li>
+                    <IconMusicbrainz />
+                    MusicBrainz <a href="https://musicbrainz.org/user/soopyc">soopyc</a>
+                    <ul>
+                        <li>
+                            <IconGenericMusic /> ListenBrainz <a href="https://listenbrainz.org/user/soopyc/">soopyc</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </details>
 
     <hr />
     <details open>
-        <summary>Games</summary> <!-- TODO: write and use a header/anchor type component that a. spans the entire page width and b. becomes highlighted when the current url fragment matches its id -->
+        <summary>Games</summary>
+        <!-- TODO: write and use a header/anchor type component that a. spans the entire page width and b. becomes highlighted when the current url fragment matches its id -->
         <div class="list-none">
             <ul>
                 <li>
-                    <abbr
-                        use:tippy={{ allowHTML: true, maxWidth: "600px" }}
-                        title="プロジェクトセカイ　カラフルステージ！feat.初音ミク<br>Project Sekai: Colorful Stage! (feat. Hatsune Miku)"
-                    >
-                        プロセカ:
-                    </abbr>
+                    <IconD20 /> Gambling/Gacha
                     <ul>
                         <li>
-                            JP: <span class="copy">234698393179963406</span>
+                            <IconGenericMusic />
+                            <abbr
+                                use:tippy={{ allowHTML: true, maxWidth: "600px" }}
+                                title="プロジェクトセカイ　カラフルステージ！ feat.初音ミク<br>Project Sekai: Colorful Stage! (feat. Hatsune Miku)"
+                            >
+                                プロセカ:
+                            </abbr>
+                            <ul>
+                                <li>
+                                    <abbr title="Japan" use:tippy={{}}>JA_JP</abbr>:
+                                    <span class="copy">234698393179963406</span>
+                                </li>
+                                <li>
+                                    <abbr use:tippy={{}} title="Taiwan / Hong Kong">TW/HK</abbr>:
+                                    <span class="copy">7048999698589457153</span>
+                                </li>
+                                <li>
+                                    <abbr use:tippy={{}} title="Worldwide / Global">WW/XW</abbr>:
+                                    <span class="muted">recovering account...</span>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            TW: <span class="copy">7048999698589457153</span>
+                            <IconGenericMusic />
+                            <abbr
+                                use:tippy={{ allowHTML: true, maxWidth: "600px" }}
+                                title="ワールドダイスター 夢のステラリウム<br>World Dai Star: Yume no Stellarium"
+                                >ユメステ:</abbr
+                            >
+                            <ul>
+                                <li>JP: <span class="copy">5007270775</span></li>
+                                <li class="muted">This game is currently only available in JP markets.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <IconCat />
+                            <abbr use:tippy={{}} title="Cat Fantasy">貓之城:</abbr>
+                            <ul>
+                                <li>
+                                    <abbr use:tippy={{}} title="Taiwan / Hong Kong / Mainland China">TW/HK/CN:</abbr>
+                                    <span class="copy">2036715</span>
+                                    <span class="muted">(昆士區)</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <IconArchive />
+                            <abbr use:tippy={{ allowHTML: true }} title="ブルーアーカイブ<br>Blue Archive"
+                                >ブルアカ:</abbr
+                            >
+                            <ul>
+                                <li>
+                                    <abbr use:tippy={{}} title="Taiwan / Hong Kong">TW/HK</abbr>:
+                                    <IconAccount /><span class="copy" title="UID">8875367</span>
+                                    <IconAccountPlus /><span class="copy" title="Friend Code">ARVPPJDU</span>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <IconFire />
+                            <abbr use:tippy={{ allowHTML: true }} title="ヘブンバーンズレッド<br>Heaven Burns Red"
+                                >ヘブバン:</abbr
+                            >
+                            <ul>
+                                <li>
+                                    <abbr title="Unknown" use:tippy={{}}>UNK?</abbr>:
+                                    <span class="muted">recovering account...</span>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <abbr
-                        use:tippy={{ allowHTML: true, maxWidth: "600px" }}
-                        title="ワールドダイスター 夢のステラリウム<br>World Dai Star: Yume no Stellarium"
-                        >ユメステ:</abbr
-                    >
-                    <ul>
-                        <li class="muted">This game is currently only available in JP markets.</li>
-                        <li>JP: <span class="copy">5007270775</span></li>
-                    </ul>
-                </li>
+
                 <li>
                     <span title="osu!">
                         <IconOsuAmpersandPound33Semicolon />
+                        osu!
                     </span>
-                    <a href="//osu.ppy.sh/u/soopyc">
-                        <span class="text-hide">osu!</span>
-                        soopyc
-                    </a>
+                    <a href="//osu.ppy.sh/u/soopyc"> soopyc </a>
                 </li>
-                <li>Minecraft: CatgirlSelene</li>
+                <li>
+                    <span title="Minecraft"><IconMinecraft /> Minecraft</span>
+                    <a href="https://namemc.com/profile/CatgirlSelene.1">CatgirlSelene</a>
+                </li>
             </ul>
         </div>
     </details>
 
     <hr />
     <details class="list-none" open id="keys">
-        <summary>Public keys</summary>
+        <summary><IconKey /> Public keys</summary>
         <ul>
             <li>
                 <span class="text-rose">Age keys</span>
@@ -285,6 +354,23 @@
                 <ul>
                     <li class="copy">RWTwHbCTKdHg/muMS/0Uxlz27Jw7C1ccDxnDx+GIpM+1IeeWzIu6aAi9</li>
                 </ul>
+            </li>
+        </ul>
+    </details>
+
+    <!-- Because this is essentially in the same category as the previous <details/>, no <hr/> will be added. -->
+    <details class="list-none" open id="identity-proofs">
+        <summary><IconAccountOutline /> Identity Proofs</summary>
+        <ul>
+            <li>
+                <IconCertificateFill /> <abbr use:tippy={{}} title="Ariadne Signature Profile">ASP</abbr>:
+                <a href="https://keyoxide.org/aspe%3Akeyoxide.org%3A5VATYUSIE6DC5CPWEYTRSUSUXI">
+                    aspe:keyoxide.org:5VATYUSIE6DC5CPWEYTRSUSUXI
+                </a>
+            </li>
+            <li>
+                <IconKeybase />
+                Keybase <a href="//keybase.io/kcomain">kcomain</a>
             </li>
         </ul>
     </details>
