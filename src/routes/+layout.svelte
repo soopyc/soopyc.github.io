@@ -61,7 +61,6 @@
 </svelte:head>
 
 <div id="loadingBar" style:width={`${navprogress}%`} class:active={showProgress} />
-<!-- possible to set to active on startup, but need to find way to animate. -->
 
 <noscript>
     <div id="nojs">
@@ -78,20 +77,23 @@
     </div>
 </noscript>
 
-<div id="header">
-    <p id="site-name">soopy.moe<sup>★</sup></p>
-    <p id="time-display">
-        {#if !browser}<abbr title="Rendered at">r=</abbr>{/if}{timeDisplay}
-    </p>
-</div>
-
-<div id="nav">
-    <a href="/" class:current={$page.url.pathname == "/"}>~/Home</a>
-    <a href="/services" class:current={$page.url.pathname == "/services"}>~/Services</a>
-    <a href="/projects" class:current={$page.url.pathname == "/projects"}>~/Projects</a>
-    <a href="/about" class:current={$page.url.pathname == "/about"}>~/About</a>
-</div>
-<hr />
+<nav class="sticky">
+    <div>
+        <div id="header">
+            <p id="site-name">soopy.moe<sup>★</sup></p>
+            <p id="time-display">
+                {#if !browser}<abbr title="Rendered at">r=</abbr>{/if}{timeDisplay}
+            </p>
+        </div>
+        <div id="nav">
+            <a href="/" class:current={$page.url.pathname == "/"}>~/Home</a>
+            <a href="/services" class:current={$page.url.pathname == "/services"}>~/Services</a>
+            <a href="/projects" class:current={$page.url.pathname == "/projects"}>~/Projects</a>
+            <a href="/about" class:current={$page.url.pathname == "/about"}>~/About</a>
+        </div>
+        <hr />
+    </div>
+</nav>
 
 <div use:twemoji>
     <slot />
@@ -160,6 +162,7 @@
         background-color: var(--color-love)
         transition-property: width, height
         transition-duration: 150ms
+        z-index: 1
 
         &.active
             height: 0.2rem
@@ -186,4 +189,11 @@
         text-align: center
         p
             margin: 0
+
+    nav
+        background-color: var(--color-base)
+
+    .sticky
+        position: sticky
+        top: 0
 </style>
