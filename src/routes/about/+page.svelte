@@ -65,12 +65,12 @@
     <h3 id="whoami">Who am I?</h3>
     <p>
         My name is Cassie, but you can also call me Sophie or any other names listed on the front page. I'm a Secondary
-        6 student in 🇭🇰 Hong Kong. I study <span class="text-gold">Biology</span>,
-        <span class="text-gold">Physics</span> and <span class="text-gold">Computer Science</span>.
+        6 student in 🇭🇰 Hong Kong. I study <span class="text-rose">Biology</span>,
+        <span class="text-rose">Physics</span> and <span class="text-rose">Computer Science</span>.
     </p>
     <p>
-        I also manage my own network of services and the infrastructure of them. See <a href="/sites">~/Sites</a> for more
-        details.
+        I also manage my own network of services and the infrastructure of them. See <a href="/services">~/Services</a> for
+        more details.
     </p>
     <p>
         proud owner of <a href="//bnuuy.moe">bnuuy.moe</a>
