@@ -58,9 +58,6 @@
     {#if daysLeft.days() <= 31 && daysLeft.asSeconds() < 0}
         <p>can you believe it folks‽ birthday! just {(daysLeft).humanize()} away‼</p>
     {/if}
-    {#if now.diff(birthday, "years") == 18}
-        <p>i am now legal. <img class="inline-img" src="/images/yippee.gif" alt="GIF of the autism creature/TBH with confetti"/> </p>
-    {/if}
 
     <p class="separator p-note">full-time student</p>
     <p class="p-note">sysadmin cosplayer<sup><a href="https://youtube.com/c/JeffGeerling">?</a></sup></p>
