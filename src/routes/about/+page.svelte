@@ -264,7 +264,7 @@
                                 </li>
                                 <li>
                                     <abbr use:tippy={{}} title="Worldwide / Global">WW/XW</abbr>:
-                                    <span class="muted">recovering account...</span>
+                                    <span class="copy">272743172185239560</span>
                                 </li>
                             </ul>
                         </li>
