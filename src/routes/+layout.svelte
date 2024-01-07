@@ -62,21 +62,6 @@
 
 <div id="loadingBar" style:width={`${navprogress}%`} class:active={showProgress} />
 
-<noscript>
-    <div id="nojs">
-        <p>You currently do not have JavaScript enabled, though this site should still work fine.</p>
-        <p>If you notice any accessibility issues, please do not hesitate to shoot me a message.</p>
-        <p>
-            You can find methods to contact me on
-            {#if $page.url.pathname == "/about"}
-                this page.
-            {:else}
-                the <a href="/about">contact</a> page.
-            {/if}
-        </p>
-    </div>
-</noscript>
-
 <nav class="sticky">
     <div>
         <div id="header">
@@ -120,6 +105,22 @@
             <a href="https://webring.bucketfish.me/redirect.html?to=next&name=soopyc"><IconArrowRight /></a>
         </span>
     </p>
+
+    <noscript>
+        <div id="nojs">
+            <p>JavaScript is currently not enabled or not supported, though this site should still work fine.</p>
+            <p>If there are any accessibility issues, please do not hesitate to contact me.</p>
+            <p>
+                You can find methods to contact me on
+                {#if $page.url.pathname == "/about"}
+                    this exact page.
+                {:else}
+                    the <a href="/about">about</a> page.
+                {/if}
+            </p>
+        </div>
+    </noscript>
+
 </div>
 
 <style lang="sass">
