@@ -69,9 +69,6 @@
         <a href="https://pronouns.page/@soopyc" rel="me" class="u-url">Pronounce -&gt; pronouns.page</a>
     </p>
     <p>
-        <a href="https://koakuma.soopy.moe/sophie" rel="me" class="u-url">GitLab -&gt; //koakuma.soopy.moe</a>
-    </p>
-    <p>
         <a href="https://patchy.soopy.moe/mizuki" rel="me" class="u-url">Forgejo -&gt; //patchy.soopy.moe</a>
     </p>
     <!-- i dont really use gitlab kekO -->
