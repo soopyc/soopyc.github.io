@@ -392,6 +392,10 @@
         padding-top: 0.25rem
         vertical-align: middle
 
+    // lazy method
+    h3
+        scroll-margin-top: 5.5rem
+
     .muted
         color: var(--color-muted) !important
     //    text-decoration: wavy line-through
