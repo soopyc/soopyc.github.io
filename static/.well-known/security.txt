@@ -2,7 +2,7 @@
 Hash: SHA512
 
 Contact: mailto:me@soopy.moe
-Expires: 2026-01-01T00:00:00.000Z
+Expires: 2025-01-01T00:00:00.000Z
 Encryption: https://soopy.moe/agekeys.txt
 Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/8F3B277901484C6EA7E63F82D539637D518022C6
 Preferred-Languages: en
@@ -10,8 +10,8 @@ Canonical: https://soopy.moe/.well-known/security.txt
 Canonical: https://soopy.moe/security.txt
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQSPOyd5AUhMbqfmP4LVOWN9UYAixgUCZTvrhgAKCRDVOWN9UYAi
-xpVHAQCsi4EwFtA6K8oF+MUarfUegLN4kHq1quz1gJuICUMynAD/R+Sis/nJFHPA
-AKQ50YR8l6zjS5f9GZU/qPbUZZNDIwE=
-=WJN+
+iHUEARYKAB0WIQSPOyd5AUhMbqfmP4LVOWN9UYAixgUCZfVSygAKCRDVOWN9UYAi
+xmgHAPwM6gxKBB1JPTeFZZDdoorZz3+D2GefEjlxi2nryD2rkAD/cy0GeU0+QFRs
+16AVDnhpVqru8FdClL/Lppx7yrc1rAY=
+=kzBH
 -----END PGP SIGNATURE-----
