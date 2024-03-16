@@ -6,6 +6,7 @@
 		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
+        "clean": "rm -rv .svelte-kit .netlify build",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
@@ -15,7 +16,7 @@
 		"@iconify-json/octicon": "^1.1.52",
 		"@iconify-json/ph": "^1.1.11",
 		"@iconify-json/simple-icons": "^1.1.95",
-		"@sveltejs/adapter-netlify": "^3.0.2",
+		"@sveltejs/adapter-cloudflare": "^4.2.0",
 		"@sveltejs/kit": "^2.5.4",
 		"@sveltejs/vite-plugin-svelte": "^3.0.2",
 		"firacode": "^6.2.0",
