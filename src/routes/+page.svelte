@@ -72,7 +72,7 @@
         <a href="https://patchy.soopy.moe/mizuki" rel="me" class="u-url">Forgejo -&gt; //patchy.soopy.moe</a>
     </p>
     <!-- i dont really use gitlab kekO -->
-    <p><a href="https://gitlab.com/kcomain" rel="me" class="u-url">GitLab SaaS -&gt; //gitlab.com</a></p>
+    <p><a href="https://gitlab.com/soopyc" rel="me" class="u-url">GitLab SaaS -&gt; //gitlab.com</a></p>
     <p>
         <a
             href="https://keys.openpgp.org/vks/v1/by-fingerprint/7BADC9C659B024D8F0AC64F3DB9BEC3A93B4B1DF"
