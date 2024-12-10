@@ -1,0 +1,85 @@
+:root {
+    --base: rgb(239, 241, 245);
+    --text: rgb(76, 79, 105);
+    --muted: rgb(140, 143, 161);
+
+    --red: rgb(210, 15, 57);
+    --green: rgb(64, 160, 43);
+    --yellow: rgb(223, 142, 29);
+    --blue: rgb(30, 102, 245);
+    --pink: rgb(234, 118, 203);
+    --teal: rgb(23, 146, 153);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --base: rgb(30, 30, 46);
+        --text: rgb(205, 214, 244);
+        --muted: rgb(127, 132, 156);
+
+        --red: rgb(243, 139, 168);
+        --green: rgb(166, 227, 161);
+        --yellow: rgb(249, 226, 175);
+        --blue: rgb(137, 180, 250);
+        --pink: rgb(245, 194, 231);
+        --teal: rgb(148, 226, 213);
+    }
+}
+
+body {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.25rem;
+    color: var(--text);
+    background-color: var(--base);
+
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 765px;
+
+    overflow: scroll;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: var(--blue);
+    transition-duration: 0.25s;
+    transition-property: padding, color, background-color;
+    transition-timing-function: ease-in-out;
+
+    &:hover, &:focus {
+        color: var(--base);
+        background-color: var(--blue);
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+    }
+}
+
+p {
+    margin: 0; // terminal like spacing
+}
+
+.muted {
+    color: var(--muted);
+}
+
+// rgybpt
+.text-red {
+    color: var(--red);
+}
+.text-green {
+    color: var(--green);
+}
+.text-yellow {
+    color: var(--yellow);
+}
+.text-blue {
+    color: var(--blue);
+}
+.text-pink {
+    color: var(--pink);
+}
+.text-teal {
+    color: var(--teal);
+}

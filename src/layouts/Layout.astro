@@ -1,5 +1,7 @@
 ---
 import "@fontsource/ubuntu-mono";
+import "@csstools/normalize.css";
+import "../styles/main.scss";
 const { title } = Astro.props;
 ---
 
@@ -8,11 +10,11 @@ const { title } = Astro.props;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="https://www.libravatar.org/avatar/58a08528a7e2b3fd738b25d0c63f5c82?s=1024" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <body class="mt-5 mx-auto max-w-screen-md font-mono">
+    <body>
         <slot />
     </body>
 </html>
