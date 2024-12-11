@@ -1,15 +1,14 @@
 ---
-const {prompt} = Astro.props;
+const {prompt = "$ "} = Astro.props;
 ---
 
 <p>
-    <span id="prompt" class="text-blue">{prompt ?? "$ "}</span>
     <slot />
 </p>
 
-<style lang="scss">
-    #prompt {
-        -webkit-user-select: none;
-        user-select: none;
+<style lang="scss" define:vars={{prompt: `'${prompt}'`}}>
+    p:before {
+        content: var(--prompt);
+        color: var(--blue);
     }
 </style>
