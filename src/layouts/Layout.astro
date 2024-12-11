@@ -15,6 +15,18 @@ const { title } = Astro.props;
         <title>{title}</title>
     </head>
     <body>
+        <p id="screen-warning" class="text-yellow"><b>WARN:</b> Your screen is a little too compact. Some command outputs may become garbled.</p>
+
         <slot />
     </body>
 </html>
+
+<style lang="scss">
+    #screen-warning {
+        display: block;
+
+        @media (min-width: 512px) {
+            display: none;
+        }
+    }
+</style>
