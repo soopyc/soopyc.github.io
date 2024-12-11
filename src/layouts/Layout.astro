@@ -7,7 +7,6 @@ import "../styles/main.scss";
 
 import Prompt from "../components/Prompt.astro";
 import Output from "../components/Output.astro";
-import Indented from "../components/Indented.astro";
 import dayjs from "dayjs";
 
 const { title } = Astro.props;
@@ -47,13 +46,13 @@ const { title } = Astro.props;
             <!-- Webrings -->
             <Output>
                 <p>Webrings:</p>
-                <Indented>
-                    <p>
+                <ul>
+                    <li>
                         <a href="//webring.bucketfish.me">bucketfish</a>
                         <a href="//webring.bucketfish.me/redirect.html?to=prev&name=soopyc">[prev]</a>
                         <a href="//webring.bucketfish.me/redirect.html?to=next&name=soopyc">[next]</a>
-                    </p>
-                </Indented>
+                    </li>
+                </ul>
 
                 <p>Source code: <a href="//github.com/soopyc/soopyc.github.io">github:soopyc/soopyc.github.io</a></p>
             </Output>
