@@ -18,6 +18,7 @@
             packages = [
               pkgs.nodejs_latest
               pkgs.pnpm
+              pkgs.nrr
             ];
           };
         };
