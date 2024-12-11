@@ -8,6 +8,7 @@ import "../styles/main.scss";
 import Prompt from "../components/Prompt.astro";
 import Output from "../components/Output.astro";
 import dayjs from "dayjs";
+import { Image } from "astro:assets";
 
 const { title } = Astro.props;
 ---
@@ -57,6 +58,16 @@ const { title } = Astro.props;
                 <p>Source code: <a href="//github.com/soopyc/soopyc.github.io">github:soopyc/soopyc.github.io</a></p>
             </Output>
 
+            <Prompt>nix run /flake#buttons</Prompt>
+            <Output>
+                <div id="buttons">
+                    <Image width="88" height="31" src="/images/buttons/transnow2.gif" alt="trans rights now" />
+                    <Image width="88" height="31" height="31" src="/images/buttons/valid-bad.gif" alt="w3c certified bad html" />
+                    <Image width="88" height="31" src="/images/buttons/valid-css-blue.gif" alt="w3c valid css" />
+                    <Image width="88" height="31" src="/images/buttons/windose20.png" alt="windose 20 from needy streamer overload" />
+                </div>
+            </Output>
+
             <Prompt>^D</Prompt>
             <Output>logout</Output>
         </footer>
@@ -67,13 +78,14 @@ const { title } = Astro.props;
     #screen-warning {
         display: block;
 
-        @media (min-width: 60ch) {
+        @media (min-width: 50ch) {
             display: none;
         }
     }
 
-    #dir-listing {
+    #dir-listing, #buttons {
         display: flex;
+        flex-wrap: wrap;
         gap: 1ch;
     }
 </style>
