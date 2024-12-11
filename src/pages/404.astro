@@ -1,0 +1,28 @@
+---
+import DmesgTS from "../components/DmesgTS.astro";
+import Output from "../components/Output.astro";
+import Layout from "../layouts/Layout.astro";
+
+performance.clearMeasures();
+export const prerender = false; // experiment
+---
+
+<Layout title="not found?">
+    <Output>
+        <p>
+            <DmesgTS />
+            <span class="text-red">could not read directory at /home/site{Astro.url.pathname}</span>
+        </p>
+        <p>
+            <DmesgTS />
+            <span class="text-yellow">hint:</span>
+            <span>please check if you have spelled the directory name correctly.</span>
+        </p>
+        <p>
+            <DmesgTS />
+            <span class="text-yellow">hint:</span>
+            <span>contact the site admin if this is unexpected.</span>
+        </p>
+
+    </Output>
+</Layout>
