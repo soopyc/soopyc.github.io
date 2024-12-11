@@ -1,10 +1,58 @@
 ---
+import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+import Indented from "../components/Indented.astro";
+import Output from "../components/Output.astro";
 import Prompt from "../components/Prompt.astro";
 import Layout from "../layouts/Layout.astro";
+
+export const prerender = false;
+Astro.response.headers.append("strict-transport-security", "max-age=63072000; includeSubDomains; preload");
+dayjs.extend(duration);
+dayjs.extend(relativeTime);
+
+const birthday = dayjs("2005-12-26T00:00:00+08:00");
+const birthdayThisYear = birthday.year(dayjs().year());
+const now = dayjs();
+const daysLeft = dayjs.duration(now.diff(birthdayThisYear));
 ---
 
-<Layout title="meow">
-    <p class="text-yellow"><b>WARNING:</b> Here be dragons - construction in progress!</p>
-    <Prompt>meow</Prompt>
-    <Prompt prompt="(mrow 1) ">exit</Prompt>
+<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+
+<Layout>
+    <Prompt>./site intro</Prompt>
+    <Output>
+        <h1>Welcome to soopy.moe!</h1>
+        <Indented>
+            <!-- i failed trying to make it more terminal-like without breaking stuff :p -->
+            <p>
+                Name: <span class="text-pink">soopyc</span>
+                <span class="text-teal"> (cassie, sophie)</span>
+            </p>
+            <p>Born: {birthday.format("YYYY-MM-DD")}</p>
+            {daysLeft.asDays() < 31 && <p>Birthday in: {daysLeft.humanize()}</p>}
+            <p>Age: {now.diff(birthday, "years", true).toFixed(7)}y</p>
+            <p>Descriptors:</p>
+            <ul>
+                <li>full-time student</li>
+                <li>sysadmin cosplayer<a href="//youtube.com/c/JeffGeerling">[1]</a></li>
+                <li>genderfluid transfemby</li>
+                <li>hong konger</li>
+            </ul>
+        </Indented>
+    </Output>
+
+    <Prompt>./site links</Prompt>
+    <Output>
+        <Indented>
+            <ul>
+                <li>GitHub <a rel="me" href="//github.com/soopyc">soopyc</a></li>
+                <li>GitLab<span class="text-muted"> (SaaS) </span><a rel="me" href="//gitlab.com/soopyc">soopyc</a></li>
+                <li>Patchy <a rel="me" href="//patchy.soopy.moe/cassie">patchy.@/cassie</a></li>
+                <li>Email <a rel="me" href="mailto:cassie@soopy.moe">me@soopy.moe</a></li>
+            </ul>
+        </Indented>
+    </Output>
 </Layout>
