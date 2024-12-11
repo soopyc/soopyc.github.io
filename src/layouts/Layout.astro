@@ -1,7 +1,14 @@
 ---
 import "@fontsource/ubuntu-mono";
 import "@csstools/normalize.css";
+
+import "../styles/kosugimaru.scss";
 import "../styles/main.scss";
+
+import Prompt from "../components/Prompt.astro";
+import Output from "../components/Output.astro";
+import Indented from "../components/Indented.astro";
+
 const { title } = Astro.props;
 ---
 
@@ -10,14 +17,46 @@ const { title } = Astro.props;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" href="https://www.libravatar.org/avatar/58a08528a7e2b3fd738b25d0c63f5c82?s=1024" />
+        <link rel="icon" href="https://www.libravatar.org/avatar/58a08528a7e2b3fd738b25d0c63f5c82?s=512" />
         <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
+        <title>site@soopy:~{Astro.url.pathname} {title && "| " + title}</title>
     </head>
     <body>
         <p id="screen-warning" class="text-yellow"><b>WARN:</b> Your screen is a little too compact. Some command outputs may become garbled.</p>
+        <p class="text-yellow"><b>WARN:</b> Construction in progress!</p>
+        <header>
+            <Prompt>pwd && eza -D ~/pages</Prompt>
+            <Output>
+                <p>~{Astro.url.pathname}</p>
+                <div id="dir-listing">
+                    <a href="/">home</a>
+                    <a href="/blog">blog</a>
+                    <a href="/about">about</a>
+                </div>
+            </Output>
+        </header>
 
         <slot />
+
+        <footer>
+            <Prompt>nix run /flake#footer</Prompt>
+            <!-- Webrings -->
+            <Output>
+                <p>Webrings:</p>
+                <Indented>
+                    <p>
+                        <a href="//webring.bucketfish.me">bucketfish</a>
+                        <a href="//webring.bucketfish.me/redirect.html?to=prev&name=soopyc">[prev]</a>
+                        <a href="//webring.bucketfish.me/redirect.html?to=next&name=soopyc">[next]</a>
+                    </p>
+                </Indented>
+
+                <p>Source code: <a href="//github.com/soopyc/soopyc.github.io">github:soopyc/soopyc.github.io</a></p>
+            </Output>
+
+            <Prompt>^D</Prompt>
+            <Output>logout</Output>
+        </footer>
     </body>
 </html>
 
@@ -25,8 +64,13 @@ const { title } = Astro.props;
     #screen-warning {
         display: block;
 
-        @media (min-width: 512px) {
+        @media (min-width: 60ch) {
             display: none;
         }
+    }
+
+    #dir-listing {
+        display: flex;
+        gap: 1ch;
     }
 </style>
