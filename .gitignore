@@ -23,6 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# wrangler
+.wrangler/
+
 # nix
 .direnv
 result
