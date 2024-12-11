@@ -20,6 +20,9 @@ importers:
       astro:
         specifier: ^5.0.4
         version: 5.0.4(@types/node@22.10.1)(jiti@1.21.6)(less@4.2.1)(rollup@4.28.1)(sass@1.82.0)(typescript@5.7.2)(yaml@2.6.1)
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
       sass:
         specifier: ^1.82.0
         version: 1.82.0
@@ -1139,6 +1142,9 @@ packages:
 
   date-fns@4.1.0:
     resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
+
+  dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
 
   debug@4.4.0:
     resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
@@ -3257,6 +3263,8 @@ snapshots:
   data-uri-to-buffer@2.0.2: {}
 
   date-fns@4.1.0: {}
+
+  dayjs@1.11.13: {}
 
   debug@4.4.0:
     dependencies:
