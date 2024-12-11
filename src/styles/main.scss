@@ -27,23 +27,24 @@
 }
 
 body {
-    font-family: "Ubuntu Mono", monospace;
-    font-size: 1.25rem;
+    // https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMwMHB4IiwibWF4V2lkdGgiOiI3NjhweCIsIm1pbkZvbnRTaXplIjoiMXJlbSIsIm1heEZvbnRTaXplIjoiMS4yNXJlbSJ9
+    font-size: clamp(1rem, 0.8397rem + 0.8547vw, 1.25rem);
+    font-family: "Ubuntu Mono", 'Kosugi Maru', monospace;
     color: var(--text);
     background-color: var(--base);
 
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
     max-width: 768px;
 
     overflow: scroll;
     overflow-wrap: break-word;
 
-    @media (max-width: 768px) {
-        margin-left: 1rem;
-        margin-right: 1rem;
+    @media (min-width: 768px) {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -59,10 +60,6 @@ a {
         padding-left: 0.25em;
         padding-right: 0.25em;
     }
-}
-
-p {
-    margin: 0; // terminal like spacing
 }
 
 .muted {
@@ -87,4 +84,40 @@ p {
 }
 .text-teal {
     color: var(--teal);
+}
+
+// spacing
+p, ul {
+    margin: 0; // terminal like spacing
+}
+
+ul {
+    padding-left: 2ch;
+    list-style-type: '- ';
+
+    &:first-child {
+        padding: 0;
+    }
+}
+
+h1, h2, h3 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 1em 0 0 0;
+    color: var(--pink);
+
+    &:before {
+        white-space: pre;
+        color: var(--muted);
+    }
+}
+
+h1:before {
+    content: '# ';
+}
+h2:before {
+    content: '## ';
+}
+h3:before {
+    content: '### ';
 }
