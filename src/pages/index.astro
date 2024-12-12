@@ -19,10 +19,9 @@ const now = dayjs();
 const daysLeft = dayjs.duration(now.diff(birthdayThisYear));
 ---
 
-<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
-
 <Layout>
-    <Prompt>./site intro</Prompt>
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+    <Prompt>site show intro</Prompt>
     <Output>
         <h1>Welcome to soopy.moe!</h1>
         <Indented>
@@ -44,7 +43,7 @@ const daysLeft = dayjs.duration(now.diff(birthdayThisYear));
         </Indented>
     </Output>
 
-    <Prompt>./site links</Prompt>
+    <Prompt>site show links</Prompt>
     <Output>
         <Indented>
             <ul>
