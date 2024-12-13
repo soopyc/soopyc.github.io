@@ -121,3 +121,8 @@ h2:before {
 h3:before {
     content: '### ';
 }
+
+// astro-icons
+[data-icon] {
+    vertical-align: middle;
+}
