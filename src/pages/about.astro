@@ -1,0 +1,48 @@
+---
+import Output from "../components/Output.astro";
+import Layout from "../layouts/Layout.astro";
+import Prompt from "../components/Prompt.astro";
+import ContactLink from "../components/ContactLink.astro";
+
+import links from "../assets/contactLinks.ts";
+import ContactSection from "../components/ContactSection.astro";
+---
+
+<Layout title="about me!">
+    <Prompt>whoami</Prompt>
+    <Output>
+        <p>site</p>
+    </Output>
+    <Prompt>site whoami</Prompt>
+    <Output>
+        <p>
+            my name is <span class="text-pink">cassie</span>, but i'm more commonly known as
+            <span class="text-pink">soopy</span> and <span class="text-pink">sophie</span>.
+        </p>
+    </Output>
+    <Output>
+        <p>
+            i am currently studying for an associate's degree for
+            <span class="text-green">network and systems administation</span>.
+        </p>
+    </Output>
+    <Output>
+        <p>
+            i manage my own network of servers and host a bunch of services on each of them. see
+            <a href="//miku.soopy.moe">miku.@</a> for status of the hosted services.
+        </p>
+        <p>i am also a maintainer for the <a href="//t2linux.org">t2linux</a> (on nixos) project.</p>
+    </Output>
+    <Output>
+        <p>i try not to use the word/character "i" so much but sentences look weird without that.</p>
+    </Output>
+
+    <Prompt>site finger</Prompt>
+    <Output>
+        <p>
+            as a chronically online person, i have a wide range of contact methods. here's a mostly complete exerpt of
+            my online presence.
+        </p>
+        {Object.entries(links).map((section) => <ContactSection {section} />)}
+    </Output>
+</Layout>

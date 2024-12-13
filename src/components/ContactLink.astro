@@ -1,0 +1,20 @@
+---
+import type { Link } from "../assets/contactLinks";
+import {Icon} from "astro-icon/components";
+
+const { label, href, text = label, icon = "ph:question" }: Link = Astro.props.link;
+---
+
+<p>
+    <Icon name={icon} />
+    <!-- <span>{label}</span>
+    <a href={href}>{text}</a> -->
+    <a {href}>{label}</a>
+</p>
+
+<style lang="scss">
+    a:hover,
+    a:focus {
+        padding: unset;
+    }
+</style>

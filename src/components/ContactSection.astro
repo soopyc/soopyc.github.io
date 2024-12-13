@@ -1,0 +1,19 @@
+---
+import type { Link } from "../assets/contactLinks";
+import ContactLink from "./ContactLink.astro";
+
+const [section, links]: [string, Link[]] = Astro.props.section;
+---
+
+<h2>{section}</h2>
+<div>
+    {links.map(link => <ContactLink {link} />)}
+</div>
+
+<style>
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1ch;
+    }
+</style>
