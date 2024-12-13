@@ -5,10 +5,13 @@ import "@csstools/normalize.css";
 import "../styles/kosugimaru.scss";
 import "../styles/main.scss";
 
+import pkg from "../../package.json";
+
 import Prompt from "../components/Prompt.astro";
 import Output from "../components/Output.astro";
 import dayjs from "dayjs";
 import { Image } from "astro:assets";
+import Indented from "../components/Indented.astro";
 
 const { title } = Astro.props;
 ---
@@ -54,8 +57,6 @@ const { title } = Astro.props;
                         <a href="//webring.bucketfish.me/redirect.html?to=next&name=soopyc">[next]</a>
                     </li>
                 </ul>
-
-                <p>Source code: <a href="//github.com/soopyc/soopyc.github.io">github:soopyc/soopyc.github.io</a></p>
             </Output>
 
             <Prompt>nix run /flake#buttons</Prompt>
@@ -66,6 +67,15 @@ const { title } = Astro.props;
                     <Image width="88" height="31" src="/images/buttons/valid-css-blue.gif" alt="w3c valid css" />
                     <Image width="88" height="31" src="/images/buttons/windose20.png" alt="windose 20 from needy streamer overload" />
                 </div>
+            </Output>
+
+            <Prompt>site --version</Prompt>
+            <Output>
+                <p>v{pkg.version}</p>
+                <Indented>
+                    <p>Built with: {Astro.generator}</p>
+                    <p>Source: <a href="//github.com/soopyc/soopyc.github.io">github:soopyc/soopyc.github.io</a></p>
+                </Indented>
             </Output>
 
             <Prompt>^D</Prompt>
