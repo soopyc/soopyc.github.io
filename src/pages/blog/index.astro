@@ -6,7 +6,7 @@ import BlogPostEntry from "../../components/BlogPostEntry.astro";
 import Layout from "../../layouts/Layout.astro";
 
 const posts = (await getCollection("posts"))
-    .toSorted((a, b) => a.data.created.getTime() - b.data.created.getTime())
+    .sort((a, b) => a.data.created.getTime() - b.data.created.getTime())
     .reverse();
 ---
 
