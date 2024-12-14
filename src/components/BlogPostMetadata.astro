@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+    entry: CollectionEntry<"posts">
+}
+
+const { entry } = Astro.props;
+---
+
+<p><span class="text-muted">Written by: </span><span class="text-green">{entry.data.author}</span></p>
+<p><span class="text-muted">Posted on: </span>{entry.data.created.toISOString()}</p>
+{
+    entry.data.lastmodified && (
+        <p>
+            <span class="text-muted">Last modified: </span>
+            {entry.data.lastmodified.toISOString()}
+        </p>
+    )
+}

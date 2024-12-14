@@ -6,30 +6,29 @@ import Layout from "../../layouts/Layout.astro";
 import Output from "../../components/Output.astro";
 import Prompt from "../../components/Prompt.astro";
 import Indented from "../../components/Indented.astro";
+import BlogPostMetadata from "../../components/BlogPostMetadata.astro";
 
 export const getStaticPaths = (async () => {
     const posts = await getCollection("posts");
 
-    return posts.map((post) => {
+    return posts.map((entry) => {
         return {
-            params: { slug: post.id },
-            props: { post },
+            params: { slug: entry.id },
+            props: { post: entry },
         };
     });
 }) satisfies GetStaticPaths;
 
-const { post } = Astro.props;
-const { Content } = await render(post);
+const { post: entry } = Astro.props;
+const { Content } = await render(entry);
 ---
 
-<Layout title={post.data.title}>
-    <Prompt>site blog cat "{post.id}"</Prompt>
+<Layout title={entry.data.title}>
+    <Prompt>site blog cat "{entry.id}"</Prompt>
     <Output>
-        <h1>{post.data.title}</h1>
+        <h1>{entry.data.title}</h1>
         <Indented>
-            <p><span class="text-muted">Written by: </span><span class="text-green">{post.data.author}</span></p>
-            <p><span class="text-muted">Posted on: </span>{post.data.created.toISOString()}</p>
-            {post.data.lastmodified && <p><span class="text-muted">Last modified: </span>{post.data.lastmodified.toISOString()}</p>}
+            <BlogPostMetadata {entry} />
         </Indented>
     </Output>
     <Output>
