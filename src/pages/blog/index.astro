@@ -5,13 +5,15 @@ import Prompt from "../../components/Prompt.astro";
 import BlogPostEntry from "../../components/BlogPostEntry.astro";
 import Layout from "../../layouts/Layout.astro";
 
-const posts = await getCollection("posts");
+const posts = (await getCollection("posts"))
+    .toSorted((a, b) => a.data.created.getTime() - b.data.created.getTime())
+    .reverse();
 ---
 
 <Layout title="Blog posts">
     <Prompt>site posts list</Prompt>
     <Output>
         <h1>Blog posts</h1>
-        {posts.map(entry => <BlogPostEntry {entry} />)}
+        {posts.map((entry) => <BlogPostEntry {entry} />)}
     </Output>
 </Layout>
