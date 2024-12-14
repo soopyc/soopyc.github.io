@@ -6,6 +6,14 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
+    markdown: {
+        shikiConfig: {
+            themes: {
+                light: "catppuccin-latte",
+                dark: "catppuccin-mocha",
+            }
+        },
+    },
     adapter: cloudflare(),
     integrations: [icon()],
 });

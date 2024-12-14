@@ -26,10 +26,14 @@
     }
 }
 
+body,
+code {
+    font-family: "Ubuntu Mono", 'Kosugi Maru', monospace;
+}
+
 body {
     // https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMwMHB4IiwibWF4V2lkdGgiOiI3NjhweCIsIm1pbkZvbnRTaXplIjoiMXJlbSIsIm1heEZvbnRTaXplIjoiMS4yNXJlbSJ9
     font-size: clamp(1rem, 0.8397rem + 0.8547vw, 1.25rem);
-    font-family: "Ubuntu Mono", 'Kosugi Maru', monospace;
     color: var(--text);
     background-color: var(--base);
 
@@ -48,13 +52,32 @@ body {
     }
 }
 
+.astro-code {
+    padding: 1ch;
+    border-radius: 0.5rem;
+    border: 1px solid var(--text);
+
+    @media (prefers-color-scheme: dark) {
+
+        &,
+        & span {
+            color: var(--shiki-dark) !important;
+            background-color: var(--shiki-dark-bg) !important;
+            font-style: var(--shiki-dark-font-style) !important;
+            font-weight: var(--shiki-dark-font-weight) !important;
+            text-decoration: var(--shiki-dark-text-decoration) !important;
+        }
+    }
+}
+
 a {
     color: var(--blue);
     transition-duration: 0.25s;
     transition-property: padding, color, background-color;
     transition-timing-function: ease-in-out;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         color: var(--base);
         background-color: var(--blue);
         padding-left: 0.25em;
@@ -70,24 +93,30 @@ a {
 .text-red {
     color: var(--red);
 }
+
 .text-green {
     color: var(--green);
 }
+
 .text-yellow {
     color: var(--yellow);
 }
+
 .text-blue {
     color: var(--blue);
 }
+
 .text-pink {
     color: var(--pink);
 }
+
 .text-teal {
     color: var(--teal);
 }
 
 // spacing
-p, ul {
+p,
+ul {
     margin: 0; // terminal like spacing
 }
 
@@ -100,7 +129,9 @@ ul {
     }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-size: 1em;
     font-weight: normal;
     margin: 1em 0 0 0;
@@ -115,9 +146,11 @@ h1, h2, h3 {
 h1:before {
     content: '# ';
 }
+
 h2:before {
     content: '## ';
 }
+
 h3:before {
     content: '### ';
 }

@@ -1,0 +1,38 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import { render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Output from "../../components/Output.astro";
+import Prompt from "../../components/Prompt.astro";
+import Indented from "../../components/Indented.astro";
+
+export const getStaticPaths = (async () => {
+    const posts = await getCollection("posts");
+
+    return posts.map((post) => {
+        return {
+            params: { slug: post.id },
+            props: { post },
+        };
+    });
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title}>
+    <Prompt>site blog cat "{post.id}"</Prompt>
+    <Output>
+        <h1>{post.data.title}</h1>
+        <Indented>
+            <p><span class="text-muted">Written by: </span><span class="text-green">{post.data.author}</span></p>
+            <p><span class="text-muted">Posted on: </span>{post.data.created.toISOString()}</p>
+            {post.data.lastmodified && <p><span class="text-muted">Last modified: </span>{post.data.lastmodified.toISOString()}</p>}
+        </Indented>
+    </Output>
+    <Output>
+        <Content />
+    </Output>
+</Layout>
