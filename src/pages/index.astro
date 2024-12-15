@@ -9,7 +9,7 @@ import {
     intervalToDuration,
     setYear,
 } from "date-fns";
-import { TZDate } from "@date-fns/tz";
+import { tz, TZDate } from "@date-fns/tz";
 
 import Indented from "../components/Indented.astro";
 import Output from "../components/Output.astro";
@@ -36,7 +36,7 @@ const uptimeDuration = intervalToDuration({ start: birthday, end: now });
                 Name: <span class="text-pink">soopyc</span>
                 <span class="text-teal"> (cassie, sophie)</span>
             </p>
-            <p>Born: <span class="text-green">{format(birthday, "yyyy-MM-dd '('xxx')'")}</span></p>
+            <p>Born: <span class="text-green">{format(birthday, "yyyy-MM-dd '('xxx')'", {in: tz("Asia/Hong_Kong")})}</span></p>
             <p>Uptime: <span class="text-yellow">{formatDuration(uptimeDuration)}</span></p>
             {
                 differenceInMonths(birthdayThisYear, now) == 0 && differenceInSeconds(birthdayThisYear, now) > 0 && (
