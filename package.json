@@ -11,14 +11,16 @@
     "dependencies": {
         "@astrojs/cloudflare": "^12.1.0",
         "@csstools/normalize.css": "^12.1.1",
+        "@date-fns/tz": "^1.2.0",
         "@fontsource/ubuntu-mono": "^5.1.0",
         "@iconify-json/ph": "^1.2.1",
         "@iconify-json/simple-icons": "^1.2.15",
         "astro": "^5.0.5",
         "astro-icon": "^1.1.4",
-        "dayjs": "^1.11.13",
+        "date-fns": "^4.1.0",
         "sass": "^1.83.0",
-        "tailwindcss": "^3.4.16"
+        "tailwindcss": "^3.4.16",
+        "tippy.js": "^6.3.7"
     },
     "devDependencies": {
         "wrangler": "^3.95.0"

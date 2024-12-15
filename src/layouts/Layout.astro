@@ -9,14 +9,19 @@ import pkg from "../../package.json";
 
 import Prompt from "../components/Prompt.astro";
 import Output from "../components/Output.astro";
-import dayjs from "dayjs";
-import { Image } from "astro:assets";
 import Indented from "../components/Indented.astro";
+
+import { Image } from "astro:assets";
+import { format } from "date-fns";
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
+<!--
+    Thanks for checking in :3 I know you cannot really read the source of this with just view source,
+    so there's a link to the actual readable source down below. Have fun making your own website!
+-->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -26,7 +31,7 @@ const { title } = Astro.props;
         <title>site@soopy:~{Astro.url.pathname} {title && "| " + title}</title>
     </head>
     <body>
-        <Output><p>Last login: {dayjs().format("ddd MMM DD HH:mm:ss YYYY Z")}</p></Output>
+        <Output><p>Last login: {format(new Date(), "EEE MMM dd HH:mm:ss yyyy xxx")}</p></Output>
         <p id="screen-warning" class="text-yellow">
             <b>WARN:</b> Your screen is a little too compact. Some command outputs may become garbled.
         </p>
@@ -63,9 +68,20 @@ const { title } = Astro.props;
             <Output>
                 <div id="buttons">
                     <Image width="88" height="31" src="/images/buttons/transnow2.gif" alt="trans rights now" />
-                    <Image width="88" height="31" height="31" src="/images/buttons/valid-bad.gif" alt="w3c certified bad html" />
+                    <Image
+                        width="88"
+                        height="31"
+                        height="31"
+                        src="/images/buttons/valid-bad.gif"
+                        alt="w3c certified bad html"
+                    />
                     <Image width="88" height="31" src="/images/buttons/valid-css-blue.gif" alt="w3c valid css" />
-                    <Image width="88" height="31" src="/images/buttons/windose20.png" alt="windose 20 from needy streamer overload" />
+                    <Image
+                        width="88"
+                        height="31"
+                        src="/images/buttons/windose20.png"
+                        alt="windose 20 from needy streamer overload"
+                    />
                 </div>
             </Output>
 
@@ -93,7 +109,8 @@ const { title } = Astro.props;
         }
     }
 
-    #dir-listing, #buttons {
+    #dir-listing,
+    #buttons {
         display: flex;
         flex-wrap: wrap;
         gap: 1ch;
