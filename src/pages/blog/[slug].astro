@@ -24,14 +24,24 @@ const { Content } = await render(entry);
 ---
 
 <Layout title={entry.data.title}>
-    <Prompt>site blog cat "{entry.id}"</Prompt>
+    <Fragment slot="head">
+        <meta name="author" content={entry.data.author} />
+        <meta name="description" content={entry.data.summary} />
+    </Fragment>
+    <Prompt>site blog cat .</Prompt>
     <Output>
         <h1>{entry.data.title}</h1>
-        <Indented>
-            <BlogPostMetadata {entry} />
-        </Indented>
+        <BlogPostMetadata {entry} />
     </Output>
     <Output>
-        <Content />
+        <div class="main-content">
+            <Content />
+        </div>
     </Output>
 </Layout>
+
+<style lang="scss">
+    div.main-content :global(p) {
+        margin-bottom: 1em;
+    }
+</style>

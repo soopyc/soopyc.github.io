@@ -8,6 +8,7 @@ const posts = defineCollection({
         author: z.string().default("unknown"),
         created: z.coerce.date(),
         lastmodified: z.coerce.date().optional(),
+        summary: z.string().default("the author did not provide a summary :("),
     })
 })
 
