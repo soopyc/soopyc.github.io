@@ -1,7 +1,15 @@
 ---
-import dayjs from "dayjs";
-import duration from "dayjs/plugin/duration";
-import relativeTime from "dayjs/plugin/relativeTime";
+import {
+    differenceInMonths,
+    differenceInSeconds,
+    format,
+    formatDistanceStrict,
+    formatDuration,
+    getYear,
+    intervalToDuration,
+    setYear,
+} from "date-fns";
+import { tz, TZDate } from "@date-fns/tz";
 
 import Indented from "../components/Indented.astro";
 import Output from "../components/Output.astro";
@@ -10,13 +18,11 @@ import Layout from "../layouts/Layout.astro";
 
 export const prerender = false;
 Astro.response.headers.append("strict-transport-security", "max-age=63072000; includeSubDomains; preload");
-dayjs.extend(duration);
-dayjs.extend(relativeTime);
 
-const birthday = dayjs("2005-12-26T00:00:00+08:00");
-const birthdayThisYear = birthday.year(dayjs().year());
-const now = dayjs();
-const daysLeft = dayjs.duration(now.diff(birthdayThisYear));
+const birthday = new TZDate("2005-12-26T00:00:00+08:00"); // definitely +08:00 now?!?!?!?
+const now = new Date();
+const birthdayThisYear = setYear(birthday, getYear(now)); // we could use getFullYear(). however, :nerd:
+const uptimeDuration = intervalToDuration({ start: birthday, end: now });
 ---
 
 <Layout>
@@ -30,9 +36,21 @@ const daysLeft = dayjs.duration(now.diff(birthdayThisYear));
                 Name: <span class="text-pink">soopyc</span>
                 <span class="text-teal"> (cassie, sophie)</span>
             </p>
-            <p>Born: {birthday.format("YYYY-MM-DD")}</p>
-            {daysLeft.asDays() < 31 && <p>Birthday in: {daysLeft.humanize()}</p>}
-            <p>Age: {now.diff(birthday, "years", true).toFixed(7)}y</p>
+            <p>
+                Born:
+                <span class="text-green">{format(birthday, "yyyy-MM-dd '('xxx')'", { in: tz("Asia/Hong_Kong") })}</span>
+            </p>
+            <p>
+                Uptime:
+                <span class="text-yellow">{formatDuration(uptimeDuration)}</span>
+            </p>
+            {
+                differenceInMonths(birthdayThisYear, now) == 0 && differenceInSeconds(birthdayThisYear, now) > 0 && (
+                    <p>
+                        Anniversary in: <span class="text-red">{formatDistanceStrict(now, birthdayThisYear)}</span>
+                    </p>
+                )
+            }
             <p>Descriptors:</p>
             <ul>
                 <li>full-time student</li>
