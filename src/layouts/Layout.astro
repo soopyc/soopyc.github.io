@@ -29,6 +29,7 @@ const { title } = Astro.props;
         <link rel="icon" href="https://www.libravatar.org/avatar/58a08528a7e2b3fd738b25d0c63f5c82?s=512" />
         <meta name="generator" content={Astro.generator} />
         <title>site@soopy:~{Astro.url.pathname} {title && "| " + title}</title>
+        <slot name="head" />
     </head>
     <body>
         <Output><p>Last login: {format(new Date(), "EEE MMM dd HH:mm:ss yyyy xxx")}</p></Output>

@@ -11,6 +11,9 @@ const posts = (await getCollection("posts"))
 ---
 
 <Layout title="Blog posts">
+    <Fragment slot="head">
+        <meta name="description" content="blog posts posted on soopy.moe." />
+    </Fragment>
     <Prompt>site posts list</Prompt>
     <Output>
         <h1>Blog posts</h1>
