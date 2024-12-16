@@ -20,7 +20,6 @@ export const getStaticPaths = (async () => {
     });
 }) satisfies GetStaticPaths;
 
-export const prerender = false
 const { post: entry } = Astro.props;
 const { Content } = await render(entry);
 ---
@@ -53,7 +52,7 @@ const { Content } = await render(entry);
         </noscript>
 
         <h1>Webmentions</h1>
-        <Webmentions id={entry.id}>
+        <Webmentions server:defer id={entry.id}>
             <p slot="fallback" class="text-muted">Loading webmentions...</p>
         </Webmentions>
     </Output>
