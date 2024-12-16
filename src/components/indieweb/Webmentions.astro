@@ -1,0 +1,23 @@
+---
+import constants from "../../assets/constants";
+import type { HFeed } from "../../assets/microformats2.ts";
+import WebmentionEntry from "./WebmentionEntry.astro";
+
+interface Props {
+    id: string;
+}
+
+const { id: postId } = Astro.props;
+const normalizedUrl = new URL(`/blog/${postId}/`, constants.canonicalBase);
+const webmentionFeed: HFeed = await (
+    await fetch(
+        constants.webmentionEndpoint +
+            `?${new URLSearchParams({
+                target: normalizedUrl.toString(),
+                "wm-property": "in-reply-to",
+            })}`,
+    )
+).json();
+---
+
+{webmentionFeed.children.length > 0 ? <ul>{webmentionFeed.children.map(entry => <li><WebmentionEntry {entry} /></li>)}</ul> : <p>No webmentions yet. Post a response and <a href="https://webmention.io/soopy.moe/webmention">make a webmention</a>!</p>}

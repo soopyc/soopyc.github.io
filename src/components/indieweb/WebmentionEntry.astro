@@ -1,0 +1,25 @@
+---
+import { formatDistanceStrict, formatDistanceToNow } from "date-fns";
+import type { HEntry } from "../../assets/microformats2";
+import Indented from "../Indented.astro";
+import Output from "../Output.astro";
+
+interface Props {
+    entry: HEntry;
+}
+const { entry } = Astro.props;
+
+const published = new Date(entry.published);
+const received = new Date(entry["wm-received"]);
+---
+
+<Output>
+    <p class="text-teal">Reply by <a class="text-yellow" href={entry.url}>{entry.author.name ?? "unknown author?"}</a></p>
+    <p class="text-muted">
+        Created <time class="text-green" title={published.toISOString()}>{formatDistanceToNow(published)}</time> ago,
+        received in <time title={received.toISOString()}>{formatDistanceStrict(received, published)}</time>
+    </p>
+    <Indented>
+        <p>{entry.content?.text ?? "no content"}</p>
+    </Indented>
+</Output>

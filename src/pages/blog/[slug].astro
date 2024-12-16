@@ -2,9 +2,11 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import { render } from "astro:content";
+
 import Layout from "../../layouts/Layout.astro";
 import Output from "../../components/Output.astro";
 import Prompt from "../../components/Prompt.astro";
+import Webmentions from "../../components/indieweb/Webmentions.astro";
 import BlogPostMetadata from "../../components/BlogPostMetadata.astro";
 
 export const getStaticPaths = (async () => {
@@ -39,6 +41,20 @@ const { Content } = await render(entry);
             </div>
         </Output>
     </div>
+
+    <Prompt>site blog cat --dynamic .</Prompt>
+    <Output>
+        <noscript>
+            <p class="text-red">
+                Your browser does not support JavaScript. This section cannot be loaded as it contains dynamic content
+                not immediately rendered on the server.
+            </p>
+        </noscript>
+
+        <h1>Webmentions</h1>
+        <Webmentions server:defer id={entry.id}>
+            <p slot="fallback" class="text-muted">Loading webmentions...</p>
+        </Webmentions>
     </Output>
 </Layout>
 
