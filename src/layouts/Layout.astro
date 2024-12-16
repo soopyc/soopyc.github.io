@@ -13,6 +13,7 @@ import Indented from "../components/Indented.astro";
 
 import { Image } from "astro:assets";
 import { format } from "date-fns";
+import constants from "../assets/constants";
 
 const { title } = Astro.props;
 ---
@@ -26,7 +27,7 @@ const { title } = Astro.props;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" href="https://www.libravatar.org/avatar/58a08528a7e2b3fd738b25d0c63f5c82?s=512" />
+        <link rel="icon" href={constants.avatar} />
         <meta name="generator" content={Astro.generator} />
         <title>site@soopy:~{Astro.url.pathname} {title && "| " + title}</title>
         <slot name="head" />

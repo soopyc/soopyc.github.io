@@ -15,6 +15,7 @@ import Indented from "../components/Indented.astro";
 import Output from "../components/Output.astro";
 import Prompt from "../components/Prompt.astro";
 import Layout from "../layouts/Layout.astro";
+import constants from "../assets/constants";
 
 export const prerender = false;
 Astro.response.headers.append("strict-transport-security", "max-age=63072000; includeSubDomains; preload");
@@ -28,51 +29,58 @@ const uptimeDuration = intervalToDuration({ start: birthday, end: now });
 <Layout>
     <Fragment slot="head">
         <meta name="description" content="home page of soopyc" />
+        <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
     </Fragment>
-    <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
-    <Prompt>site intro</Prompt>
-    <Output>
-        <h1>Welcome to soopy.moe!</h1>
-        <Indented>
-            <!-- i failed trying to make it more terminal-like without breaking stuff :p -->
-            <p>
-                Name: <span class="text-pink">soopyc</span>
-                <span class="text-teal"> (cassie, sophie)</span>
-            </p>
-            <p>
-                Born:
-                <span class="text-green">{format(birthday, "yyyy-MM-dd '('xxx')'", { in: tz("Asia/Hong_Kong") })}</span>
-            </p>
-            <p>
-                Uptime:
-                <span class="text-yellow">{formatDuration(uptimeDuration)}</span>
-            </p>
-            {
-                differenceInMonths(birthdayThisYear, now) == 0 && differenceInSeconds(birthdayThisYear, now) > 0 && (
-                    <p>
-                        Anniversary in: <span class="text-red">{formatDistanceStrict(now, birthdayThisYear)}</span>
-                    </p>
-                )
-            }
-            <p>Descriptors:</p>
-            <ul>
-                <li>full-time student</li>
-                <li>sysadmin cosplayer<a href="//youtube.com/c/JeffGeerling">[1]</a></li>
-                <li>genderfluid transfemby</li>
-                <li>hong konger</li>
-            </ul>
-        </Indented>
-    </Output>
 
-    <Prompt>site quicklinks</Prompt>
-    <Output>
-        <Indented>
-            <ul>
-                <li>GitHub <a rel="me" href="//github.com/soopyc">soopyc</a></li>
-                <li>GitLab<span class="text-muted"> (SaaS) </span><a rel="me" href="//gitlab.com/soopyc">soopyc</a></li>
-                <li>Patchy <a rel="me" href="//patchy.soopy.moe/cassie">patchy.@/cassie</a></li>
-                <li>Email <a rel="me" href="mailto:cassie@soopy.moe">me@soopy.moe</a></li>
-            </ul>
-        </Indented>
-    </Output>
+    <div class="h-card">
+        <Prompt>site intro</Prompt>
+        <Output>
+            <h1>Welcome to soopy.moe!</h1>
+            <data class="u-photo" value={constants.avatar} />
+            <data class="u-url" value="https://soopy.moe" />
+            <Indented>
+                <!-- i failed trying to make it more terminal-like without breaking stuff :p -->
+                <p>
+                    <!-- could use p-given-name and p-last-name but eh -->
+                    Name: <span class="p-nickname text-pink">soopyc</span>
+                    <span class="text-teal"> (<span>cassie</span>, sophie)</span>
+                    <data class="p-name" value="Cassie Cheung" />
+                    <data class="p-name" value="張恩瞳" />
+                </p>
+                <p>
+                    Born:
+                    <span class="text-green">{format(birthday, "yyyy-MM-dd '('xxx')'", { in: tz("Asia/Hong_Kong") })}</span>
+                </p>
+                <p>
+                    Uptime:
+                    <span class="text-yellow">{formatDuration(uptimeDuration)}</span>
+                </p>
+                {
+                    differenceInMonths(birthdayThisYear, now) == 0 && differenceInSeconds(birthdayThisYear, now) > 0 && (
+                        <p>
+                            Anniversary in: <span class="text-red">{formatDistanceStrict(now, birthdayThisYear)}</span>
+                        </p>
+                    )
+                }
+                <p>Descriptors:</p>
+                <ul>
+                    <li>full-time student</li>
+                    <li>sysadmin cosplayer<a href="//youtube.com/c/JeffGeerling">[1]</a></li>
+                    <li>genderfluid transfemby</li>
+                    <li>hong konger</li>
+                </ul>
+            </Indented>
+        </Output>
+        <Prompt>site quicklinks</Prompt>
+        <Output>
+            <Indented>
+                <ul>
+                    <li>GitHub <a rel="me" href="//github.com/soopyc">soopyc</a></li>
+                    <li>GitLab<span class="text-muted"> (SaaS) </span><a rel="me" href="//gitlab.com/soopyc">soopyc</a></li>
+                    <li>Patchy <a rel="me" href="//patchy.soopy.moe/cassie">patchy.@/cassie</a></li>
+                    <li>Email <a rel="me" href="mailto:cassie@soopy.moe" class="u-email">me@soopy.moe</a></li>
+                </ul>
+            </Indented>
+        </Output>
+    </div>
 </Layout>
