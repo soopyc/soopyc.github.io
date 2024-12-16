@@ -16,7 +16,7 @@ const { entry } = Astro.props;
     <p>
         <span class="text-muted">Written by: </span>{
             Object.keys(constants.authors).find((key) => key == entry.data.author) ? (
-                <a class="text-green h-card" href={constants.authors[entry.data.author].url}>
+                <a rel="author" class="text-green p-author h-card" href={constants.authors[entry.data.author].url}>
                     {entry.data.author}
                 </a>
             ) : (

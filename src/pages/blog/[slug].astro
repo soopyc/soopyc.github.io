@@ -5,7 +5,6 @@ import { render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Output from "../../components/Output.astro";
 import Prompt from "../../components/Prompt.astro";
-import Indented from "../../components/Indented.astro";
 import BlogPostMetadata from "../../components/BlogPostMetadata.astro";
 
 export const getStaticPaths = (async () => {
@@ -32,9 +31,10 @@ const { Content } = await render(entry);
         <Prompt>site blog cat .</Prompt>
         <Output>
             <BlogPostMetadata {entry} />
+            <data class="u-url" value={Astro.url.pathname}></data>
         </Output>
         <Output>
-            <div class="main-content">
+            <div class="e-content">
                 <Content />
             </div>
         </Output>
@@ -43,7 +43,7 @@ const { Content } = await render(entry);
 </Layout>
 
 <style lang="scss">
-    .main-content :global(p) {
+    .e-content :global(p) {
         margin-bottom: 1em;
     }
 </style>

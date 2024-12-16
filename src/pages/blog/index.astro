@@ -17,6 +17,16 @@ const posts = (await getCollection("posts"))
     <Prompt>site posts list</Prompt>
     <Output>
         <p>There are currently <span class="text-green">{posts.length}</span> blog posts.</p>
-        {posts.map((entry) => <BlogPostEntry {entry} />)}
+        <div class="h-feed">
+            <data class="p-name" value="Blog posts on soopy.moe"></data>
+            <data class="u-url" value={Astro.url.pathname}></data>
+            {
+                posts.map((entry) => (
+                    <div class="h-entry">
+                        <BlogPostEntry {entry} />
+                    </div>
+                ))
+            }
+        </div>
     </Output>
 </Layout>

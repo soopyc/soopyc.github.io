@@ -14,6 +14,6 @@ const { entry } = Astro.props;
 <div>
     <BlogPostMetadata {entry} />
     <Indented>
-        <p><a href={`/blog/${entry.id}`}>[read]</a></p>
+        <p><a class="u-url" href={`/blog/${entry.id}`}>[read]</a></p>
     </Indented>
 </div>
