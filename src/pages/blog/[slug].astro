@@ -28,20 +28,22 @@ const { Content } = await render(entry);
         <meta name="author" content={entry.data.author} />
         <meta name="description" content={entry.data.summary} />
     </Fragment>
-    <Prompt>site blog cat .</Prompt>
-    <Output>
-        <h1>{entry.data.title}</h1>
-        <BlogPostMetadata {entry} />
-    </Output>
-    <Output>
-        <div class="main-content">
-            <Content />
-        </div>
+    <div class="h-entry">
+        <Prompt>site blog cat .</Prompt>
+        <Output>
+            <BlogPostMetadata {entry} />
+        </Output>
+        <Output>
+            <div class="main-content">
+                <Content />
+            </div>
+        </Output>
+    </div>
     </Output>
 </Layout>
 
 <style lang="scss">
-    div.main-content :global(p) {
+    .main-content :global(p) {
         margin-bottom: 1em;
     }
 </style>

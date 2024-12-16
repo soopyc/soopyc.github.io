@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Indented from "./Indented.astro";
+import constants from "../assets/constants";
 
 interface Props {
     entry: CollectionEntry<"posts">;
@@ -9,15 +10,28 @@ interface Props {
 const { entry } = Astro.props;
 ---
 
-<p><span class="text-teal">{entry.data.summary}</span></p>
+<h1 class="p-name">{entry.data.title}</h1>
+<p><span class="text-teal p-summary">{entry.data.summary}</span></p>
 <Indented>
-    <p><span class="text-muted">Written by: </span><span class="text-green">{entry.data.author}</span></p>
-    <p><span class="text-muted">Posted on: </span>{entry.data.created.toISOString()}</p>
+    <p>
+        <span class="text-muted">Written by: </span>{
+            Object.keys(constants.authors).find((key) => key == entry.data.author) ? (
+                <a class="text-green h-card" href={constants.authors[entry.data.author].url}>
+                    {entry.data.author}
+                </a>
+            ) : (
+                <span class="text-yellow">{entry.data.author}</span>
+            )
+        }
+    </p>
+    <p>
+        <span class="text-muted">Posted on: </span><time class="dt-published">{entry.data.created.toISOString()}</time>
+    </p>
     {
         entry.data.lastmodified && (
             <p>
                 <span class="text-muted">Last modified: </span>
-                {entry.data.lastmodified.toISOString()}
+                <time class="dt-updated">{entry.data.lastmodified.toISOString()}</time>
             </p>
         )
     }

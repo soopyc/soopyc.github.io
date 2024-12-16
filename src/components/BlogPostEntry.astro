@@ -12,7 +12,6 @@ const { entry } = Astro.props;
 ---
 
 <div>
-    <h2>{entry.data.title}</h2>
     <BlogPostMetadata {entry} />
     <Indented>
         <p><a href={`/blog/${entry.id}`}>[read]</a></p>

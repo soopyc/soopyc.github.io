@@ -16,7 +16,7 @@ const posts = (await getCollection("posts"))
     </Fragment>
     <Prompt>site posts list</Prompt>
     <Output>
-        <h1>Blog posts</h1>
+        <p>There are currently <span class="text-green">{posts.length}</span> blog posts.</p>
         {posts.map((entry) => <BlogPostEntry {entry} />)}
     </Output>
 </Layout>
