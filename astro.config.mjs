@@ -14,12 +14,6 @@ export default defineConfig({
             }
         },
     },
-    adapter: cloudflare({
-        routes: {extend: {
-            include: [
-                {pattern: "/_server-islands/*"}
-            ]
-        }}
-    }),
+    adapter: cloudflare(),
     integrations: [icon()],
 });
