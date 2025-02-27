@@ -80,6 +80,7 @@ const { title } = Astro.props;
             <Prompt>nix run /flake#buttons</Prompt>
             <Output>
                 <div id="buttons">
+                    <a href="//soopy.moe"><Image width="88" height="31" src="/images/buttons/own/88x31.gif" alt="88x31 button of soopy.moe" /></a>
                     <Image width="88" height="31" src="/images/buttons/transnow2.gif" alt="trans rights now" />
                     <Image
                         width="88"
@@ -126,5 +127,10 @@ const { title } = Astro.props;
         display: flex;
         flex-wrap: wrap;
         gap: 1ch;
+
+        a {
+            padding: unset;
+            background-color: unset;
+        }
     }
 </style>
