@@ -9,20 +9,20 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/cloudflare": "^12.4.0",
+        "@astrojs/cloudflare": "^12.6.0",
         "@csstools/normalize.css": "^12.1.1",
         "@date-fns/tz": "^1.2.0",
-        "@fontsource/ubuntu-mono": "^5.2.5",
+        "@fontsource/ubuntu-mono": "^5.2.6",
         "@iconify-json/ph": "^1.2.2",
-        "@iconify-json/simple-icons": "^1.2.31",
-        "astro": "^5.6.1",
+        "@iconify-json/simple-icons": "^1.2.42",
+        "astro": "^5.11.0",
         "astro-icon": "^1.1.5",
         "date-fns": "^4.1.0",
-        "sass": "^1.86.3",
+        "sass": "^1.89.2",
         "tailwindcss": "^3.4.17",
         "tippy.js": "^6.3.7"
     },
     "devDependencies": {
-        "wrangler": "^3.114.5"
+        "wrangler": "^3.114.11"
     }
 }
