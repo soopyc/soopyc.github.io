@@ -12,9 +12,9 @@ export const data: ContactLinks = {
         {icon: "ph:at-bold", label: "Email", text: "cassie@soopy.moe", href: "mailto:cassie@soopy.moe"},
         {icon: "ph:matrix-logo-bold", label: "Matrix", text: "@sophie:nue.soopy.moe", href: "https://matrix.to/#/@sophie:nue.soopy.moe"},
         {icon: "simple-icons:discord", label: "Discord", text: "soopy.moe", href: "https://discord.com/users/397273885701177347"},
-        {icon: "ph:fediverse-logo-bold", label: "Fediverse", text: "@soopyc@tech.lgbt", href: "https://tech.lgbt/@soopyc"},
         {icon: "simple-icons:bluesky", label: "Bluesky", text: "soopy.moe", href: "https://bsky.app/profile/soopy.moe"},
         {icon: "simple-icons:bluesky", label: "Bluesky (Alt)", text: "pds.soopy.moe", href: "https://bsky.app/profile/pds.soopy.moe"},
+        {icon: "ph:fediverse-logo-bold", label: "Fediverse", text: "@soopyc@tech.lgbt", href: "https://tech.lgbt/@soopyc"},
     ],
     Services: [
         {icon: "ph:lastfm-logo-bold", label: "last.fm", text: "kcomain", href: "https://last.fm/user/kcomain"},
@@ -30,7 +30,10 @@ export const data: ContactLinks = {
         {icon: "simple-icons:osu", label: "osu!", text: "soopyc", href: "https://osu.ppy.sh/u/soopyc"},
         {icon: "simple-icons:namemc", label: "NameMC", text: "soopyc", href: "https://namemc.com/profile/soopyc.1"},
         {icon: "simple-icons:steam", label: "Steam", text: "soopyc", href: "https://steamcommunity.com/id/soopyc/"},
-    ]
+    ],
+    Miscellaneous: [
+        {icon: "ph:key-bold", label: "Encryption Keys", href: "/keys"}
+    ],
 }
 
 export default data;

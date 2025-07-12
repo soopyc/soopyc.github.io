@@ -27,7 +27,8 @@
 }
 
 body,
-code {
+code,
+pre {
     font-family: "Ubuntu Mono", 'Kosugi Maru', monospace;
 }
 
@@ -158,4 +159,9 @@ h3:before {
 // astro-icons
 [data-icon] {
     vertical-align: middle;
+}
+
+// quick utils
+.select-all {
+    user-select: all;
 }

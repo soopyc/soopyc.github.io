@@ -1,0 +1,59 @@
+---
+import Indented from "../components/Indented.astro";
+import Output from "../components/Output.astro";
+import Prompt from "../components/Prompt.astro";
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="Encryption Keys">
+    <Prompt>site showkey --files</Prompt>
+    <Output>
+        <Indented>
+            <ul>
+                <li>Age keys: <a href="/agekeys.txt">agekeys.txt</a></li>
+                <li>PGP keys: <a href="/pgpkeys.asc">pgpkeys.asc</a></li>
+            </ul>
+        </Indented>
+    </Output>
+
+    <Prompt>cat ~/.age/yubi1</Prompt>
+    <Output><pre>#    Name: me+19302295-main@soopy.moe
+# Created: Fri, 08 Sep 2023 10:22:20 +0000
+<span class="select-all">age1yubikey1qgmfcf0vddslyza7djdekjjk3t3u29d474c5xscmcdye8x3spvhlxxj23xz</span></pre></Output>
+
+    <Prompt>gpg --list-k 0xD8B0825267927FF9</Prompt>
+    <Output><pre>pub   ed25519/0xD8B0825267927FF9 2025-06-15 [SC] [expires: 2099-01-01]
+      Key fingerprint = DBB6 CB65 5501 B8D9 FFE1  76C4 D8B0 8252 6792 7FF9
+uid                   [ultimate] Cassie Cheung (Primary) &lt;cassie@soopy.moe&gt;
+uid                   [ultimate] Cassie Cheung (Primary) &lt;me@soopy.moe&gt;
+sub   ed25519/0xC53FFA3E22D8394C 2025-06-15 [A] [expires: 2099-01-01]
+sub   cv25519/0x072B132F43BBB42C 2025-06-15 [E] [expires: 2099-01-01]</pre></Output>
+
+    <Prompt>gpg -a --export 0xD8B0825267927FF9</Prompt>
+    <Output><pre class="select-all">-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEaE6h4BYJKwYBBAHaRw8BAQdAudJiG316C1IWCglC148DfWXFaY7GkrSvf6rk
+nv8m+rm0JkNhc3NpZSBDaGV1bmcgKFByaW1hcnkpIDxtZUBzb29weS5tb2U+iJkE
+ExYKAEEWIQTbtstlVQG42f/hdsTYsIJSZ5J/+QUCaE6h4AIbAwUJilaBqwULCQgH
+AgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRDYsIJSZ5J/+S4cAP9wbc4T+5cSoXEL
+WzrRv1FoENMpL6rS0wQww77rwpxAGAD+MlsBwMjAyZo6+8sjgIj92KVwbT7IznpN
+x+LlZSQJpgK0KkNhc3NpZSBDaGV1bmcgKFByaW1hcnkpIDxjYXNzaWVAc29vcHku
+bW9lPoiZBBMWCgBBFiEE27bLZVUBuNn/4XbE2LCCUmeSf/kFAmhOq5oCGwMFCYpW
+gasFCwkIBwICIgIGFQoJCAsCBBYCAwECHgcCF4AACgkQ2LCCUmeSf/mcjgD+J18G
+6Xx1Ak5d6WrCSnpOnGErwRYaKJr92AXjt7VK/b0A/jDu9aSIKrySi7yw5mIgDPRU
+L3gRNBMuloiRVO5tUoUBuDMEaE6h4BYJKwYBBAHaRw8BAQdACZW7aMwGISFvoTv4
+c+1j4B4yANgbdVuxDXE3Wn+0gOWIfgQYFgoAJhYhBNu2y2VVAbjZ/+F2xNiwglJn
+kn/5BQJoTqHgAhsgBQmKVoGrAAoJENiwglJnkn/5cEYBAMuRuYBzSF9p9TgJ9K//
+PHQdp3rk80gAzB1ZYnro+SQ2AQDydqxxonX8DiIhxtOi8dDK6KmSwY+E6WlfLKsu
+kGRHCrg4BGhOoeASCisGAQQBl1UBBQEBB0CxZE5oBEDWc0XmZDORqkarbjn7gnMj
+9eQiKCVr7aY/dwMBCAeIfgQYFgoAJhYhBNu2y2VVAbjZ/+F2xNiwglJnkn/5BQJo
+TqHgAhsMBQmKVoGrAAoJENiwglJnkn/5hL4BAM1csgAXPoitinMDpTyo5M2Rs6GB
+C/X6+B26Bmqwtc8zAQCqJK47gyxycqCeYLS99mWEPRKEgeU4BAGFiJdKjzYzDA==
+=sOwo
+-----END PGP PUBLIC KEY BLOCK-----</pre></Output>
+</Layout>
+
+<style>
+    pre {
+        overflow: scroll;
+    }
+</style>
