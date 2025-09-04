@@ -9,7 +9,7 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/cloudflare": "^12.6.0",
+        "@astrojs/cloudflare": "^12.6.6",
         "@csstools/normalize.css": "^12.1.1",
         "@date-fns/tz": "^1.2.0",
         "@fontsource/ubuntu-mono": "^5.2.6",
