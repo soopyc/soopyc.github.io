@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+import Output from "../components/Output.astro";
+import Prompt from "../components/Prompt.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Other games">
+    <Prompt>site finger -v --section=games-others</Prompt>
+    <Output>
+        <h1>other games</h1>
+        <p>
+            this page is almost exclusively gacha games and games that don't have online player profile links.
+        </p>
+
+        <h2><Icon name="ph:storefront-bold"/> arcade games</h2>
+        <!-- TODO: deduplicate these -->
+        <ul class="copy-spans">
+            <li><Icon name="ph:bell-bold"/> Geki: <span>ain't got any</span></li>
+            <li><Icon name="mdi:penguin"/> Chu: <span>9019435299572</span></li>
+            <li><Icon name="ph:washing-machine-fill"/> Mai: <span>9012435891582</span></li>
+        </ul>
+        <p class="text-muted">PS: i usually go to <a href="https://zenius-i-vanisher.com/v5.2/arcade.php?id=6956#summary">this arcade</a>!</p>
+
+        <h2><Icon name="ph:music-notes-fill"/> rhythm games</h2>
+        <ul class="copy-spans">
+            <li><Icon name="ph:music-note-fill"/> プロセカ: <span>234698393179963406</span></li>
+            <li><Icon name="ph:music-note-fill"/> 世界計劃: <span>7048999698589457153</span></li>
+            <li><Icon name="ph:music-note-fill"/> 世界计划: <span>ain't got any</span></li>
+            <li><Icon name="ph:music-note-fill"/> ColorfulStage: <span>272743172185239560</span></li>
+            <li><Icon name="ph:circle-duotone"/> Rizline: find me irl!</li>
+        </ul>
+    </Output>
+</Layout>
+
+<style>
+    .copy-spans span {
+        user-select: all;
+    }
+</style>

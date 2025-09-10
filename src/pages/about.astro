@@ -18,10 +18,14 @@ import links from "../assets/contactLinks.ts";
             my name is <span class="text-pink">sophie</span>, but i'm more commonly known as
             <span class="text-pink">soopy</span> and <span class="text-pink">cassie</span>.
         </p>
+        <p class="text-muted">
+            not related to the other soopy, who made soopyv2. if you came here for them, you are
+            on the wrong site. s/moe/dev/ :3
+        </p>
     </Output>
     <Output>
         <p>
-            i am currently studying for an associate's degree of
+            currently studying for an associate's degree of
             <span class="text-green">network and systems administation</span>.
         </p>
     </Output>
@@ -30,18 +34,17 @@ import links from "../assets/contactLinks.ts";
             i manage my own network of servers and host a bunch of services on each of them. see
             <a href="//miku.soopy.moe">miku.@</a> for status of the hosted services.
         </p>
-        <p>i am also a maintainer for the <a href="//t2linux.org">t2linux</a> (on nixos) project.</p>
     </Output>
     <Output>
-        <p>trying not to use the character "i" so much but sentences look weird without that.</p>
+        <p>i'm also a maintainer for the <a href="//t2linux.org">t2linux</a> (on nixos) project.</p>
     </Output>
+    <!-- <Output>
+        <p>trying not to use the character "i" so much but sentences look weird without that.</p>
+    </Output> -->
 
     <Prompt>site finger</Prompt>
     <Output>
-        <p>
-            as a chronically online person, i have a wide range of contact methods. here's a mostly complete exerpt of
-            my online presence.
-        </p>
+        <p>here's a mostly complete exerpt of my online presence. my offline presence is limited to trusted friends.</p>
         {Object.entries(links).map((section) => <ContactSection {section} />)}
     </Output>
 </Layout>

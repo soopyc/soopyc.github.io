@@ -3,6 +3,7 @@ import type { Link } from "../assets/contactLinks";
 import ContactLink from "../components/ContactLink.astro";
 
 const [section, links]: [string, Link[]] = Astro.props.section;
+// TODO: make this ItemFarm or something and dedup impl of ContactLink and the games item farm
 ---
 
 <h2>{section}</h2>

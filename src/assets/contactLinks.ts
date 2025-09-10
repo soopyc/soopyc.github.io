@@ -30,6 +30,7 @@ export const data: ContactLinks = {
         {icon: "simple-icons:osu", label: "osu!", text: "soopyc", href: "https://osu.ppy.sh/u/soopyc"},
         {icon: "simple-icons:namemc", label: "NameMC", text: "soopyc", href: "https://namemc.com/profile/soopyc.1"},
         {icon: "simple-icons:steam", label: "Steam", text: "soopyc", href: "https://steamcommunity.com/id/soopyc/"},
+        {icon: "ph:arrow-right-bold",label: "Other...", href: "/games"}
     ],
     Miscellaneous: [
         {icon: "ph:key-bold", label: "Encryption Keys", href: "/keys"}
