@@ -42,12 +42,13 @@ body {
     margin-bottom: 2.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    max-width: 768px;
+    max-width: 80ch;
 
     overflow: scroll;
     overflow-wrap: break-word;
 
-    @media (min-width: 768px) {
+    // frankly i have no idea why this value specifically makes it seamless, but whatever.
+    @media (min-width: 93ch) {
         margin-left: auto;
         margin-right: auto;
     }
