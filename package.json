@@ -16,7 +16,7 @@
         "@iconify-json/mdi": "^1.2.3",
         "@iconify-json/ph": "^1.2.2",
         "@iconify-json/simple-icons": "^1.2.56",
-        "astro": "^5.15.3",
+        "astro": "^5.15.6",
         "astro-icon": "^1.1.5",
         "date-fns": "^4.1.0",
         "sass": "^1.93.2",
