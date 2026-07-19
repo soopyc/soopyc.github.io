@@ -16,4 +16,5 @@ export default defineConfig({
     },
     adapter: cloudflare({ imageService: "compile" }),
     integrations: [icon()],
+    compressHTML: true,
 });
