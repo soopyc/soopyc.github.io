@@ -1,5 +1,5 @@
 name = "soopy-main"
-compatibility_date = "2026-04-01"
+compatibility_date = "2026-07-20"
 main = "@astrojs/cloudflare/entrypoints/server"
 
 [assets]
